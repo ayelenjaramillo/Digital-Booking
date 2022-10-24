@@ -1,5 +1,7 @@
 package com.dh.CrudCategorias.services;
 
+import com.dh.CrudCategorias.exceptions.BadRequestException;
+import com.dh.CrudCategorias.exceptions.ResourceNotFoundException;
 import com.dh.CrudCategorias.models.Categoria;
 import com.dh.CrudCategorias.models.CategoriaDTO;
 import com.dh.CrudCategorias.repositories.CategoriaRepository;
@@ -17,7 +19,7 @@ public class CategoriaService {
     @Autowired
     ObjectMapper mapper;
 
-    public Categoria agregarCategoria(Categoria categoria){
+    public Categoria agregarCategoria(Categoria categoria) throws BadRequestException {
         return categoriaRepository.save(categoria);
     }
 
@@ -42,13 +44,13 @@ public class CategoriaService {
         return respuesta;
     }
 */
-    public CategoriaDTO buscarCategoriaPorId(Integer id){
+    public CategoriaDTO buscarCategoriaPorId(Integer id) throws ResourceNotFoundException {
         Optional<Categoria> categoriaPorEncontrar = categoriaRepository.findById(id);
         CategoriaDTO respuesta = null;
         if (categoriaPorEncontrar.isPresent()){
             respuesta = mapper.convertValue(categoriaPorEncontrar, CategoriaDTO.class);
         }else{
-            categoriaPorEncontrar.isEmpty();
+            throw new ResourceNotFoundException("No se encontro la categoria con el id:" + id);
         }
         return respuesta;
     }

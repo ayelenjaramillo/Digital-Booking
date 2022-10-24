@@ -1,5 +1,6 @@
 package com.dh.CrudCategorias.controllers;
 
+import com.dh.CrudCategorias.exceptions.ResourceNotFoundException;
 import com.dh.CrudCategorias.models.Categoria;
 import com.dh.CrudCategorias.models.CategoriaDTO;
 import com.dh.CrudCategorias.services.CategoriaService;
@@ -30,7 +31,7 @@ public class CategoriaController {
     }
 
     @GetMapping("/{id}")
-    public CategoriaDTO buscarCategoriaPorId(@PathVariable Integer id){
+    public CategoriaDTO buscarCategoriaPorId(@PathVariable Integer id) throws ResourceNotFoundException {
         return  categoriaService.buscarCategoriaPorId(id);
     }
 
