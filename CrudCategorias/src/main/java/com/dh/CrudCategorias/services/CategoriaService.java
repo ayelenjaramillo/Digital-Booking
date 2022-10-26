@@ -23,9 +23,7 @@ public class CategoriaService {
         return categoriaRepository.save(categoria);
     }
 
-    public void actualizarCategoria(Categoria categoria){
-        guardarCategoria(categoria);
-    }
+    public void actualizarCategoria(Categoria categoria){guardarCategoria(categoria);}
 
     public void eliminarCategoria(Integer id){
         categoriaRepository.deleteById(id);

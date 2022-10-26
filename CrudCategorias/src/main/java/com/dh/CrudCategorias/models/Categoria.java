@@ -3,15 +3,23 @@ package com.dh.CrudCategorias.models;
 import javax.persistence.*;
 
 @Entity
+@Table(name= "CATEGORIAS") //para no tener problema con los nombres
 public class Categoria {
 
     @Id
     @SequenceGenerator(name = "categoria_sequence", sequenceName = "categoria_sequence", allocationSize = 1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "categoria_sequence")
     private Integer id;
+    @Column
     private String titulo;
     private String descripcion;
     private String urlImagen;
+
+
+    //agregando constructor vacío por requerimiento
+    public Categoria() {
+        super();
+    }
 
     public Categoria(String titulo, String descripcion, String urlImagen) {
         this.titulo = titulo;
