@@ -1,0 +1,26 @@
+/******* Header *******/
+
+/* Title */
+.h-title{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0.6rem 2rem 0.2rem;
+    background-color: white; 
+}
+
+/* List */
+.h-list li{
+    list-style-type: none;
+    float: right;
+    justify-content:space-around;
+    padding:0.5rem;
+}
+
+.h-list button{
+    border: white;
+}
+
+.h-list a{
+    text-decoration: none;
+}

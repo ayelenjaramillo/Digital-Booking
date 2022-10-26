@@ -3,6 +3,7 @@ import NavBar from "./Components/Navbar";
 import Home from "./Components/Home"; 
 import Registro from "./Components/Registro"; 
 import LogIn from "./Components/LogIn"; 
+import MenuPrincLogin from "./Components/MenuPrincLogin"; 
 import Footer from "./Components/Footer";
 
 import "./App.css"; 
@@ -16,6 +17,7 @@ const App = () => {
           <Route index element = {<Home/>}></Route>
           <Route path="/home" element= {<Home/>}></Route>
           <Route path="/Login" element= {<LogIn/>}></Route>
+          <Route path="/MenuPrincLogin" element = {<MenuPrincLogin/>}></Route>
           <Route path="/registro" element = {<Registro/>}></Route>
           </Route>
         </Routes>
