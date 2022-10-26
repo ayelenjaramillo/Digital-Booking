@@ -3,7 +3,7 @@ package com.dh.CrudCategorias.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "CATEGORIAS") //se agrega?
+@Table(name= "CATEGORIAS")
 public class Categoria {
 
     @Id
@@ -14,7 +14,6 @@ public class Categoria {
     private String titulo;
     private String descripcion;
     private String urlImagen;
-
 
     //agregando constructor vacío por requerimiento
     public Categoria() {
