@@ -1,0 +1,33 @@
+.h-principal{
+    list-style-type: none;
+    background-color: #545776; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+    
+}
+
+.h-sec{
+    background-color: #545776;
+    display: flex;
+    
+}
+
+form{
+    text-align: center;
+    background-color:#545776;
+}
+.react-datepicker-wrapper {
+    width: unset;
+    padding: 0 10px;
+  } 
+
+button{
+    width: 200px;
+    background-color: #1DBEB4;
+    color: white;
+}
+select{
+    width: 300px;
+} 
