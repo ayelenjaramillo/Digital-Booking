@@ -3,14 +3,14 @@ package com.dh.CrudCategorias.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "CATEGORIAS") //para no tener problema con los nombres
+@Table(name= "CATEGORIAS") //se agrega?
 public class Categoria {
 
     @Id
     @SequenceGenerator(name = "categoria_sequence", sequenceName = "categoria_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "categoria_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "categoria_sequence")
     private Integer id;
-    @Column
+    @Column // se agrega?
     private String titulo;
     private String descripcion;
     private String urlImagen;
