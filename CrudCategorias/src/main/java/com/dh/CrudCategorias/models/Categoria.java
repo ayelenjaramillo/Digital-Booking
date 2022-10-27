@@ -1,19 +1,24 @@
 package com.dh.CrudCategorias.models;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.*;
 
+@Entity
+@Table(name= "CATEGORIAS")
 public class Categoria {
 
     @Id
     @SequenceGenerator(name = "categoria_sequence", sequenceName = "categoria_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "categoria_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "categoria_sequence")
     private Integer id;
+    @Column // se agrega?
     private String titulo;
     private String descripcion;
     private String urlImagen;
+
+    //agregando constructor vacío por requerimiento
+    public Categoria() {
+        super();
+    }
 
     public Categoria(String titulo, String descripcion, String urlImagen) {
         this.titulo = titulo;
