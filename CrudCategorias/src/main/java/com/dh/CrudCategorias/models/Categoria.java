@@ -3,21 +3,29 @@ package com.dh.CrudCategorias.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name= "CATEGORIAS")
+@Table(name="categorias")
 public class Categoria {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "categoria_sequence")
     @SequenceGenerator(name = "categoria_sequence", sequenceName = "categoria_sequence", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "categoria_sequence")
     private Integer id;
-    @Column // se agrega?
+    @Column
     private String titulo;
+    @Column
     private String descripcion;
+    @Column
     private String urlImagen;
 
     //agregando constructor vacío por requerimiento
     public Categoria() {
-        super();
+    }
+
+    public Categoria(CategoriaDTO categoriaDTO) {
+        this.titulo= categoriaDTO.getTitulo();
+        this.descripcion= categoriaDTO.getDescripcion();
+        this.urlImagen= categoriaDTO.getUrlImagen();
+
     }
 
     public Categoria(String titulo, String descripcion, String urlImagen) {
@@ -49,6 +57,9 @@ public class Categoria {
         return urlImagen;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
