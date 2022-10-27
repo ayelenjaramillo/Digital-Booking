@@ -24,3 +24,15 @@
 .h-list a{
     text-decoration: none;
 }
+@media(max-width:800px){
+    .image{
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px){
+
+.image{
+    width: 50%;
+}
+}

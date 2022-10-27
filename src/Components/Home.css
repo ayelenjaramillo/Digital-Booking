@@ -20,7 +20,7 @@ form{
 }
 .react-datepicker-wrapper {
     width: unset;
-    padding: 0 10px;
+   
   } 
 
 button{
@@ -31,3 +31,36 @@ button{
 select{
     width: 300px;
 } 
+@media (max-width: 800px){
+    .h-principal{
+        flex-direction: column;
+        background-color:#967ED5 ;
+        width: 100%;
+        margin: 0 auto;
+        width: 100%; 
+    }
+    .h-sec{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 40px 10px;
+        align-items: center;
+        width: 100%;
+    }
+}
+@media(max-width:500px){
+    .h-principal{
+        background-color: white;
+        padding: 0;
+}
+    .h-sec{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 40px 10px;
+        align-items: center;
+    }
+}
+
+
