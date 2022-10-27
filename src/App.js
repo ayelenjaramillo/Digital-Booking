@@ -3,6 +3,8 @@ import NavBar from "./Components/Navbar";
 import Home from "./Components/Home"; 
 import Registro from "./Components/Registro"; 
 import LogIn from "./Components/LogIn"; 
+// import Categoria from "./Components/Categoria";
+// import Listado from "./Components/Listado";
 import MenuPrincLogin from "./Components/MenuPrincLogin"; 
 import Footer from "./Components/Footer";
 
@@ -22,6 +24,8 @@ const App = () => {
           </Route>
         </Routes>
       </BrowserRouter>
+      {/* <Categoria/>
+      <Listado/> */}
     <Footer/>
     </>
   );
