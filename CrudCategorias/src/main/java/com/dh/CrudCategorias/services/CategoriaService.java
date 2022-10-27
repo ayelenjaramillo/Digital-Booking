@@ -19,51 +19,34 @@ public class CategoriaService {
     @Autowired
     ObjectMapper mapper;
 
-    public Categoria agregarCategoria(Categoria categoria) throws BadRequestException {
+    public Categoria agregarCategoria(CategoriaDTO categoriaDTO) {
+        Categoria categoria = new Categoria(categoriaDTO);
         return categoriaRepository.save(categoria);
     }
 
-    public void actualizarCategoria(Categoria categoria){guardarCategoria(categoria);}
+    public Categoria actualizarCategoria(CategoriaDTO categoriaDTO, Integer id) throws ResourceNotFoundException{
+        Categoria categoria = buscarCategoriaPorId(id);
+        categoria.setTitulo(categoriaDTO.getTitulo());
+        categoria.setDescripcion(categoriaDTO.getDescripcion());
+        categoria.setUrlImagen(categoriaDTO.getUrlImagen());
 
-    public void eliminarCategoria(Integer id){
-        categoriaRepository.deleteById(id);
-    }
-/*
-    public Categoria buscarCategoriaPorId(Integer id){
-        Optional<Categoria> categoriaPorEncontrar = categoriaRepository.findById(id);
-        Categoria respuesta = null;
-        if (categoriaPorEncontrar.isPresent()) {
-             Categoria categoria = categoriaPorEncontrar.get();
-             System.out.println(categoriaRepository.findById(id));
-        }
-        else{
-            categoriaPorEncontrar.isEmpty();
-        }
-        return respuesta;
-    }
-*/
-    public CategoriaDTO buscarCategoriaPorId(Integer id) throws ResourceNotFoundException {
-        Optional<Categoria> categoriaPorEncontrar = categoriaRepository.findById(id);
-        CategoriaDTO respuesta = null;
-        if (categoriaPorEncontrar.isPresent()){
-            respuesta = mapper.convertValue(categoriaPorEncontrar, CategoriaDTO.class);
-        }else{
-            throw new ResourceNotFoundException("No se encontro la categoria con el id:" + id);
-        }
-        return respuesta;
+        return categoriaRepository.save(categoria);
+
     }
 
-    public Collection<CategoriaDTO> listarCategorias(){
+    public void eliminarCategoria(Integer id) throws ResourceNotFoundException{
+        Categoria categoria = buscarCategoriaPorId(id); //command option V
+        categoriaRepository.delete(categoria);
+    }
+
+    public Categoria buscarCategoriaPorId(Integer id) throws ResourceNotFoundException{
+        Categoria categoria = categoriaRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("No se encontro la categoria con el id: " + id));
+        return categoria;
+    }
+
+    public List<Categoria> listarCategorias(){
         List<Categoria> categoriaList = categoriaRepository.findAll();
-        Set<CategoriaDTO> categoriaDTO = new HashSet<>();
-        for (Categoria categoria : categoriaList){
-            categoriaDTO.add(mapper.convertValue(categoria, CategoriaDTO.class));
-        }
-        return categoriaDTO;
-    }
-
-    private void guardarCategoria(Categoria categoria){
-        categoriaRepository.save(categoria);
+        return categoriaList;
     }
 
 
