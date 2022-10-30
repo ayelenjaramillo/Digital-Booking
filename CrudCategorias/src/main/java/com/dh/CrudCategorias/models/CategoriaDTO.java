@@ -1,17 +1,30 @@
 package com.dh.CrudCategorias.models;
+import com.fasterxml.jackson.annotation.JsonCreator;
 
 public class CategoriaDTO {
 
-    private Integer id;
     private String titulo;
+    private String descripcion;
+    private String urlImagen;
 
-    public CategoriaDTO(Integer id, String titulo) {
-        this.id = id;
+    @JsonCreator
+    public CategoriaDTO(String titulo, String descripcion, String urlImagen) {
         this.titulo = titulo;
+        this.descripcion = descripcion;
+        this.urlImagen = urlImagen;
     }
 
-    public CategoriaDTO(Categoria categoria) {
-        this.id = categoria.getId();
-        this.titulo = categoria.getTitulo();
+    public String getTitulo() {
+        return titulo;
     }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String getUrlImagen() {
+        return urlImagen;
+    }
+
+
 }

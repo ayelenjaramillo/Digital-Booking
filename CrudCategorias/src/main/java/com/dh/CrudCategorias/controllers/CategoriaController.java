@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
+import java.util.List;
 
 @RestController
 @RequestMapping("/categorias")
@@ -20,31 +21,29 @@ public class CategoriaController {
 
 
     @PostMapping
-    public ResponseEntity<Categoria> crearCategoria(@RequestBody Categoria categoria){
-        return  ResponseEntity.ok(categoriaService.agregarCategoria(categoria));
+    public ResponseEntity<Categoria> crearCategoria(@RequestBody CategoriaDTO categoriaDTO){
+        return  ResponseEntity.ok(categoriaService.agregarCategoria(categoriaDTO));
     }
 
-    @PutMapping
-    public ResponseEntity<?> actualizarCategoria (@RequestBody Categoria categoria){
-        categoriaService.actualizarCategoria(categoria);
-        return  ResponseEntity.ok(HttpStatus.OK);
+    @PutMapping("/{id}")
+    public ResponseEntity<Categoria> actualizarCategoria (@RequestBody CategoriaDTO categoriaDTO, @PathVariable Integer id) throws ResourceNotFoundException{
+        Categoria categoria = categoriaService.actualizarCategoria(categoriaDTO, id);
+        return  ResponseEntity.ok(categoria);
     }
 
     @GetMapping("/{id}")
-    public CategoriaDTO buscarCategoriaPorId(@PathVariable Integer id) throws ResourceNotFoundException {
+    public Categoria buscarCategoriaPorId(@PathVariable Integer id) throws ResourceNotFoundException {
         return  categoriaService.buscarCategoriaPorId(id);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminarCategoria(@PathVariable Integer id){
-        ResponseEntity<String> respuesta = null;
+    public ResponseEntity<Void> eliminarCategoria(@PathVariable Integer id) throws ResourceNotFoundException{
         categoriaService.eliminarCategoria(id);
-        respuesta = ResponseEntity.status(HttpStatus.OK).body("Eliminado correctamente");
-        return respuesta;
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 
     @GetMapping
-    public Collection<CategoriaDTO> listarCategorias(){
+    public List<Categoria> listarCategorias(){
         return categoriaService.listarCategorias();
     }
 }
