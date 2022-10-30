@@ -16,7 +16,7 @@ const LogIn =()=>{
     const compararDatos = (event) => {
         event.preventDefault();
         console.log(loginState.contrasenia)
-        loginState.usuario === prevLoginState.usuario && loginState.contrasenia == prevLoginState.contrasenia ? window.location = "/MenuPrincLogin"
+        loginState.usuario === prevLoginState.usuario && loginState.contrasenia === prevLoginState.contrasenia ? window.location = "/MenuPrincLogin"
          : alert("Por favor vuelva a intentarlo, sus credenciales son inválidas")
         
     }
