@@ -1,0 +1,23 @@
+.main-menuprincipal{
+    margin: 5px;
+
+
+}
+.avatar{
+    margin-right: 20px;
+    float: right;
+  
+}
+.div-header-menuprinc{
+    display: flex;
+    width: 100%;
+}
+.text-avatar{
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    font-size: 23px;
+    font-weight: lighter;
+    
+}
+

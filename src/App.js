@@ -7,7 +7,7 @@ import LogIn from "./Components/LogIn";
 // import Listado from "./Components/Listado";
 import MenuPrincLogin from "./Components/MenuPrincLogin"; 
 import Footer from "./Components/Footer";
-
+import Avatar from "@material-ui/core/Avatar"; 
 import "./App.css"; 
 const App = () => {
   
@@ -18,12 +18,12 @@ const App = () => {
           <Route path="/" element={<NavBar/>}>
           <Route index element = {<Home/>}></Route>
           <Route path="/home" element= {<Home/>}></Route>
-          <Route path="/Login" element= {<LogIn/>}></Route>
-          <Route path="/MenuPrincLogin" element = {<MenuPrincLogin/>}></Route>
+          <Route path="/Login" element= {<LogIn/>}></Route></Route>
+          <Route path="/MenuPrincLogin" element = {<MenuPrincLogin/>}></Route> 
           <Route path="/registro" element = {<Registro/>}></Route>
-          </Route>
-        </Routes>
+      </Routes>
       </BrowserRouter>
+      {/* <Avatar src="./gatonegro.png" />  */}
       {/* <Categoria/>
       <Listado/> */}
     <Footer/>
