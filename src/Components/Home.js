@@ -4,6 +4,8 @@ import "../Components/Home.css";
 import React, { useState} from 'react';
 import Categoria from './Categoria';
 import Listado from './Listado';
+import {BsCalendarEvent} from 'react-icons/bs';
+import {MdLocationPin} from 'react-icons/md';
 
 const Home =()=>{
 const[startDate, setStartDate] = useState(); 
@@ -24,12 +26,14 @@ return(
                     <option>Capital Federal, Buenos Aires, Argentina</option>
                     <option>Villa La Angostura, Neuquen, Argentina</option>
                 </select>
+                <MdLocationPin />
                 <DatePicker placeholderText="CheckIn - CheckOut" selectsRange={true}
                     onChange = {onChangeDateHandler}
                     startDate={startDate}
                     endDate={endDate}
                     dateFormat="dd MM yyyy"/>
                 <button type="submit">BUSCAR </button>
+                <BsCalendarEvent />
             </div>
         </form>
         </div>
