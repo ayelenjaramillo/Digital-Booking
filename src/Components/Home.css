@@ -39,7 +39,12 @@ button{
     height: 40px;
     border-style: double;
     border: #1DBEB4;
-    
+    font-weight: bold;
+
+}
+.b-home{
+    background-color: #1DBEB4;
+    color: white;
 }
 select{
     width: 300px;

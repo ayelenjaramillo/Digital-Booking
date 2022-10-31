@@ -1,18 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "../Components/Registro.css"
-
+import Componente from "../assets/Componente.png"; 
 const Registro =()=>{
     return(
         <div>
-        
+            <div className="r-navbar">
+        <Link to="/Home"><img  src={Componente} alt="title"/></Link>
+        <button className="r-boton"><Link to = "/LogIn"> Iniciar Sesion </Link></button>
+        <Outlet/></div>
            <div className="container_principal">
             <form className="formulario">
             <p className="text"> Crear cuenta</p>
-                <label> Nombre</label>
+                <label className="r-l-especial"> Nombre</label><label> Apellido </label>
                 <br/>
-                <input type ="text"/>
-                <label> Apellido </label>
-                <input type="text"/>
+                <input className="r-input-especial" type ="text"/>
+                <input className="r-input-especial" type="text"/>
                 <br/>
                 <label> Email</label>
                 <br/>
@@ -31,7 +33,7 @@ const Registro =()=>{
                 </button>
                 <br/>
                 <p>Ya tenes cuenta?
-                <Link to="/LogIn" className="text">
+                <Link to="/LogIn" className="r-text">
                     Iniciar sesion
                 </Link></p>
                 </form>

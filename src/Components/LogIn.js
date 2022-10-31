@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "../Components/Login.css"; 
+import Componente from "../assets/Componente.png"; 
 const LogIn =()=>{
 
     const prevLoginState = {
@@ -23,7 +24,10 @@ const LogIn =()=>{
 
     return(
     <div> 
-        
+         <div className="r-navbar">
+        <Link to="/Home"><img  src={Componente} alt="title"/></Link>
+        <button className="l-botonnavbar" ><Link to = "/Registro"> Crear Cuenta </Link></button>
+        <Outlet/></div>
         <div className="container_principal"> 
             <form className="formulario" onSubmit={compararDatos}>
                 <h3>Iniciar sesion</h3>
@@ -48,9 +52,9 @@ const LogIn =()=>{
                 </button>
                 </Link>
                 <br/>
-                <p> Aun no tenes cuenta? 
-                <Link to="/Registro" className="text">
-                  Registrarme
+                <p> Aun no tenes cuenta?
+                <Link to="/Registro" className="l-text">
+          Registrarme
                 </Link>  </p>
             </form>
         </div>

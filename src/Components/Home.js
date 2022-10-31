@@ -29,7 +29,7 @@ return(
                     startDate={startDate}
                     endDate={endDate}
                     dateFormat="dd MM yyyy"/>
-                <button type="submit">BUSCAR </button>
+                <button className = "boton-principal"type="submit">BUSCAR </button>
             </div>
         </form>
         </div>

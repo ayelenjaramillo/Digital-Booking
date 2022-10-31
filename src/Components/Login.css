@@ -6,22 +6,44 @@
     transform: translate(-50%, -50%);
     padding: 40px;
     width: 80%;
-    text-align: center;
-    font-weight: bolder;
     color: black;
     
 }
-.container_secundario{
-    text-align: center;
-}
+
 .boton_principal{
     background-color: #1CB9C2;
     margin: 20px;
     border-radius: 3px;
     width: 200px;
     color: white;
-}
-.text{
-    color: black;
     
+}
+.l-botonnavbar{
+    background-color: white; 
+    color: #1CB9C2;
+    border-style: double;
+    margin: 30px 40px;
+}
+
+.l-text{
+    color: black;
+  
+}
+h3{
+    color: #1CB9C2;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 0 auto;
+}
+input, label{
+    padding: 12px;
+    width: 350px;
+    text-align: start;
+    border-color: #DBDBDC;
+}
+a{color: unset;
+ text-decoration: unset;}
+.formulario{
+    width: 60%;
 }

@@ -8,7 +8,7 @@ import './Footer.css';
 
 const Footer =() =>(
     <div className="footer"> 
-        <p><img className="image" src={logo} alt="footerimg"/></p> 
+        <p className="f-p-text">© 2021 Digital Booking</p> 
         <ul className="f-list">
             <li className="list"><a href="#"><img className="image"src={FB} alt="fb"/></a></li>
             <li className="list"><a href="#"><img className="image"src ={IG} alt="ig"/></a></li>
