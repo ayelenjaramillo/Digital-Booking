@@ -1,6 +1,8 @@
 import { Link, Outlet } from "react-router-dom";
 import "../Components/Registro.css"
 import Componente from "../assets/Componente.png"; 
+import { BsEyeSlash } from 'react-icons/bs';
+
 const Registro =()=>{
     return(
         <div>
@@ -22,11 +24,12 @@ const Registro =()=>{
                 <br/>
                 <label>Contraseña</label>
                 <br/>
-                <input type="password"/>
+                <input type="password"/><BsEyeSlash />
                 <br/>
                 <label> Confirmar Contraseña</label>
                 <br/>
                 <input type="password"/>
+                
                 <br/>
                 <button className="boton_principal">
                 Crear Cuenta
