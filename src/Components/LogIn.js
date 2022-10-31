@@ -1,22 +1,29 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../Components/Login.css"; 
-const LogIn =()=>{
 
+const LogIn =()=>{
+    //Variable/hook para redirigir despues de hacer las validaciones
+    const navigate = useNavigate();
+
+    //Usuario previo para comparar con el nuevo y ver las validaciones
     const prevLoginState = {
         usuario:"usuario@hotmail.com", 
         contrasenia: "123456"
     }; 
     
+    //Estado donde se guardara el usuario del Login
     const[loginState, setLoginState] = useState({
         usuario:"", 
         contrasenia: ""
     });     
 
+    //Funcion para comparar el usuario nuevo con el guardado
     const compararDatos = (event) => {
         event.preventDefault();
         console.log(loginState.contrasenia)
-        loginState.usuario === prevLoginState.usuario && loginState.contrasenia === prevLoginState.contrasenia ? window.location = "/MenuPrincLogin"
+        loginState.usuario === prevLoginState.usuario && loginState.contrasenia === prevLoginState.contrasenia ? navigate("/MenuPrincLogin", { state: {loginState: loginState}})
          : alert("Por favor vuelva a intentarlo, sus credenciales son inválidas")
         
     }
@@ -42,11 +49,10 @@ const LogIn =()=>{
                     setLoginState({...loginState, contrasenia: value})}}/>
                     
                 <br/>
-                <Link to="/MenuPrincLogin" state={{ loginState: loginState }}>
-                <button className="boton_principal" disabled ={!loginState.contrasenia || !loginState.usuario}>
-                INGRESAR
+
+                <button className="boton_principal">
+                    INGRESAR
                 </button>
-                </Link>
                 <br/>
                 <p> Aun no tenes cuenta? 
                 <Link to="/Registro" className="text">
