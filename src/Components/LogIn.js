@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "../Components/Login.css"; 
+import { BsEyeSlash } from 'react-icons/bs';
 
 const LogIn =()=>{
     //Variable/hook para redirigir despues de hacer las validaciones
@@ -47,7 +48,7 @@ const LogIn =()=>{
                 <input type="password" minLength={6} required onChange={(event)=>{
                     const value = event.target.value; 
                     setLoginState({...loginState, contrasenia: value})}}/>
-                    
+                <BsEyeSlash />    
                 <br/>
 
                 <button className="boton_principal">
