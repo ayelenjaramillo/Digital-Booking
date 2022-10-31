@@ -5,12 +5,13 @@
     height: 500px;
     color: #545776;
     font-size: 24px;
-   
+    overflow-x: hidden;
 }
 
 .categorias {
    
     display: flex;
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;

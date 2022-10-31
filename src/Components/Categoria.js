@@ -7,13 +7,13 @@ const Categoria = () => {
 return (
 <div className= "main">
     <h2>Buscar por tipo de Alojamiento</h2>
-    <p className="categorias">
+    <div className="categorias">
     {
         data.map((categoria) => (
           <Card key={categoria.id} categoria={categoria}/>
         ))
     }
-    </p>
+    </div>
 </div>
 )
 }
