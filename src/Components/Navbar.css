@@ -15,11 +15,13 @@
     float: right;
     justify-content:space-around;
     padding:0.5rem;
+    
 }
 
 .h-list button{
     border: #1DBEB4;
     border-style: double;
+    font-weight: bold;
 }
 
 .h-list a{

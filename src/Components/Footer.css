@@ -14,6 +14,7 @@
     float: right;
     justify-content:space-around;
     padding:0.5rem;
+    margin: 10px;
 }
 
 .f-list li{
@@ -21,4 +22,8 @@
     float: right;
     justify-content:space-around;
     padding:0.5rem;
+}
+.f-p-text{
+    color: white;
+    padding: 30px;
 }

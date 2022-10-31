@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import "../Components/Login.css"; 
+import Componente from "../assets/Componente.png"; 
 import { useNavigate } from "react-router-dom";
 import "../Components/Login.css"; 
-import { BsEyeSlash } from 'react-icons/bs';
+
 
 const LogIn =()=>{
     //Variable/hook para redirigir despues de hacer las validaciones
@@ -31,7 +33,10 @@ const LogIn =()=>{
 
     return(
     <div> 
-        
+         <div className="r-navbar">
+        <Link to="/Home"><img  src={Componente} alt="title"/></Link>
+        <button className="l-botonnavbar" ><Link to = "/Registro"> Crear Cuenta </Link></button>
+        <Outlet/></div>
         <div className="container_principal"> 
             <form className="formulario" onSubmit={compararDatos}>
                 <h3>Iniciar sesion</h3>
@@ -48,16 +53,16 @@ const LogIn =()=>{
                 <input type="password" minLength={6} required onChange={(event)=>{
                     const value = event.target.value; 
                     setLoginState({...loginState, contrasenia: value})}}/>
-                <BsEyeSlash />    
+                    
                 <br/>
 
                 <button className="boton_principal">
                     INGRESAR
                 </button>
                 <br/>
-                <p> Aun no tenes cuenta? 
-                <Link to="/Registro" className="text">
-                  Registrarme
+                <p> Aun no tenes cuenta?
+                <Link to="/Registro" className="l-text">
+          Registrarme
                 </Link>  </p>
             </form>
         </div>
