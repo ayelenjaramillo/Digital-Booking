@@ -5,7 +5,7 @@ import './Navbar.css'
 const NavBar =()=> {
     return(
 <>
-<header className="h-title">
+<header className="header-navbar">
   <h2 ><Link to="/Home"><img className="image" src={Componente} alt="title"/></Link></h2>  
   <ul className="h-list">  
     <li><button><Link to = "/LogIn"> Iniciar Sesion </Link></button></li>

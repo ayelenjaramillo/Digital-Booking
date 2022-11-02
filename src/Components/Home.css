@@ -4,18 +4,22 @@
     color: white;
     display: flex;
     justify-content: center;
-    padding: 30px 20px;
-    
+    /* padding: 30px 20px; */
+    padding-top: 5rem;
+    margin-top: 0%;
+    position: relative;
+    z-index: -1;
+    padding-bottom: 1rem;
 }
 
 .h-sec{
     background-color: #545776;
     display: flex;
-    margin: 0 5px;
+    /* margin: 0 5px; */
     
 }
 input{
-    height: 40px;
+    /* height: 40px; */
 }
 
 form{

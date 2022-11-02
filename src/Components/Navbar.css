@@ -1,12 +1,15 @@
 /******* Header *******/
 
 /* Title */
-.h-title{
+.header-navbar{
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 0.6rem 2rem 0.2rem;
-    background-color: white; 
+    /* padding: 0.6rem 2rem 0.2rem; */
+    background-color: rgb(75, 25, 114); 
+    position: fixed;
+    top: 0%;
+    width:100%;
 }
 
 /* List */
@@ -29,7 +32,7 @@
     color: #1DBEB4;
 
 }
-@media(max-width:800px){
+/* @media(max-width:800px){
     .image{
         width: 50%;
     }
@@ -40,4 +43,4 @@
 .image{
     width: 50%;
 }
-}
+} */
