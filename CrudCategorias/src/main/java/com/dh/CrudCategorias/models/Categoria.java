@@ -3,7 +3,8 @@ package com.dh.CrudCategorias.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name="categorias")
+@Table(name = "Categorias")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Categoria {
 
     @Id //@EmbededldId para clave compuesta

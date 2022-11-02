@@ -7,8 +7,6 @@ import org.junit.Test;
 import org.junit.After;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.jupiter.api.AssertEquals.assertEquals;
-
 
 //https://chromedriver.chromium.org/getting-started
 public class Browser {
