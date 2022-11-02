@@ -5,6 +5,7 @@ import React, { useState} from 'react';
 import Categoria from './Categoria';
 import Listado from './Listado';
 
+
 const Home =()=>{
 const[startDate, setStartDate] = useState(); 
 const [endDate, setEndDate]= useState(); 
@@ -19,17 +20,19 @@ return(
             <h2>Busca ofertas en hoteles, casas y mucho mas</h2>
             <div className="h-sec">
                 <select name="ciudad">
-                    <option>Chubut</option>
-                    <option>Cordoba</option>
-                    <option>Buenos Aires</option>
-                    <option>Neuquen</option>
+                    <option>Trelew, Chubut, Argentina</option>
+                    <option>Rio Cuarto, Cordoba, Argentina</option>
+                    <option>Capital Federal, Buenos Aires, Argentina</option>
+                    <option>Villa La Angostura, Neuquen, Argentina</option>
                 </select>
-                <DatePicker selectsRange={true}
+               
+                <DatePicker placeholderText="CheckIn - CheckOut" selectsRange={true}
                     onChange = {onChangeDateHandler}
                     startDate={startDate}
                     endDate={endDate}
                     dateFormat="dd MM yyyy"/>
-                <button type="submit">BUSCAR </button>
+                <button className = "boton-principal"type="submit"> BUSCAR </button>
+                
             </div>
         </form>
         </div>

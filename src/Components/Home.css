@@ -11,20 +11,38 @@
 .h-sec{
     background-color: #545776;
     display: flex;
+    margin: 0 5px;
     
+}
+input{
+    height: 40px;
 }
 
 form{
     text-align: center;
     background-color:#545776;
+    
 }
 .react-datepicker-wrapper {
     width: unset;
-   
-  } 
+    display: flex;
+    height: 40px;
+    margin: 0 10px;
+    
+} 
 
 button{
     width: 200px;
+    background-color: white;
+    color:#1DBEB4;
+    border-radius: 10px;
+    height: 40px;
+    border-style: double;
+    border: #1DBEB4;
+    font-weight: bold;
+
+}
+.b-home{
     background-color: #1DBEB4;
     color: white;
 }

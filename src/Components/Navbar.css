@@ -15,15 +15,18 @@
     float: right;
     justify-content:space-around;
     padding:0.5rem;
+    
 }
 
 .h-list button{
-    border: white;
+    border: #1DBEB4;
+    border-style: double;
+    font-weight: bold;
 }
 
 .h-list a{
     text-decoration: none;
-    color: white;
+    color: #1DBEB4;
 
 }
 @media(max-width:800px){
