@@ -47,16 +47,22 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- VER SELENIUM DEPENDENCIA-->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.141.59</version>
+    	</dependency>
 	</dependencies>
 
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+		<!-- <plugins>
+        	<plugin>
+        	<groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-		</plugins>
-		</build>
+		</plugins>-->
+	</build>
 
 </project>

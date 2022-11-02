@@ -6,15 +6,13 @@ import javax.persistence.*;
 @Table(name="categorias")
 public class Categoria {
 
-    @Id
+    @Id //@EmbededldId para clave compuesta
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "categoria_sequence")
     @SequenceGenerator(name = "categoria_sequence", sequenceName = "categoria_sequence", allocationSize = 1)
     private Integer id;
-    @Column
     private String titulo;
-    @Column
     private String descripcion;
-    @Column
+    @Column (name= "url_imagen") // Car= aclaro name porque en la tabla es diferente el nombre y puede traer problemas
     private String urlImagen;
 
     //agregando constructor vacío por requerimiento
