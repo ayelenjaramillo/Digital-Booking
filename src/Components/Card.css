@@ -4,6 +4,8 @@
     grid-gap: 1rem;
     place-content: center;
     padding: 5px 5px;
+    z-index: -1;
+
 }
 
 .card{
