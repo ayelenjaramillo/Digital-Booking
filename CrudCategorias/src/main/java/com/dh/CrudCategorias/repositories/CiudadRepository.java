@@ -1,8 +1,8 @@
 package com.dh.CrudCategorias.repositories;
-import com.dh.CrudCategorias.models.Producto;
+import com.dh.CrudCategorias.models.Ciudad;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductoRepository extends JpaRepository <Producto, Integer> {
+public interface CiudadRepository extends JpaRepository<Ciudad, Integer> {
 }

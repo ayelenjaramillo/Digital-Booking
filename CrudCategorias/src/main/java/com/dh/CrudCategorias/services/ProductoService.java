@@ -6,8 +6,8 @@ import com.dh.CrudCategorias.repositories.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
+
 
 @Service
 public class ProductoService {
@@ -20,7 +20,7 @@ public class ProductoService {
         return productoRepository.save(producto);
     }
 
-    @Transactional
+    //@Transactional ¿si o no?
     public Producto actualizarProducto(ProductoDTO productoDTO, Integer id) throws ResourceNotFoundException {
         Producto producto = buscarProductoPorId(id);
         producto.setNombre(productoDTO.getNombre());
@@ -30,7 +30,7 @@ public class ProductoService {
 
     }
 
-    @Transactional
+    //@Transactional ¿si o no?
     public void eliminarProducto(Integer id) throws ResourceNotFoundException{
         Producto producto = buscarProductoPorId(id); //command option V
         productoRepository.delete(producto);

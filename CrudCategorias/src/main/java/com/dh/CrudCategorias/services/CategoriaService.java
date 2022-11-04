@@ -17,8 +17,11 @@ public class CategoriaService {
 
     @Autowired
     CategoriaRepository categoriaRepository;
-    @Autowired
-    ObjectMapper mapper;
+
+
+
+    //@Autowired
+    //ObjectMapper mapper;
     //@Transactional /metodos con efecto
     public Categoria agregarCategoria(CategoriaDTO categoriaDTO) {
         Categoria categoria = new Categoria(categoriaDTO);
@@ -29,7 +32,7 @@ public class CategoriaService {
         Categoria categoria = buscarCategoriaPorId(id);
         categoria.setTitulo(categoriaDTO.getTitulo());
         categoria.setDescripcion(categoriaDTO.getDescripcion());
-        categoria.setUrlImagen(categoriaDTO.getUrlImagen());
+        /*categoria.setUrlImagen(categoriaDTO.getUrlImagen());*/
 
         return categoriaRepository.save(categoria);
 
