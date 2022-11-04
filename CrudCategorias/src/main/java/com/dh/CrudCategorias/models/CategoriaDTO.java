@@ -14,6 +14,7 @@ public class CategoriaDTO {
         this.urlImagen = urlImagen;
     }
 
+
     public String getTitulo() {
         return titulo;
     }

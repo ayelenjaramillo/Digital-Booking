@@ -1,20 +1,22 @@
 package com.dh.CrudCategorias.models;
-
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "Categorias")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+//@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Categoria {
 
     @Id //@EmbededldId para clave compuesta
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "categoria_sequence")
-    @SequenceGenerator(name = "categoria_sequence", sequenceName = "categoria_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String titulo;
     private String descripcion;
-    @Column (name= "url_imagen") // Car= aclaro name porque en la tabla es diferente el nombre y puede traer problemas
-    private String urlImagen;
+
+    //@OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL) //
+    private List<Producto> productos;
 
     //agregando constructor vacío por requerimiento
     public Categoria() {
@@ -23,21 +25,22 @@ public class Categoria {
     public Categoria(CategoriaDTO categoriaDTO) {
         this.titulo= categoriaDTO.getTitulo();
         this.descripcion= categoriaDTO.getDescripcion();
-        this.urlImagen= categoriaDTO.getUrlImagen();
+        //this.urlImagen= categoriaDTO.getUrlImagen();
 
     }
 
-    public Categoria(String titulo, String descripcion, String urlImagen) {
+    //eel que no tiene id lo utilizo para cargar info en la bbd
+    public Categoria(String titulo, String descripcion) {
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.urlImagen = urlImagen;
+        //this.urlImagen = urlImagen;
     }
 
-    public Categoria(Integer id, String titulo, String descripcion, String urlImagen) {
+    public Categoria (Integer id, String titulo, String descripcion) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.urlImagen = urlImagen;
+        //this.urlImagen = urlImagen;
     }
 
     public Integer getId() {
@@ -52,9 +55,9 @@ public class Categoria {
         return descripcion;
     }
 
-    public String getUrlImagen() {
+    /*    public String getUrlImagen() {
         return urlImagen;
-    }
+    }*/
 
     public void setId(Integer id) {
         this.id = id;
@@ -62,12 +65,15 @@ public class Categoria {
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
-
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
-    public void setUrlImagen(String urlImagen) {
+   /* public void setUrlImagen(String urlImagen) {
         this.urlImagen = urlImagen;
-    }
+    }*/
+
+
+
+
+
 }
