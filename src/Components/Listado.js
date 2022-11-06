@@ -7,9 +7,9 @@ export default function Listado(props) {
     return (
     <div >
         <div>
-            <h2 className='title'>Recomendaciones</h2>
+            <h2>Recomendaciones</h2>
         </div>
-        <div className='container'>
+        <div className='contenedor'>
             {Data.map((card) => (
             <Card 
             key={card.id}

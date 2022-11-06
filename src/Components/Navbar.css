@@ -12,10 +12,15 @@
     width:100%;
     overflow: hidden;
     z-index: 1;
+    padding: 1rem;
 }
 
 .navBar-mobile{
     display: none;
+}
+
+.image2{
+  display: none;
 }
 
 /* List */
@@ -28,9 +33,12 @@
 }
 
 .h-list button{
-    border: #1DBEB4;
-    border-style: double;
+    background-color: white;
+    color: #1DBEB4;
+    border: 0.1rem solid #1DBEB4;
     font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
 }
 
 .h-list a{
@@ -58,7 +66,10 @@
     .navBar-mobile{
         display: flex;
         align-items: center;
+        justify-content: space-around;
+        margin-right: 1rem;
     }
+
 
     .h-list{
         display: none;
@@ -106,6 +117,7 @@
       
       .menuNav h3 {
         padding-bottom: 1rem;
+        padding-top: 5rem;
         text-align: right;
         padding-right: 1rem;
         background-color: #1DBEB4;
@@ -114,23 +126,41 @@
 
       }
 
-      .menuNav button{
+      .menuNav div{
         text-align: left;
         padding-left: 1rem;
-        padding-bottom: 6rem;
-        padding-top: 0.5rem;
+        /* padding-bottom: 6rem;
+        padding-top: 0.5rem; */
         background-color: #1DBEB4;
         width: 100%;
         border-radius: 0;
         color: white;
+        position: absolute;
       }
 
       .menuNav li:nth-child(3){
         padding-top: 1rem;
       }
     
+      .image{
+        display: none;
+      }
+
+      .image2{
+        display: flex;
+      }
       /* .navBar button {
         background: transparent;;
         border: none;
       } */
+}
+
+@media (max-width: 991px){
+  .image{
+    display: none;
+  }
+
+  .image2{
+    display: flex;
+  }
 }
