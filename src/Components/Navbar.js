@@ -4,6 +4,10 @@ import IconMob from "../assets/logo1.png";
 import './Navbar.css';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import React, {useState} from "react";
+import {BsFacebook} from 'react-icons/bs';
+import {FaLinkedinIn} from 'react-icons/fa';
+import {BsInstagram} from 'react-icons/bs';
+import {AiOutlineTwitter} from 'react-icons/ai';
 
 
 
@@ -41,6 +45,10 @@ const NavBar =()=> {
       <li><Link to = "/Registro"> Crear Cuenta </Link></li>
       <hr></hr>
       <li><Link to = "/LogIn"> Iniciar Sesion </Link></li>
+      <li className="redes-mobile"><BsInstagram size={20}/></li>
+      <li className="redes-mobile"><AiOutlineTwitter size={20}/></li>
+      <li className="redes-mobile"><FaLinkedinIn size={20}/></li>
+      <li className="redes-mobile"><BsFacebook size={20}/></li>
     </ul>
   </div>
 </header>
