@@ -7,7 +7,7 @@ export default function Listado(props) {
     return (
     <div className='listado'>
         <div>
-            <h2>Buscar por tipo de alojamiento</h2>
+            <p className='titlecat'>Buscar por tipo de alojamiento</p>
         </div>
         <div className='contenedor'>
             {Data.map((card) => (

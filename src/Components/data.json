@@ -2,25 +2,25 @@
     {
         "id": "1",
         "titulo": "Hoteles",
-        "descripcion": "bla",
+        "descripcion": "807.107 hoteles",
         "url_imagen": "/images/hotel.png"
     },
     {
         "id": "2",
         "titulo": "Hostels",
-        "descripcion": "bla",
+        "descripcion": "807.107 hostels",
         "url_imagen": "../Hostel.jpg"
     },
     {
         "id": "3",
         "titulo": "Departamentos",
-        "descripcion": "bla",
+        "descripcion": "807.107 departamentos",
         "url_imagen": "../departamento.jpg"
     },
     {
         "id": "4",
         "titulo": "Bed and Breakfast",
-        "descripcion": "bla",
+        "descripcion": "807.107 bed & breakfast",
         "url_imagen": "../bed_and_breakfast.jpg"
     }
     ]
