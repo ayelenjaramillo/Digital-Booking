@@ -14,6 +14,11 @@
 }
 
 .rightproductdetails{
-    text-align: center;
+    color: #383B58;
 }
+
+.rightproductdetails p:first-child{
+    font-weight: bold;
+}
+
 

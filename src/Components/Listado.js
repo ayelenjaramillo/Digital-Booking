@@ -1,19 +1,19 @@
-import React from 'react';
 import Card from './Card';
-import Data from './data.json';
 import './Listado.css';
+import Data from './data.json';
+
 
 export default function Listado(props) {
     return (
-    <div >
+    <div className='listado'>
         <div>
-            <h2>Recomendaciones</h2>
+            <h2>Buscar por tipo de alojamiento</h2>
         </div>
         <div className='contenedor'>
             {Data.map((card) => (
             <Card 
             key={card.id}
-            producto = {card.producto}
+            card = {card}
             />
         ))}
         </div>

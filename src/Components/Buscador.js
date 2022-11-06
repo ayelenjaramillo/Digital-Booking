@@ -2,8 +2,6 @@ import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import "../Components/Buscador.css"; 
 import React, { useState} from 'react';
-import Categoria from './Categoria';
-import Listado from './Listado';
 
 
 const Buscador =()=>{
@@ -17,22 +15,21 @@ return(
     <div>
         <div className="h-principal">
         <form> 
-            <h2>Busca ofertas en hoteles, casas y mucho mas</h2>
+            <p>Busca ofertas en hoteles, casas y mucho más</p>
             <div className="h-sec">
                 <select name="ciudad">
+                    <option disabled selected hidden >A dónde vamos?</option>
                     <option>Trelew, Chubut, Argentina</option>
                     <option>Rio Cuarto, Cordoba, Argentina</option>
                     <option>Capital Federal, Buenos Aires, Argentina</option>
                     <option>Villa La Angostura, Neuquen, Argentina</option>
                 </select>
-               
-                <DatePicker placeholderText="CheckIn - CheckOut" selectsRange={true}
+                <DatePicker placeholderText="Check in - Check out" selectsRange={true}
                     onChange = {onChangeDateHandler}
                     startDate={startDate}
                     endDate={endDate}
                     dateFormat="dd MM yyyy"/>
-                <button className = "boton-principal"type="submit"> BUSCAR </button>
-                
+                <button className = "boton-principal"type="submit"> Buscar </button>
             </div>
         </form>
         </div>

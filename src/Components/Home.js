@@ -6,8 +6,8 @@ import Listado from './Listado';
 export default function Home(props) {
     return (
     <div className="home">
-        {/* <Buscador/> */}
+        <Buscador/>
         {/* <Categoria/> */}
-        {/* <Listado/> */}
+        <Listado/>
     </div>
 )}

@@ -11,7 +11,7 @@
     top: 0%;
     width:100%;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
     padding: 1rem;
 }
 
@@ -60,6 +60,16 @@
     width: 50%;
 }
 } */
+
+@media (max-width: 991px){
+  .image{
+    display: none;
+  }
+
+  .image2{
+    display: flex;
+  }
+}
 
 @media (max-width: 731px){
 
@@ -164,12 +174,3 @@
       }
 }
 
-@media (max-width: 991px){
-  .image{
-    display: none;
-  }
-
-  .image2{
-    display: flex;
-  }
-}
