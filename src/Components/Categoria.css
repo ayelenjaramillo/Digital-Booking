@@ -1,10 +1,12 @@
 .main {
-     display: flex;
+    display: flex;
     flex-direction: column;
     height: 500px;
     color: #545776;
     font-size: 24px;
     width: 100%;
+    overflow: hidden;
+    margin: 10px;
  
 }
 
@@ -13,9 +15,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     background: #FFFFFF;
-    margin: 5px;
-    width: 100%;
-  
+    overflow: hidden;
+    width: 95%; 
 }
