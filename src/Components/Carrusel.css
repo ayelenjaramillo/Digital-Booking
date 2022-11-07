@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.principal{
+    padding: 1em;
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+}
+.gallery{
+    padding-bottom:3em; 
+    padding-top: 1em;
+    margin-right: 6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 246px;
+    gap:1rem; 
+    
+}
+.gallery-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-alone{
+    width: 40%;
+    margin:1rem
+}

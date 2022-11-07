@@ -20,6 +20,7 @@ const MenuPrincLogin =(props)=>{
             <Outlet/>
             <p className="text-avatar">Hola, {usuario}!
         <Avatar src={usuario?usuario: ""} className="avatar">{usuario[0].toUpperCase()}</Avatar></p>
+        <button><Link to="/Home">X</Link></button>
       </div>
       <Home/>
         </div>

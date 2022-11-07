@@ -24,7 +24,7 @@ const Registro =()=>{
                 <br/>
                 <label>Contraseña</label>
                 <br/>
-                <input type="password"/><BsEyeSlash />
+                <input type="password" /><BsEyeSlash />
                 <br/>
                 <label> Confirmar Contraseña</label>
                 <br/>
