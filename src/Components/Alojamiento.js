@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "../Components/Alojamiento.css"; 
 import "react-datepicker/dist/react-datepicker.css"; 
 import DatePicker from "react-datepicker";
+import Carrusel from "./Carrusel";
 
 const Alojamiento=()=>{
     const[startDate, setStartDate] = useState(); 
@@ -37,7 +38,7 @@ return(
 
     </span>
    </div> 
-  
+    <Carrusel/>
    <p>-----------AQUI IRIA EL BLOQUE DE IMAGENEs---------------</p>
     <span>
         <h3>Alojate en el corazon de Location</h3>
