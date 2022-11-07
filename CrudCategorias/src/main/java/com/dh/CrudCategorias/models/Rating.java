@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="Puntuaciones")
-public class Puntuacion {
+public class Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //@SequenceGenerator(name = "Imagen_sequence", sequenceName = "Imagen_sequence", allocationSize = 1)

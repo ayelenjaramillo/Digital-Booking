@@ -1,40 +1,39 @@
 package com.dh.CrudCategorias.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name= "Imagenes")
-public class Imagen {
+public class Image {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //@SequenceGenerator(name = "Imagen_sequence", sequenceName = "Imagen_sequence", allocationSize = 1)
     private Integer id;
     @Column
-    private String titulo;
+    private String title;
     private String url;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "productos_id", referencedColumnName = "id")
     @JsonIgnore
-    private Producto producto;
+    private Product product;
 
 
-    public Imagen(){}
+    public Image(){}
 
-    public Imagen(ImagenDTO imagenDTO) {
+    public Image(ImageDTO imagenDTO) {
     }
 
-    public Imagen(String titulo, String url) {
-        this.titulo = titulo;
+    public Image(String title, String url) {
+        this.title = title;
         this.url = url;
     }
 
-    public Imagen(String titulo, String url, Producto producto) {
+    public Image(String title, String url, Product product) {
 
-        this.titulo = titulo;
+        this.title = title;
         this.url = url;
-        this.producto= producto;
+        this.product = product;
     }
 
     public Integer getId() {return id;}
@@ -43,12 +42,12 @@ public class Imagen {
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getTitle() {
+        return title;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getUrl() {
@@ -59,10 +58,10 @@ public class Imagen {
         this.url = url;
     }
 
-    public Producto getProducto() {return producto;}
+    public Product getProduct() {return product;}
 
-    public void setProducto(Producto producto) {
-        this.producto = producto;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
 

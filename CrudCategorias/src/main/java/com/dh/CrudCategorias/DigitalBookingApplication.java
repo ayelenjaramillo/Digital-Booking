@@ -5,11 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication
-public class CrudCategoriasApplication {
+public class DigitalBookingApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(CrudCategoriasApplication.class, args);
+		SpringApplication.run(DigitalBookingApplication.class, args);
 
 
 

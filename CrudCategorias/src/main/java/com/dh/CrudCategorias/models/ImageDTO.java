@@ -1,17 +1,17 @@
 package com.dh.CrudCategorias.models;
 import com.fasterxml.jackson.annotation.JsonCreator;
 
-public class ImagenDTO {
+public class ImageDTO {
 
     private Integer id;
     private String titulo;
     private String url;
 
-    public ImagenDTO() {
+    public ImageDTO() {
     }
 
     @JsonCreator
-    public ImagenDTO(String titulo, String url) {
+    public ImageDTO(String titulo, String url) {
         this.titulo = titulo;
         this.url = url;
     }

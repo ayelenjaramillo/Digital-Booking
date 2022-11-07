@@ -13,7 +13,7 @@ import java.util.Set;
 //@ToString
 //Para agregar un modificador de acceso a cada campo (instancia), use @FieldDefaults(level=AccessLevel.PRIVATE). Cualquier campo que aún no tenga un modificador de acceso (es decir, cualquier campo que parezca un paquete de acceso privado) se cambia para tener el modificador de acceso apropiado.
 //@FieldDefaults(level = AccessLevel.PRIVATE)
-public class ProductoDTO extends Producto{
+public class ProductDTO extends Product {
 
     //como un DTO podia contener información de múltiples fuentes/tablas y concentrarlas en una única clase simple,
     // quisiera que el producto DTO traiga las caracteristicas de alguna forma // duda sobre caracteristica como clase // pueden ir seteadas dentro de productoDTO?.
@@ -24,13 +24,13 @@ public class ProductoDTO extends Producto{
     private Integer categoriaEstablecimiento;
     private Integer categoria_id;
     private Integer ciudad_id;
-    private Set<Imagen> imagenes_id = new HashSet<>();
+    private Set<Image> imagenes_id = new HashSet<>();
 
 
-    public ProductoDTO(){}
+    public ProductDTO(){}
 
     @JsonCreator
-    public ProductoDTO(String nombre, String direccion,Integer categoriaEstablecimiento, Integer categoria_id, Integer ciudad_Id,Set<Imagen> imagenes_id) {
+    public ProductDTO(String nombre, String direccion, Integer categoriaEstablecimiento, Integer categoria_id, Integer ciudad_Id, Set<Image> imagenes_id) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.categoriaEstablecimiento= categoriaEstablecimiento;
@@ -54,7 +54,7 @@ public class ProductoDTO extends Producto{
 
     public Integer getCiudad_id() {return ciudad_id;}
 
-    public Set<Imagen> getImagenes() {return imagenes_id;}
+    public Set<Image> getImagenes() {return imagenes_id;}
 
 
    /* public Producto toProducto (){

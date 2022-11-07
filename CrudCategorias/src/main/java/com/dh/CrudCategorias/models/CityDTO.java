@@ -2,17 +2,17 @@ package com.dh.CrudCategorias.models;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 
-public class CiudadDTO {
+public class CityDTO {
 
 
     private String nombre;
     private String pais;
 
-    public CiudadDTO() {
+    public CityDTO() {
     }
 
     @JsonCreator
-    public CiudadDTO(String nombre, String pais) {
+    public CityDTO(String nombre, String pais) {
         this.nombre = getNombre();
         this.pais = getPais();
     }

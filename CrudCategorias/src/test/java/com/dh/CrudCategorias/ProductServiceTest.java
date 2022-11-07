@@ -1,22 +1,17 @@
 package com.dh.CrudCategorias;
 import com.dh.CrudCategorias.models.*;
 //import com.dh.CrudCategorias.repositories.CaracteristicaRepository;
-import com.dh.CrudCategorias.repositories.CategoriaRepository;
-import com.dh.CrudCategorias.repositories.CiudadRepository;
-import com.dh.CrudCategorias.repositories.ImagenRepository;
-import com.dh.CrudCategorias.repositories.ProductoRepository;
+import com.dh.CrudCategorias.repositories.CategoryRepository;
+import com.dh.CrudCategorias.repositories.CityRepository;
+import com.dh.CrudCategorias.repositories.ImageRepository;
+import com.dh.CrudCategorias.repositories.ProductRepository;
 import org.junit.FixMethodOrder;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.HashSet;
 import java.util.Set;
 
 //@AutoConfigureMockMvc //acordate de tirar las excepciones que pide
@@ -27,27 +22,27 @@ import java.util.Set;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 
-    public class ProductoServiceTest {
+    public class ProductServiceTest {
 
         //@Autowired
         //private MockMvc mockMvc;
 
-        private CategoriaRepository categoriaRepository;
-        private CiudadRepository ciudadRepository;
-        private ProductoRepository productoRepository;
+        private CategoryRepository categoriaRepository;
+        private CityRepository ciudadRepository;
+        private ProductRepository productoRepository;
         //private CaracteristicaRepository caracteristicaRepository;
-        private ImagenRepository imagenesRepository;
+        private ImageRepository imagenesRepository;
 
 
        @Test
         public void crearProductoTest() {
 
-            Categoria categoria= new Categoria("Hotel","Hermoso hotel");
-            Ciudad ciudad= new Ciudad("Berazategui","Argentina");
-            Imagen imagen = new Imagen("imagen1","www.hotel-aklsslkad.com/1");
-            Imagen imagen1 = new Imagen("imagen2","www.hotel-aklsslkad.com/2");
-            Producto producto = new Producto("hotel El Primero","Calle 148 Y 16", 3, "No dejamos hacer nada",true,categoria,Set.of(imagen1,imagen));
-            productoRepository.save(producto);
+            Category category = new Category("Hotel","Hermoso hotel");
+            City city = new City("Berazategui","Argentina");
+            Image imagen = new Image("imagen1","www.hotel-aklsslkad.com/1");
+            Image imagen1 = new Image("imagen2","www.hotel-aklsslkad.com/2");
+            Product product = new Product("hotel El Primero","Calle 148 Y 16", 3, "No dejamos hacer nada",true, category,Set.of(imagen1,imagen));
+            productoRepository.save(product);
 
 
         }
