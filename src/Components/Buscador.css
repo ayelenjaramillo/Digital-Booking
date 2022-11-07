@@ -14,7 +14,7 @@
 }
 
 .h-principal p{
-    padding: 1rem 0rem;
+    padding: 1rem 0rem 0rem 0rem;
     text-align: center;
     font-size:xx-large;
     font-weight: bold;
@@ -107,6 +107,11 @@
 
     .boton-principal{
         margin-top: 1rem;
+    }
+
+    .h-principal p{
+        font-size:x-large;
+
     }
     }
 
