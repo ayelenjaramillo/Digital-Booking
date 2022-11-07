@@ -1,14 +1,13 @@
 package com.dh.CrudCategorias.services;
-
 import com.dh.CrudCategorias.exceptions.BadRequestException;
 import com.dh.CrudCategorias.exceptions.ResourceNotFoundException;
 import com.dh.CrudCategorias.models.Categoria;
 import com.dh.CrudCategorias.models.CategoriaDTO;
 import com.dh.CrudCategorias.repositories.CategoriaRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
+//import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.*;
 
@@ -20,7 +19,8 @@ public class CategoriaService {
 
 
 
-    //@Autowired
+    //
+    // @Autowired
     //ObjectMapper mapper;
     //@Transactional /metodos con efecto
     public Categoria agregarCategoria(CategoriaDTO categoriaDTO) {

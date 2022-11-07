@@ -14,7 +14,7 @@ public class CiudadController {
     @Autowired
     CiudadService ciudadService;
 
-    @PostMapping("/crear") //(@RequestBody ProductoDTO productoDTO, @PathVariable Integer id,CategoriaDTO categoriaDTO, Ciudad ciudadDTO)
+    @PostMapping("/crear_ciudad") //(@RequestBody ProductoDTO productoDTO, @PathVariable Integer id,CategoriaDTO categoriaDTO, Ciudad ciudadDTO)
     public ResponseEntity<Ciudad> crearCiudad(@RequestBody CiudadDTO ciudadDTO){
         return  ResponseEntity.ok(ciudadService.agregarCiudad(ciudadDTO));
     }

@@ -1,22 +1,28 @@
 package com.dh.CrudCategorias.models;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table(name= "Imagenes")
-public class Imagen extends Producto {
+public class Imagen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     //@SequenceGenerator(name = "Imagen_sequence", sequenceName = "Imagen_sequence", allocationSize = 1)
     private Integer id;
+    @Column
     private String titulo;
     private String url;
 
-    /*@OneToMany(mappedBy = "imagen", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Producto> productos;*/
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "productos_id", referencedColumnName = "id")
+    @JsonIgnore
+    private Producto producto;
 
-    public Imagen() {
+
+    public Imagen(){}
+
+    public Imagen(ImagenDTO imagenDTO) {
     }
 
     public Imagen(String titulo, String url) {
@@ -24,10 +30,11 @@ public class Imagen extends Producto {
         this.url = url;
     }
 
-    public Imagen(Integer id, String titulo, String url) {
-        this.id = id;
+    public Imagen(String titulo, String url, Producto producto) {
+
         this.titulo = titulo;
         this.url = url;
+        this.producto= producto;
     }
 
     public Integer getId() {return id;}
@@ -50,6 +57,12 @@ public class Imagen extends Producto {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public Producto getProducto() {return producto;}
+
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 
 

@@ -1,5 +1,6 @@
 package com.dh.CrudCategorias.services;
 import com.dh.CrudCategorias.exceptions.ResourceNotFoundException;
+import com.dh.CrudCategorias.models.Ciudad;
 import com.dh.CrudCategorias.models.Producto;
 import com.dh.CrudCategorias.models.ProductoDTO;
 import com.dh.CrudCategorias.repositories.ProductoRepository;
@@ -16,7 +17,7 @@ public class ProductoService {
     ProductoRepository productoRepository;
 
     public Producto agregarProducto(ProductoDTO productoDTO) {
-        Producto producto = new Producto(productoDTO);
+        Producto producto = new Producto(productoDTO.getId());
         return productoRepository.save(producto);
     }
 
@@ -45,5 +46,17 @@ public class ProductoService {
         List<Producto> productoList = productoRepository.findAll();
         return productoList;
     }
+
+    public List<Producto> buscarPorCiudad(String ciudad) {
+        List<Producto> resultados = productoRepository.buscarProductosPorCiudad(ciudad);
+        return resultados;
+    }
+
+    public List<Producto> buscarPorTituloDeCategoria(String titulo) {
+        List<Producto> resultados = productoRepository.buscarProductosPorTituloDeCategoria(titulo);
+        return resultados;
+    }
+
+
 
 }

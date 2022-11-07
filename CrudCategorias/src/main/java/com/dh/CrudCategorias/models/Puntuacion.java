@@ -6,7 +6,12 @@ import javax.persistence.*;
 @Table(name="Puntuaciones")
 public class Puntuacion {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "Imagen_sequence")
-    @SequenceGenerator(name = "Imagen_sequence", sequenceName = "Imagen_sequence", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@SequenceGenerator(name = "Imagen_sequence", sequenceName = "Imagen_sequence", allocationSize = 1)
     private Integer id;
+
+    private Integer producto_id;
+    private Integer usuario_id;
+    private String puntuacion;
+
 }

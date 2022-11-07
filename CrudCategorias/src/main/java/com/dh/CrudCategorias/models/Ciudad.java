@@ -11,12 +11,14 @@ public class Ciudad {
     //@SequenceGenerator(name = "ciudad_sequence", sequenceName = "ciudad_sequence", allocationSize = 1)
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name= "idCiudades")
     private Integer id;
     private String nombre;
     private String pais;
 
-   /*@OneToMany(mappedBy = "ciudad",cascade = CascadeType.ALL)
-   private List<Producto> productos;*/
+   @OneToMany(mappedBy = "ciudad",cascade = CascadeType.ALL)
+   private List<Producto> productos;
+
 
     public Ciudad() {
     }
