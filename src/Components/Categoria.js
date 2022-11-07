@@ -1,20 +1,38 @@
 import React from 'react';
-import Card from './Card_Cate';
+import CardCate from './Card_Cate';
 import './Categoria.css';
-import data from './dataCategoria.json'
+import Datacate from './dataCategoria.json'
 
-const Categoria = () => {
-return (
-<div className= "main">
-    <h2>Buscar por tipo de Alojamiento</h2>
-    <div className="categorias">
-    {
-        data.map((categoria) => (
-          <Card key={categoria.id} categoria={categoria}/>
-        ))
-    }
+export default function Categoria(props) {
+    return (
+    <div>
+        <div>
+            <p className='titlelist'>Recomendaciones</p>
+        </div>
+        <div className='contenedorlist'>
+            {Datacate.map((cardcate) => (
+            <CardCate 
+            key={cardcate.id}
+            producto = {cardcate.producto}
+            />
+        ))}
+        </div>
     </div>
-</div>
-)
-}
-export default Categoria
+)}
+
+
+// const Categoria = () => {
+// return (
+// <div className= "main">
+//     <h2>Buscar por tipo de Alojamiento</h2>
+//     <div className="categorias">
+//     {
+//         data.map((categoria) => (
+//           <Card key={categoria.id} categoria={categoria}/>
+//         ))
+//     }
+//     </div>
+// </div>
+// )
+// }
+// export default Categoria
