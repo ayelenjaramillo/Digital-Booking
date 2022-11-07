@@ -7,7 +7,7 @@ export default function Home(props) {
     return (
     <div className="home">
         <Buscador/>
-        <Listado/>
         <Categoria/>
+        <Listado/>
     </div>
 )}

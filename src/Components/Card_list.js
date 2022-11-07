@@ -1,12 +1,12 @@
 import React from 'react';
-import "./Card_Cate.css";
+import "./Card_list.css";
 import {RiStarSFill} from 'react-icons/ri';
 import {IoLocationSharp} from 'react-icons/io5';
 import {BiWifi, BiSwim} from 'react-icons/bi';
 
 
 
-export default function Card_Cate(props) {
+export default function Card_list(props) {
 
 return (
     <div>

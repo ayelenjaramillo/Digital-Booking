@@ -1,22 +1,38 @@
-import Card from './Card';
+import React from 'react';
+import CardCate from './Card_list';
 import './Listado.css';
-import Data from './data.json';
-
+import Datacate from './dataList.json'
 
 export default function Listado(props) {
     return (
-    <div className='listado'>
+    <div>
         <div>
-            <p className='titlecat'>Buscar por tipo de alojamiento</p>
+            <p className='titlelist'>Recomendaciones</p>
         </div>
-        <div className='contenedor'>
-            {Data.map((card) => (
-            <Card 
-            key={card.id}
-            card = {card}
+        <div className='contenedorlist'>
+            {Datacate.map((cardcate) => (
+            <CardCate 
+            key={cardcate.id}
+            producto = {cardcate.producto}
             />
         ))}
         </div>
     </div>
 )}
 
+
+// const Categoria = () => {
+// return (
+// <div className= "main">
+//     <h2>Buscar por tipo de Alojamiento</h2>
+//     <div className="categorias">
+//     {
+//         data.map((categoria) => (
+//           <Card key={categoria.id} categoria={categoria}/>
+//         ))
+//     }
+//     </div>
+// </div>
+// )
+// }
+// export default Categoria

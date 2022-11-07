@@ -1,7 +1,7 @@
 import React from 'react';
-import './Card.css'
+import './Card_categoria.css'
 
-export default function Card(props) {
+export default function Card_categoria(props) {
 
 return (
     <div >
