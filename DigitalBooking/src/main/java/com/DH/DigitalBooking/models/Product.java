@@ -1,5 +1,6 @@
 package com.DH.DigitalBooking.models;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
@@ -8,12 +9,14 @@ import java.util.Set;
     @Table(name = "products")
     public class Product {
         @Id
-        @SequenceGenerator(name="image_sequence",sequenceName = "image_sequence",initialValue = 1)
-        @GeneratedValue(strategy = GenerationType.IDENTITY,generator = "image_sequence")
+        //@SequenceGenerator(name="image_sequence",sequenceName = "image_sequence",initialValue = 1)
+        @SequenceGenerator(name="image_sequence",sequenceName = "image_sequence")
+        @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "image_sequence")
+        @NotNull
         private Long id;
         @Column
         private String title;
-        @NotNull(message = "Category title cannot be null")
+        @NotBlank(message = "Category title cannot be null")
         @Column
         private String description_title;
         @Column

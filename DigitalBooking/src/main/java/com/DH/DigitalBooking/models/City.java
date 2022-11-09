@@ -1,5 +1,4 @@
 package com.DH.DigitalBooking.models;
-
 import javax.persistence.*;
 
 @Entity
@@ -7,8 +6,8 @@ import javax.persistence.*;
 public class City {
 
     @Id
-    @SequenceGenerator(name="city_sequence",sequenceName = "city_sequence",initialValue =1)
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "city_sequence")
+    @SequenceGenerator(name="city_sequence",sequenceName = "city_sequence")
     private Long id;
     @Column
     private String city_name;

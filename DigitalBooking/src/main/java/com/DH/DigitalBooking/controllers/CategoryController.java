@@ -13,16 +13,17 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import javax.validation.Valid;
 import java.util.List;
 
-
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/categories")
 public class CategoryController {
 
     @Autowired
     private CategoryRepository categoryRepository;
+    @Autowired
     private CategoryService categoryService;
 
 
@@ -30,6 +31,8 @@ public class CategoryController {
     //addCategory
     //editCategory
     //deleteCategory
+
+    @CrossOrigin(origins = "*")
     @Operation(summary = "Returns a list of categories")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Operation successful")
@@ -45,7 +48,8 @@ public class CategoryController {
             @ApiResponse(responseCode = "400", description = "Incorrectly formatted request body", content = @Content)
     })
     @PostMapping
-    public ResponseEntity addCategory(@RequestBody Category category) throws EmptyFieldException,CreatingExistingEntityException {
+    //public ResponseEntity addCategory(@RequestBody @Valid Category category)
+    public ResponseEntity addCategory(@RequestBody  Category category) throws EmptyFieldException,CreatingExistingEntityException {
         return ResponseEntity.ok(categoryService.createCategory(category));
     }
 
@@ -86,7 +90,7 @@ public class CategoryController {
             @ApiResponse(responseCode = "404", description = "Category Id not found", content = @Content)
     })
     @DeleteMapping("/{id}")
-    public ResponseEntity<Category> deleteCategory(@PathVariable Long id) throws ResourceNotFoundException, EmptyFieldException {
+    public ResponseEntity<Category> deleteCategory(@PathVariable Long id) throws ResourceNotFoundException {
         Category result = categoryService.deleteCategoryById(id);
         return ResponseEntity.ok(result);
     }

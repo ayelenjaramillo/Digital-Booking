@@ -1,5 +1,4 @@
 package com.DH.DigitalBooking.controllers;
-
 import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
@@ -15,7 +14,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("/products")
@@ -72,8 +70,8 @@ public class ProductController {
             @ApiResponse(responseCode = "400", description = "Product already exists", content = @Content)
     })
     @PostMapping
-    public ResponseEntity addProduct(@RequestBody DTOProductBuilder product) throws CreatingExistingEntityException, EmptyFieldException, ResourceNotFoundException{
-        return ResponseEntity.ok(productService.create(product.toProduct()));
+    public ResponseEntity addProduct(@RequestBody DTOProductBuilder dtoProductBuilder) throws CreatingExistingEntityException, EmptyFieldException, ResourceNotFoundException{
+    return ResponseEntity.ok(productService.create(dtoProductBuilder));
     }
 
     /* EDIT FUNCTIONS */

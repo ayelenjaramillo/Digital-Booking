@@ -2,6 +2,7 @@ package com.DH.DigitalBooking.models;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 
@@ -10,12 +11,14 @@ import javax.validation.constraints.NotNull;
 public class Category {
 
     @Id
-    /*@SequenceGenerator(name="category_sequence",sequenceName = "category_sequence",initialValue = 0)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_sequence")*/
-
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_sequence")
+    @SequenceGenerator(name = "category_sequence", sequenceName = "category_sequence", allocationSize = 1)
+    //@Column(nullable = false)
+    //@NotNull
     private Long id;
     @Column
-    @NotNull
+    //@NotBlank
+    //@NotNull
     private String title;
     @Column
     private String description;
@@ -32,19 +35,19 @@ public class Category {
     }
 
     //constructor SIN ID
-    public Category(String title, String description,String image_url) {
+    public Category (String title, String description,String image_url) {
         this.title= title;
         this.description= description;
         this.image_url= image_url;
     }
 
     //constructor CON ID
-    public Category(Long id, String title, String description, String image_url) {
+  /*  public Category(Long id, String title, String description, String image_url) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.image_url = image_url;
-    }
+    }*/
 
     //GETTERS Y SETTERS
     public Long getId() {

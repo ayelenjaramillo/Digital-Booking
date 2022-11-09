@@ -27,9 +27,8 @@ public class CategoryController {
     //DIAPO 41
     /*Como usuario quiero poder filtrar por una categoría para ver solo los productos de la categoría que me interesa.
     Las categorías que se ven en el home deben obtenerse de la base de datos.
-    Listar productos según categoría y dónde?
+    Listar productos según categoría
     Al clickear en una categoría, se deben obtener de la base de datos y mostrar los productos de esa categoría.*/
-
 
     @GetMapping("/{id}")
     public Category buscarCategoriaPorId(@PathVariable Integer id) throws ResourceNotFoundException {

@@ -8,7 +8,7 @@ import javax.persistence.*;
 @Table(name = "features")
 public class Feature {
     @Id
-    @SequenceGenerator(name="feature_sequence",sequenceName = "feature_sequence",initialValue = 1)
+    @SequenceGenerator(name="feature_sequence",sequenceName = "feature_sequence")
     @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "feature_sequence")
     private Long id;
     @Column

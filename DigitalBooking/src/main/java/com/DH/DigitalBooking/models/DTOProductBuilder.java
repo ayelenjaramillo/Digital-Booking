@@ -1,5 +1,4 @@
 package com.DH.DigitalBooking.models;
-
 import lombok.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,14 +18,11 @@ public class DTOProductBuilder extends Product{
     private String address;
     private long category_id;
     private long city_id;
+    //the return value of "com.DH.DigitalBooking.models.DTOProductBuilder.getCity()" is null
     private Set<Image> images = new HashSet<>();
     private Set<Feature> features = new HashSet<>();
     private String policy;
 
-    public Product toProduct(){
-        return new Product(title, description_title, description, rating, address,
-                new Category(category_id, null, null, null),
-                new City(city_id,null, null), images,features,"Aquí van las políticas de este establecimiento");
-    }
 
+    //metodo privado en service que haga la tranformacion 2 responsabilidades
 }

@@ -2,8 +2,7 @@ package com.DH.DigitalBooking.services;
 import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
-import com.DH.DigitalBooking.models.Image;
-import com.DH.DigitalBooking.models.Product;
+import com.DH.DigitalBooking.models.*;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.DH.DigitalBooking.repositories.ProductRepository;
@@ -49,17 +48,22 @@ public class ProductService {
         return result;
     }
 
-    public Product create(Product product) throws EmptyFieldException, CreatingExistingEntityException, ResourceNotFoundException {
-        if (product.getTitle() == null || product.getTitle().trim().isEmpty()) {
+    public Product create(DTOProductBuilder dtoProductBuilder) throws EmptyFieldException, CreatingExistingEntityException, ResourceNotFoundException {
+        //revisar temanull
+        //recibe dto producto y ese dto producto se lo pasas al metodo privado, y el metodo devuelve el objeto producto.
+
+        if (dtoProductBuilder.getTitle() == null || dtoProductBuilder.getTitle().trim().isEmpty()) {
             throw new EmptyFieldException("Empty field for: title");
         }
-        if (product.getId() != null) {
+        if (dtoProductBuilder.getId() != null) {
             throw new CreatingExistingEntityException("Products' IDs are auto-generated, you cannot specify it");
         }
+        Product product= new Product();
 
-        product.setCategory(categoryService.findById(product.getCategory().getId()));
+        product.setCategory(categoryService.findById(dtoProductBuilder.getCategory_id()));
         product.setPolicy("DNLKNASDNÑLA");
-        product.setCity(cityService.findById(product.getCity().getId()));
+        //product.setCity(cityService.findById(dtoProductBuilder.getCity().getId()));
+        product.setCity(cityService.findById(dtoProductBuilder.getCity_id()));
         Product savedProduct = productRepository.save(product);
 
         Iterator<Image> itI = product.getImages().iterator();
@@ -102,4 +106,14 @@ public class ProductService {
             productRepository.delete(result);
             return result;
         }
+
+        //hacer metodo privado y hacer transformacion aca. Y que devuelva el objeto en el que quiero que se transforme.
+      /*  private Product toProduct(DTOProductBuilder dtoProductBuilder){
+            return new Product(dtoProductBuilder.getTitle(), dtoProductBuilder.getDescription(), dtoProductBuilder.getDescription_title(), dtoProductBuilder.getRating(), dtoProductBuilder.getAddress(),
+                    new Category( null, null, null),
+                    new City(dtoProductBuilder.getCity_id(), null, null), images,features,"Aquí van las políticas de este establecimiento");
+        }*/
+
+
+
     }
