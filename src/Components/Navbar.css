@@ -115,7 +115,7 @@
 
       }
       
-      a {
+      .navBar-mobile a {
         display: block;
         /* padding: 10px 40px; */
         text-decoration: none;

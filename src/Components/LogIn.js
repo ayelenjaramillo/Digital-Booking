@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
 import "../Components/Login.css"; 
+import NavBar from "../Components/Navbar";
 import Componente from "../assets/Componente.png"; 
 import { useNavigate } from "react-router-dom";
 import "../Components/Login.css"; 
@@ -27,41 +28,37 @@ const LogIn =()=>{
         event.preventDefault();
         console.log(loginState.contrasenia)
         loginState.usuario === prevLoginState.usuario && loginState.contrasenia === prevLoginState.contrasenia ? navigate("/MenuPrincLogin", { state: {loginState: loginState}})
-         : alert("Por favor vuelva a intentarlo, sus credenciales son inválidas")
+        : alert("Por favor vuelva a intentarlo, sus credenciales son inválidas")
         
     }
 
     return(
     <div> 
-         <div className="r-navbar">
+    <NavBar/>
+        {/* <div className="r-navbar">
         <Link to="/Home"><img  src={Componente} alt="title"/></Link>
         <button className="l-botonnavbar" ><Link to = "/Registro"> Crear Cuenta </Link></button>
-        <Outlet/></div>
+        <Outlet/></div> */}
         <div className="container_principal"> 
-            <form className="formulario" onSubmit={compararDatos}>
-                <h3>Iniciar sesion</h3>
+            <form onSubmit={compararDatos}>
+            <p className="titlelogin">Iniciar sesion</p>
                 <label>Correo Electronico</label>
-                <input type="email" placeholder="@..." required pattern=".+@hotmail\.com" onChange={(event)=>{
-                    const value = event.target.value; 
+                <input className="input-login" type="email" placeholder="@..." required pattern=".+@hotmail\.com" 
+                    onChange={(event)=>{const value = event.target.value; 
                     console.log(value);
                     setLoginState({...loginState, usuario: value})
                 }}/>
                 <label>Contraseña</label>
-                <input type="password" minLength={6} required onChange={(event)=>{
+                <input className="input-login" type="password" minLength={6} required 
+                    onChange={(event)=>{
                     const value = event.target.value; 
                     setLoginState({...loginState, contrasenia: value})}}/>
-                    
-
-                <button className="boton_principal">
-                    INGRESAR
-                </button>
-                <p> Aun no tenes cuenta?
-                <Link to="/Registro" className="l-text">
-          Registrarme
-                </Link>  </p>
+                <div className="buttonholderlog">
+                <button className="boton_principal">Ingresar</button>
+                </div>
+                <p className="accalign"> Aun no tenes cuenta?<Link to="/Registro" className="l-text">Registrate</Link></p>
             </form>
         </div>
-       
     </div>
     ); 
 }; 
