@@ -12,11 +12,11 @@
 }
 .gallery{
     padding-top: .5em;
-    margin-right: 6rem;
+    margin-right: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 204px;
-    gap:.7rem; 
+    grid-auto-rows: 193px;
+    gap:.5rem; 
    
     
 }
@@ -27,13 +27,14 @@
     border-radius: .73rem;
 }
 .img-alone{
-    width: 65%;
+    width: 85%;
     margin:.5rem; 
+   
     border-radius: .73rem;
 }
 .img-text{
     top: 10rem;
-    left: 10rem;
+    left: 12rem;
     content: "Ver Mas"; 
     color: white;
     position: absolute;
@@ -43,13 +44,59 @@ figure{
     margin: unset; 
     position: relative;
 }
+.iconoscarrusel{
+    padding-top: 1em;
+    margin-left: 1.5em;
+    font-size: 1.5rem;
+}
+.carousel-control-next{
+    display: none;
+}
 
-
-@media(max-width:800px){ 
-    figure{
-        width: 100%;
-    }
+@media(max-width:750px){ 
     .principal{
-        display: inline-block;
+        display: flex;
+        width: 100%;
+        height: 100%;
     }
- }
+    
+   .gallery{
+        display: flex; 
+        position: relative;
+        justify-content: center;
+        margin-bottom: 2rem;
+        width: 90%;
+        /* si le sacan el overflow van a ver que las imagenes estan todas atras en hilerita :) */
+        overflow: hidden;  
+        max-width: 1000px;
+        transition: all 600ms;
+        animation-duration: 3s;
+        height: 100%;
+
+   }
+   .gallery-picture{
+    position: relative;
+    
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 80%;
+    margin-top: 2rem; 
+   }
+   .img-alone{
+    display: none;
+   }
+   .galeria-1, .galeria-2, .galeria-3,.galeria-4{
+    position: absolute;
+    width: 100%;
+   }
+   .img-text{
+    display: none;
+   }
+   .carousel-control-next{
+    margin-top: 3rem;
+    margin-right: 3rem;
+    display: flex;
+   }
+   
+  }

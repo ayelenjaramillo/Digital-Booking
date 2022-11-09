@@ -4,13 +4,15 @@ import "../Components/Carrusel.css";
 const Carrusel=()=>{
 return(
     <main>
-        <h1 className="title">Galleria de imagenes</h1>
+        <i class="iconoscarrusel fa-solid fa-share-nodes"></i>
+        <i class="iconoscarrusel fa-regular fa-heart"></i>
         <div className="principal">
-        <section className="img-alone">
+       <section className="img-alone">
         <figure>
                 <img src="./bed_and_breakfast.jpg" className="gallery-img"/>
             </figure>
         </section>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <section className="gallery">
             <figure className="gallery-picture galeria-1">
                 <img src="./Hostel.jpg" className="gallery-img"/>
@@ -28,7 +30,13 @@ return(
                 <img src="./Hostel.jpg" className="gallery-img "/>
                 <div class="img-text">Ver Mas </div></a></Link>
             </figure>
-        </section></div>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        </section>
+        </div>
+        </div>
     </main>
 )
 }
