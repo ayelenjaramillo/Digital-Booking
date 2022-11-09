@@ -10,6 +10,7 @@ import Footer from "./Components/Footer";
 import Avatar from "@material-ui/core/Avatar"; 
 import "./App.css"; 
 import Alojamiento from "./Components/Alojamiento";
+import CarruselB from "./Components/CarruselB";
 const App = () => {
   
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route index element = {<Home/>}></Route>
           <Route path="/home" element= {<Home/>}></Route>
           <Route path="/Alojamiento" element={<Alojamiento/>}></Route>
+          <Route path="/CarruselB" element={<CarruselB/>}></Route>
           </Route>
           <Route path="/Login" element= {<LogIn/>}></Route>
           <Route path="/MenuPrincLogin" element = {<MenuPrincLogin/>}></Route> 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Components/Carrusel.css"; 
 const Carrusel=()=>{
 return(
@@ -22,7 +23,10 @@ return(
                 <img src="./Hotel.jpg" className="gallery-img"/>
             </figure>
             <figure className="gallery-picture galeria-5">
-                <img src="./Hostel.jpg" className="gallery-img"/>
+            <Link to="/CarruselB">
+                <a href="#" target="blank">
+                <img src="./Hostel.jpg" className="gallery-img "/>
+                <div class="img-text">Ver Mas </div></a></Link>
             </figure>
         </section></div>
     </main>
