@@ -41,25 +41,20 @@ const LogIn =()=>{
             <form className="formulario" onSubmit={compararDatos}>
                 <h3>Iniciar sesion</h3>
                 <label>Correo Electronico</label>
-                <br/>
                 <input type="email" placeholder="@..." required pattern=".+@hotmail\.com" onChange={(event)=>{
                     const value = event.target.value; 
                     console.log(value);
                     setLoginState({...loginState, usuario: value})
                 }}/>
-                <br/>
                 <label>Contraseña</label>
-                <br/>
                 <input type="password" minLength={6} required onChange={(event)=>{
                     const value = event.target.value; 
                     setLoginState({...loginState, contrasenia: value})}}/>
                     
-                <br/>
 
                 <button className="boton_principal">
                     INGRESAR
                 </button>
-                <br/>
                 <p> Aun no tenes cuenta?
                 <Link to="/Registro" className="l-text">
           Registrarme
