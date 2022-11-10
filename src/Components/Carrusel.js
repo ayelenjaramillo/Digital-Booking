@@ -9,25 +9,25 @@ return(
         <div className="principal">
        <section className="img-alone">
         <figure>
-                <img src="./bed_and_breakfast.jpg" className="gallery-img"/>
+                <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="gallery-img"/>
             </figure>
         </section>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <section className="gallery">
             <figure className="gallery-picture galeria-1">
-                <img src="./Hostel.jpg" className="gallery-img"/>
+                <img src="../Hostel.jpg" alt="Hostel" className="gallery-img"/>
             </figure>
             <figure className="gallery-picture galeria-2">
-                <img src="./bed_and_breakfast.jpg" className="gallery-img"/>
+                <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="gallery-img"/>
             </figure>
             
             <figure className="gallery-picture galeria-4">
-                <img src="./Hotel.jpg" className="gallery-img"/>
+                <img src="../Hotel.jpg" alt="Hotel" className="gallery-img"/>
             </figure>
             <figure className="gallery-picture galeria-5">
             <Link to="/CarruselB">
                 <a href="#" target="blank">
-                <img src="./Hostel.jpg" className="gallery-img "/>
+                <img src="../Hostel.jpg" alt="Hostel" className="gallery-img "/>
                 <div class="img-text">Ver Mas </div></a></Link>
             </figure>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">

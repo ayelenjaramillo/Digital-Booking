@@ -5,8 +5,9 @@
             "img": "/images/hotel1.png",
             "category": "Hotel",
             "title": "Hotel A",
-            "location": "A 940 m del centro",
-            "description": "Cat ipsum dolor sit amet."
+            "location": "Cordoba, Argentina",
+            "description": "Tremendo lugar.",
+            "id": "1"
         }
     },
     {
@@ -15,8 +16,75 @@
             "img": "/images/hotel2.png",
             "category": "Hotel",
             "title": "Hotel B",
-            "location": "A 940 m del centro",
-            "description": "Cat ipsum dolor sit amet."
+            "location": "Salta, Argentina",
+            "description": "Salta la linda.",
+            "id": "2"
+        }
+    },
+    {
+        "id": "3",
+        "producto": {
+            "img": "/images/hotel1.png",
+            "category": "Hostel",
+            "title": "Hostel A",
+            "location": "Buenos Aires, Argentina",
+            "description": "A 200mts del Monumental.",
+            "id": "3"
+        }
+    },
+    {
+        "id": "4",
+        "producto": {
+            "img": "/images/hotel2.png",
+            "category": "Hostel",
+            "title": "Hostel B",
+            "location": "Santa Fe, Argentina",
+            "description": "Comegato.",
+            "id": "4"
+        }
+    },
+    {
+        "id": "5",
+        "producto": {
+            "img": "/images/hotel1.png",
+            "category": "Bed and breakfast",
+            "title": "Bed and breakfast A",
+            "location": "Tucuman",
+            "description": "Cuida que son rapidos.",
+            "id": "5"
+        }
+    },
+    {
+        "id": "6",
+        "producto": {
+            "img": "/images/hotel2.png",
+            "category": "Bed and breakfast",
+            "title": "Bed and breakfast B",
+            "location": "Mendoza, Argentina",
+            "description": "De diez.",
+            "id": "6"
+        }
+    },
+    {
+        "id": "7",
+        "producto": {
+            "img": "/images/hotel1.png",
+            "category": "Departamento",
+            "title": "Departamento A",
+            "location": "Santiago del Estero, Argentina",
+            "description": "Con la prima no eh.",
+            "id": "7"
+        }
+    },
+    {
+        "id": "8",
+        "producto": {
+            "img": "/images/hotel2.png",
+            "category": "Departamento",
+            "title": "Departamento B",
+            "location": "Corrientes, Argentina",
+            "description": "Eh chango.",
+            "id": "8"
         }
     }
 ]

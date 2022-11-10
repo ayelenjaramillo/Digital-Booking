@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./Card_list.css";
 import {RiStarSFill} from 'react-icons/ri';
 import {IoLocationSharp} from 'react-icons/io5';
@@ -7,6 +8,7 @@ import {BiWifi, BiSwim} from 'react-icons/bi';
 
 
 export default function Card_list(props) {
+    let idProd = `/producto/${props.producto.id}`
 
 return (
     <div>
@@ -18,7 +20,8 @@ return (
                 <p><IoLocationSharp/> {props.producto.location}</p>
                 <p><BiWifi/><BiSwim/></p>
                 <p>{props.producto.description} </p>
-                <button>Ver más</button>
+                <button ><Link to={idProd}>Ver más</Link></button>
+                
             </div>
         </div>
     </div>
