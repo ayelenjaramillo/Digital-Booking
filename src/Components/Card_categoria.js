@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Card_categoria.css'
 
 export default function Card_categoria(props) {
@@ -8,12 +9,18 @@ return (
         <div className='card'>
             <img alt={props.card.titulo} src={props.card.url_imagen}></img>
             <div className='rightproductdetails'>
-                <p>{props.card.titulo} </p>
+                <p><Link to="/alojamiento">{props.card.titulo}</Link> </p>
                 <p>{props.card.descripcion} </p>
             </div>
         </div>
     </div>
 )}
+
+
+
+
+
+
 
 // export default function Card(props) {
 

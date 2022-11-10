@@ -5,7 +5,7 @@ import Data from './data.json';
 
 export default function Categoria(props) {
     return (
-    <div className='listado'>
+    <div>
         <div>
             <p className='titlecat'>Buscar por tipo de alojamiento</p>
         </div>
