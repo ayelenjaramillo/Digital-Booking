@@ -74,7 +74,7 @@ public class ProductService {
         product.setCategory(categoryService.findById(product.getCategory().getId()));
 
         // HACERLO AGREGANDO LA CLASE product.setPolicy(policyService.findById(dtoProductBuilder.getPolicy_id()));
-        product.setPolicy(policyService.findById(1L));
+        product.setPolicy(policyService.findById(product.getPolicy().getId()));
         //NO VA product.setCity(cityService.findById(dtoProductBuilder.getCity().getId()));
         product.setCity(cityService.findById(product.getCity().getId()));
 
