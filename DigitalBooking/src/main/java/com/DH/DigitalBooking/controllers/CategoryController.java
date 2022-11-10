@@ -32,6 +32,7 @@ public class CategoryController {
     //editCategory
     //deleteCategory
 
+
     @CrossOrigin(origins = "*")
     @Operation(summary = "Returns a list of categories")
     @ApiResponses(value = {

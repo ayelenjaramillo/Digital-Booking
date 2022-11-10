@@ -3,6 +3,7 @@ import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
 import com.DH.DigitalBooking.models.*;
+import com.DH.DigitalBooking.repositories.FeatureRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.DH.DigitalBooking.repositories.ProductRepository;
@@ -19,9 +20,15 @@ public class ProductService {
     @Autowired
     private ImageRepository imageRepository;
     @Autowired
+    private FeatureRepository featureRepository;
+
+    @Autowired
     private CategoryService categoryService;
     @Autowired
+    private PolicyService policyService;
+    @Autowired
     private CityService cityService;
+
 
 
     public List<Product> listAll() {
@@ -48,22 +55,29 @@ public class ProductService {
         return result;
     }
 
-    public Product create(DTOProductBuilder dtoProductBuilder) throws EmptyFieldException, CreatingExistingEntityException, ResourceNotFoundException {
-        //revisar temanull
+
+    //USAR METODOS PRIVADOS (VALIDACIONES SEPARADAS) SI EL METODO LO VALIDA CON OK TRUE O FALSE, O QUE VUELVA EL OBJETO YA CREADO Y VALIDADO
+    //Y SOLO QUE SE OCUPE DE HACER EL INSERT EN LA TABLA
+    public Product create(Product product) throws EmptyFieldException, CreatingExistingEntityException, ResourceNotFoundException {
+        //revisar tema null
         //recibe dto producto y ese dto producto se lo pasas al metodo privado, y el metodo devuelve el objeto producto.
 
-        if (dtoProductBuilder.getTitle() == null || dtoProductBuilder.getTitle().trim().isEmpty()) {
+        if (product.getTitle() == null || product.getTitle().trim().isEmpty()) {
             throw new EmptyFieldException("Empty field for: title");
         }
-        if (dtoProductBuilder.getId() != null) {
+       if (product.getId() != null) {
             throw new CreatingExistingEntityException("Products' IDs are auto-generated, you cannot specify it");
-        }
-        Product product= new Product();
+       }
+        Product savedproduct= new Product();
 
-        product.setCategory(categoryService.findById(dtoProductBuilder.getCategory_id()));
-        product.setPolicy("DNLKNASDNÑLA");
-        //product.setCity(cityService.findById(dtoProductBuilder.getCity().getId()));
-        product.setCity(cityService.findById(dtoProductBuilder.getCity_id()));
+        //product.setCategory(categoryService.findById(product.getCategory_id()));
+        product.setCategory(categoryService.findById(product.getCategory().getId()));
+
+        // HACERLO AGREGANDO LA CLASE product.setPolicy(policyService.findById(dtoProductBuilder.getPolicy_id()));
+        product.setPolicy(policyService.findById(1L));
+        //NO VA product.setCity(cityService.findById(dtoProductBuilder.getCity().getId()));
+        product.setCity(cityService.findById(product.getCity().getId()));
+
         Product savedProduct = productRepository.save(product);
 
         Iterator<Image> itI = product.getImages().iterator();
@@ -72,10 +86,18 @@ public class ProductService {
             im.setProduct(product);
             imageRepository.save(im);
         }
+
+        Iterator<Feature> itF = product.getFeatures().iterator();
+        while(itF.hasNext()){
+            Feature fe = itF.next();
+            fe.setProduct(product);
+            featureRepository.save(fe);
+        }
+
         savedProduct.setImages(product.getImages());
         return productRepository.save(savedProduct);
         }
-
+        //aca sí necesito el ID para buscar
         public Product edit (Product product) throws EmptyFieldException {
             if(product.getId() == null){
                 throw new EmptyFieldException("Product must have an id to edit");
@@ -87,6 +109,7 @@ public class ProductService {
                 throw new EmptyFieldException("Empty field for title");
             }
         }
+
 
         public Product delete(Product product) throws EmptyFieldException {
             if(product.getId() == null){

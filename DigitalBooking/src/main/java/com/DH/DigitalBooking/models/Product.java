@@ -1,10 +1,15 @@
 package com.DH.DigitalBooking.models;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
+    @Getter
+    @Setter
     @Entity
     @Table(name = "products")
     public class Product {
@@ -22,7 +27,7 @@ import java.util.Set;
         @Column
         private String description;
         @Column
-        private Integer rating;
+        private Integer rating; //VALIDAR NUMERO
         @Column
         private String address;
 
@@ -34,17 +39,16 @@ import java.util.Set;
         @JoinColumn(name = "cities_id", referencedColumnName = "id")
         private City city;
 
+        //VALIDAR EXISTAN HACIENDO BUSQUEDA AL MOMENTO DE SETEAR
         @OneToMany(mappedBy = "product", cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
         private Set<Image> images = new HashSet<>();
 
         @OneToMany(mappedBy = "product", cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
         private Set<Feature> features = new HashSet<>();
 
-        //@ManyToOne(fetch = FetchType.EAGER)
-        //@JoinColumn(name = "policies_id", referencedColumnName = "id")
-        //private Policy policy;
-
-        private String policy;
+        @ManyToOne(fetch = FetchType.EAGER)
+        @JoinColumn(name = "policies_id", referencedColumnName = "id")
+        private Policy policy;
 
 
 
@@ -55,7 +59,7 @@ import java.util.Set;
             this.id = id;
         }
 
-        public Product(String title, String description_title, String description, Integer rating, String address, Category category, City city, Set<Image> images, Set<Feature> features,String policy) {
+        public Product(String title, String description_title, String description, Integer rating, String address, Category category, City city, Set<Image> images, Set<Feature> features,Policy policy) {
             this.title = title;
             this.description_title = description_title;
             this.description = description;
@@ -68,88 +72,7 @@ import java.util.Set;
             this.policy = policy;
         }
 
-        public Long getId() {
-            return id;
-        }
-
-        public void setId(Long id) {
-            this.id = id;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
-
-        public String getDescription_title() {
-            return description_title;
-        }
-
-        public void setDescription_title(String description_title) {
-            this.description_title = description_title;
-        }
-
-        public String getDescription() {
-            return description;
-        }
-
-        public void setDescription(String description) {
-            this.description = description;
-        }
-
-        public Integer getRating() {
-            return rating;
-        }
-
-        public void setRating(Integer rating) {
-            this.rating = rating;
-        }
-
-        public String getAddress() {
-            return address;
-        }
-
-        public void setAddress(String address) {
-            this.address = address;
-        }
-
-        public Category getCategory() {
-            return category;
-        }
-
-        public void setCategory(Category category) {
-            this.category = category;
-        }
-
-        public City getCity() {
-            return city;
-        }
-
-        public void setCity(City city) {
-            this.city = city;
-        }
-
-        public Set<Image> getImages() {
-            return images;
-        }
-
-        public void setImages(Set<Image> images) {
-            this.images = images;
-        }
-
-        public Set<Feature> getFeatures() {return features;}
-
-        public void setFeatures(Set<Feature> features) {this.features = features;}
-
-        public String getPolicy() {
-            return policy;
-        }
-
-        public void setPolicy(String policy) {
-            this.policy = policy;
-        }
+        //GETTERS Y SETTERS USADOS
+        //get Id , set Id, set Category, set city, get images y set images
 
     }

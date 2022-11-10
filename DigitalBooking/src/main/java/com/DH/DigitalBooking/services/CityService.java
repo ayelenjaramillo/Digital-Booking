@@ -30,20 +30,20 @@ public class CityService {
         if(result.isPresent()){
             return result.get();
         }else{
-            throw new ResourceNotFoundException("Specified location could not be found.");
+            throw new ResourceNotFoundException("Specified city could not be found.");
         }
     }
 
     public City create(City location) throws EmptyFieldException, CreatingExistingEntityException, ResourceNotFoundException {
         if(location.getId() != null){
-            throw new CreatingExistingEntityException("Locations' IDs are auto-generated, you cannot specify it");
+            throw new CreatingExistingEntityException("City' IDs are auto-generated, you cannot specify it");
         }
         return cityRepository.save(location);
     }
 
     public City edit(City city) throws ResourceNotFoundException, EmptyFieldException {
         if(city.getId() == null){
-            throw new EmptyFieldException("Location must have an id to edit");
+            throw new EmptyFieldException("City must have an id to edit");
         }
         findById(city.getId());
         return cityRepository.save(city);
@@ -51,7 +51,7 @@ public class CityService {
 
     public City delete(City location) throws ResourceNotFoundException, EmptyFieldException {
         if(location.getId() == null){
-            throw new EmptyFieldException("Location must have an id to delete");
+            throw new EmptyFieldException("City must have an id to delete");
         }
         cityRepository.delete(location);
         return location;
@@ -61,7 +61,7 @@ public class CityService {
         List<Product> productos = cityRepository.findAllByCityId(id);
         if(productos.size() != 0){
 //            MODIFICAR CREANDO NUEVA EXCEPTION
-            throw new ResourceNotFoundException("Cannot delete locations with associated products");
+            throw new ResourceNotFoundException("Cannot delete cities with associated products");
         }
         City result = findById(id);
         cityRepository.delete(result);

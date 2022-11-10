@@ -3,6 +3,7 @@ import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
 import com.DH.DigitalBooking.models.DTOProductBuilder;
+import com.DH.DigitalBooking.models.DTOProductUpdate;
 import com.DH.DigitalBooking.models.Product;
 import com.DH.DigitalBooking.services.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -70,8 +71,8 @@ public class ProductController {
             @ApiResponse(responseCode = "400", description = "Product already exists", content = @Content)
     })
     @PostMapping
-    public ResponseEntity addProduct(@RequestBody DTOProductBuilder dtoProductBuilder) throws CreatingExistingEntityException, EmptyFieldException, ResourceNotFoundException{
-    return ResponseEntity.ok(productService.create(dtoProductBuilder));
+    public ResponseEntity addProduct(@RequestBody Product product) throws CreatingExistingEntityException, EmptyFieldException, ResourceNotFoundException{
+    return ResponseEntity.ok(productService.create(product));
     }
 
     /* EDIT FUNCTIONS */

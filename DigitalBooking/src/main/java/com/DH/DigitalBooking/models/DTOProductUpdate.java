@@ -1,17 +1,20 @@
 package com.DH.DigitalBooking.models;
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import java.util.HashSet;
 import java.util.Set;
 
-
-
 @AllArgsConstructor
-@NoArgsConstructor
 @ToString
 @Getter
 @Setter
-public class DTOProductBuilder {
+public class DTOProductUpdate {
 
+    private Long id;
     private String title;
     private String description_title;
     private String description;
@@ -23,6 +26,4 @@ public class DTOProductBuilder {
     private Set<Image> images = new HashSet<>();
     private Set<Feature> features = new HashSet<>();
     private String policy;
-
-    //metodo privado en service que haga la tranformacion //2 responsabilidades
 }

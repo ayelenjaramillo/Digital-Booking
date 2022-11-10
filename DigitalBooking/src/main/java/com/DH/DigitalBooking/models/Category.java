@@ -1,24 +1,28 @@
 package com.DH.DigitalBooking.models;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-
+@Getter
+@Setter
 @Entity
 @Table(name = "Categories")
 public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "category_sequence")
-    @SequenceGenerator(name = "category_sequence", sequenceName = "category_sequence", allocationSize = 1)
+    @SequenceGenerator(name = "category_sequence", sequenceName = "category_sequence", allocationSize = 0)
     //@Column(nullable = false)
     //@NotNull
     private Long id;
     @Column
     //@NotBlank
-    //@NotNull
+    @NotNull
     private String title;
     @Column
     private String description;
@@ -49,36 +53,4 @@ public class Category {
         this.image_url = image_url;
     }*/
 
-    //GETTERS Y SETTERS
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getImage_url() {
-        return image_url;
-    }
-
-    public void setImage_url(String image_url) {
-        this.image_url = image_url;
-    }
 }
