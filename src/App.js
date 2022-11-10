@@ -18,13 +18,7 @@ const App = () => {
           <Route path="/" element={<NavBar/>}></Route>
           <Route index element = {<Home/>}></Route>
           <Route path="/home" element= {<Home/>}></Route>
-<<<<<<< HEAD
-          <Route path="/Alojamiento" element={<Alojamiento/>}></Route>
-          <Route path="/CarruselB" element={<CarruselB/>}></Route>
-          </Route>
-=======
           <Route path="/Alojamiento" element= {<Alojamiento/>}></Route>
->>>>>>> silvinasprint2
           <Route path="/Login" element= {<LogIn/>}></Route>
           <Route path="/MenuPrincLogin" element = {<MenuPrincLogin/>}></Route> 
           <Route path="/registro" element = {<Registro/>}></Route>
