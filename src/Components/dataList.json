@@ -1,0 +1,22 @@
+[
+    {
+        "id": "1",
+        "producto": {
+            "img": "/images/hotel1.png",
+            "category": "Hotel",
+            "title": "Hotel A",
+            "location": "A 940 m del centro",
+            "description": "Cat ipsum dolor sit amet."
+        }
+    },
+    {
+        "id": "2",
+        "producto": {
+            "img": "/images/hotel2.png",
+            "category": "Hotel",
+            "title": "Hotel B",
+            "location": "A 940 m del centro",
+            "description": "Cat ipsum dolor sit amet."
+        }
+    }
+]

@@ -1,13 +1,26 @@
 /******* Header *******/
 
 /* Title */
-.h-title{
+.header-navbar{
     display: flex;
     justify-content: space-between;
     margin: 0;
-    padding: 0.6rem 2rem 0.2rem;
+    /* padding: 0.6rem 2rem 0.2rem; */
     background-color: white; 
-    position: sticky;
+    position: fixed;
+    top: 0%;
+    width:100%;
+    overflow: hidden;
+    z-index: 2;
+    padding: 0.5rem;
+}
+
+.navBar-mobile{
+    display: none;
+}
+
+.image2{
+  display: none;
 }
 
 /* List */
@@ -20,9 +33,12 @@
 }
 
 .h-list button{
-    border: #1DBEB4;
-    border-style: double;
+    background-color: white;
+    color: #1DBEB4;
+    border: 0.1rem solid #1DBEB4;
     font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
 }
 
 .h-list a{
@@ -30,7 +46,9 @@
     color: #1DBEB4;
 
 }
-@media(max-width:800px){
+
+
+/* @media(max-width:800px){
     .image{
         width: 50%;
     }
@@ -41,4 +59,118 @@
 .image{
     width: 50%;
 }
+} */
+
+@media (max-width: 991px){
+  .image{
+    display: none;
+  }
+
+  .image2{
+    display: flex;
+  }
 }
+
+@media (max-width: 731px){
+
+    .navBar-mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 1rem;
+    }
+
+
+    .h-list{
+        display: none;
+    }
+    /* .navBar button {
+        position: fixed;
+        left: 40px;
+        top: 40px;
+        z-index: 10;
+        cursor: pointer;
+      } */
+    
+      .menuNav {
+        overflow-y: scroll;
+        list-style: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 100%;
+        width: 0;
+        max-width: 15rem;
+        z-index: 2;
+        padding-left: 0%;
+        
+      }
+      
+      .menuNav.showMenu {
+        width: 100%;
+        background: white;
+        color: #383B58;
+
+
+      }
+      
+      .navBar-mobile a {
+        display: block;
+        /* padding: 10px 40px; */
+        text-decoration: none;
+        /* color: #3fffd2; */
+        font-weight:700;
+        text-align: right;
+        padding-right: 1rem;
+      }
+      
+      .menuNav h3 {
+        padding-bottom: 1rem;
+        padding-top: 5rem;
+        text-align: right;
+        padding-right: 1rem;
+        background-color: #1DBEB4;
+        color: white
+
+
+      }
+
+      .menuNav div{
+        text-align: left;
+        padding-left: 1rem;
+        /* padding-bottom: 6rem; */
+        padding-top: 0.5rem;
+        background-color: #1DBEB4;
+        width: 100%;
+        border-radius: 0;
+        color: white;
+        position: absolute;
+        font-weight: bold;
+      }
+
+      .menuNav li:nth-child(3){
+        padding-top: 1rem;
+      }
+    
+      .image{
+        display: none;
+      }
+
+      .image2{
+        display: flex;
+      }
+      /* .navBar button {
+        background: transparent;;
+        border: none;
+      } */
+
+      .redes-mobile{
+        display: inline;
+        float: right;
+        float: right;
+        justify-content:space-around;
+        padding: 18rem 0.5rem 0.5rem 0;
+      }
+}
+

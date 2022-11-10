@@ -1,0 +1,150 @@
+.h-principal{
+    list-style-type: none;
+    background-color: #545776; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    /* padding: 30px 20px; */
+    padding-top: 5rem;
+    /* margin-top: 0%; */
+    position: relative;
+    z-index: 1;
+    padding-bottom: 1.5rem;
+    align-content: center;
+}
+
+.h-principal p{
+    padding: 1rem 0rem 0rem 0rem;
+    text-align: center;
+    font-size:xx-large;
+    font-weight: bold;
+}
+.h-sec{
+    /* background-color: #545776; */
+    display: flex;
+    /* margin: 0 5px; */
+
+}
+.h-principal input{
+    height: 2rem;
+    border-radius: 0.3rem;
+    width: 22rem;
+}
+
+.h-principal form{
+    /* text-align: center;
+    background-color:#545776; */
+    position: sticky;
+}
+.react-datepicker-wrapper {
+    width: unset;
+    display: flex;
+    /* height: 2rem; */
+    padding: 0 1rem;
+    
+} 
+
+.boton-principal{
+    width: 10rem;
+    background-color: #1DBEB4; 
+    color: white;
+    /* color:#1DBEB4; */
+    height: 2rem;
+    border: #1DBEB4;
+    font-weight: bold;
+
+}
+.b-home{
+    background-color: #1DBEB4;
+    color: white;
+}
+.h-sec select{
+    display: flex;
+    /* height: 2rem; */
+    padding: 0 1rem;
+    border-radius: 0.3rem;
+    width: 22rem;
+
+} 
+
+
+@media (max-width: 991px){
+    .h-principal input{
+        width: 15rem;
+    }
+    .h-sec select{
+        display: flex;
+        /* height: 2rem; */
+        width: 15rem;
+    } 
+}
+
+@media (max-width: 731px){
+
+    .h-principal{
+        align-items: center;
+    }
+    .h-sec{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        align-items: center;
+    }
+    .h-principal input{
+        width: 90%;
+        margin-left: 5.1%;
+    }
+
+    .react-datepicker-wrapper{
+        width: 90%;
+        padding: 0;
+    }
+
+    .h-sec select{
+        height: 2rem;
+        width: 81%;
+    } 
+
+    .boton-principal{
+        margin-top: 1rem;
+    }
+
+    .h-principal p{
+        font-size:x-large;
+
+    }
+    }
+
+/* @media (max-width: 800px){
+    .h-principal{
+        flex-direction: column;
+        background-color:#967ED5 ;
+        width: 100%;
+        margin: 0 auto;
+        width: 100%; 
+    }
+    .h-sec{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+        padding: 40px 10px;
+        align-items: center;
+        width: 100%;
+    }
+}
+@media(max-width:500px){
+    .h-principal{
+        background-color: white;
+        padding: 0;
+}
+    .h-sec{
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 40px 10px;
+        align-items: center;
+    }
+}
+
+ */

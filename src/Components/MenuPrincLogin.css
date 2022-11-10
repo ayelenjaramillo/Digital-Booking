@@ -1,23 +1,37 @@
 .main-menuprincipal{
-    margin: 5px;
-
+    /* margin: 5px; */
+    /* padding: 0.5rem; */
 
 }
+
 .avatar{
-    margin-right: 20px;
-    float: right;
-  
+    /* margin-right: 20px; */
+    /* float: right; */
+    border-radius: 2rem;
+    padding: 0.3rem 0.7rem;
+    color:white;
+    background: #383b58;
+    border: none;
 }
 .div-header-menuprinc{
     display: flex;
-    width: 100%;
+    position: fixed;
+    top: 0%;
+    width:100%;
+    overflow: hidden;
+    z-index: 2;
+    padding: 0.5rem;
+    justify-content: space-between;
+    margin: 0;
+    /* padding: 0.6rem 2rem 0.2rem; */
+    background-color: white; 
 }
+
 .text-avatar{
     width: 70%;
     display: flex;
     justify-content: end;
-    font-size: 23px;
-    font-weight: lighter;
-    
+    /* font-weight: lighter; */
+    align-items: center;
 }
 

@@ -1,4 +1,3 @@
-
 import Avatar from "@material-ui/core/Avatar"; 
 import Componente from "../assets/Componente.png"; 
 import { Outlet, Link } from "react-router-dom";
@@ -14,15 +13,16 @@ const MenuPrincLogin =(props)=>{
     const usuario = location.state?.loginState.usuario; 
 
     return(
-        <div className="main-menuprincipal">
-        <div className="div-header-menuprinc">
-         <Link to="/Home"><img className="image" src={Componente} alt="title"/></Link>
-            <Outlet/>
-            <p className="text-avatar">Hola, {usuario}!
-        <Avatar src={usuario?usuario: ""} className="avatar">{usuario[0].toUpperCase()}</Avatar></p>
-        <button><Link to="/Home">X</Link></button>
-      </div>
-      <Home/>
+        <div>
+            <div className="div-header-menuprinc">
+                <Link to="/Home"><img className="image" src={Componente} alt="title"/></Link>
+                {/* <Outlet/> */}
+                <p className="text-avatar">
+                    <button src={usuario?usuario: ""} className="avatar">{usuario[0].toUpperCase()}</button>
+                    &nbsp; Hola, {usuario}!
+                </p>
+            </div>
+            <Home/>
         </div>
     ); 
 }

@@ -1,20 +1,22 @@
-import React from 'react';
-import Card from './Card_Cate';
+import Card from './Card_categoria';
 import './Categoria.css';
-import data from './dataCategoria.json'
+import Data from './data.json';
 
-const Categoria = () => {
-return (
-<div className= "main">
-    <h2>Buscar por tipo de Alojamiento</h2>
-    <div className="categorias">
-    {
-        data.map((categoria) => (
-          <Card key={categoria.id} categoria={categoria}/>
-        ))
-    }
+
+export default function Categoria(props) {
+    return (
+    <div>
+        <div>
+            <p className='titlecat'>Buscar por tipo de alojamiento</p>
+        </div>
+        <div className='contenedor'>
+            {Data.map((card) => (
+            <Card 
+            key={card.id}
+            card = {card}
+            />
+        ))}
+        </div>
     </div>
-</div>
-)
-}
-export default Categoria
+)}
+

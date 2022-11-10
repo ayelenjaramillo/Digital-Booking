@@ -62,7 +62,7 @@
 }
 
 
-h3{
+.titleh3aloj{
     margin: 0.5rem ; 
     padding: 0.5rem ;
     color:#545776
@@ -80,11 +80,11 @@ h3{
     width: 100%;
 }
 
-button{
+.cajaauxiliarfechas button{
     background-color: #1DBEB4;
     color: white;
 }
-h5{
+.titleh5aloj{
     color:#545776
 }
 
@@ -102,7 +102,7 @@ h5{
  .react-datepicker{
     display: flex;
  }
- h3{
+ .titleh3aloj{
     margin-left:2rem
  }
  .cajaauxiliarfechas{

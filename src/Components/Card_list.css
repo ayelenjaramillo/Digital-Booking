@@ -1,0 +1,143 @@
+.cardlist{
+    border-radius: 2rem;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
+    border-radius: 1rem;
+    height: 17rem;
+}
+
+.imagelist{
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    padding: 0.5rem;
+    width: 50%;
+    /* display: block; */
+}
+
+.rightproductdetailslist{
+    color: #383B58;
+    padding: 0.5rem;
+    line-height: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 50%;
+
+}
+
+.rightproductdetailslist p:first-child{
+    font-weight: bold;
+    font-size:large;
+    display: flex;
+}
+
+.rightproductdetailslist p:nth-child(2){
+    font-weight: bold;
+    font-size:x-large;
+    display: flex;
+}
+
+.rightproductdetailslist button{
+    width: 100%;
+    background-color: #1DBEB4; 
+    color: white;
+    /* color:#1DBEB4; */
+    height: 3rem;
+    border: #1DBEB4;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    margin-top: 2.5rem;
+
+}
+
+
+@media (max-width:991px){
+    .cardlist{
+        height: 17rem;
+    }
+
+    .rightproductdetailslist{
+        padding: 0.5rem;
+        line-height: 1rem;
+        width: 60%;
+    
+    }
+
+    .rightproductdetailslist button{
+        height: 1.5rem;
+        line-height: 0;
+        margin-top: 1.5rem;
+    }
+
+    .imagelist{
+        padding: 0.5rem;
+        width: 50%;
+        /* display: block; */
+    }
+    }
+
+    @media (max-width: 731px){
+        .cardlist{
+            display: inline;
+            height: 15rem;
+        }
+    
+        .rightproductdetailslist{
+            padding: 0.5rem;
+            line-height: 1rem;
+            width: 100%;
+        
+        }
+    
+        .rightproductdetailslist button{
+            height: 1.5rem;
+            line-height: 0;
+            margin-top: 1.5rem;
+            width: 100%;
+        }
+    
+        .imagelist{
+            padding: 0.5rem;
+            width: 100%;
+            /* display: block; */
+        }
+
+
+    }
+
+
+
+
+
+
+/* .main {
+        background: #FFFFFF;
+        margin: 1rem;
+        padding: 1rem;
+}
+
+.imagen_cate{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    border: 1px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    bottom: 25.69%;
+    padding: 20px;
+    justify-content: center;
+    overflow-x: hidden;
+    
+}
+
+.detalle{
+    font-size: 20px;
+    color: #545776;
+    left: 3.55%;
+    right: 3.87%;
+    top: 79.05%;
+    bottom: 10.41%;
+    text-align: center;
+
+} */
