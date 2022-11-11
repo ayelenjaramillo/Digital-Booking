@@ -1,10 +1,6 @@
 package com.DH.DigitalBooking.services;
-import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
-import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
-import com.DH.DigitalBooking.models.City;
 import com.DH.DigitalBooking.models.Policy;
-import com.DH.DigitalBooking.models.Product;
 import com.DH.DigitalBooking.repositories.PolicyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,15 +14,13 @@ public class PolicyService {
     @Autowired
     private PolicyRepository policyRepository;
 
+
     public List<Policy> listAll() {
-        return policyRepository.findAll();
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 
     public Policy findById(Long id) throws ResourceNotFoundException {
-        if(id == null){
-            throw new ResourceNotFoundException("No ID received");
-        }
         Optional<Policy> result = policyRepository.findById(id);
         if(result.isPresent()){
             return result.get();
@@ -35,38 +29,27 @@ public class PolicyService {
         }
     }
 
-    public Policy create(Policy policy) throws CreatingExistingEntityException{
-        if (policy.getId() != null) {
-            throw new CreatingExistingEntityException("Policy' IDs are auto-generated, you cannot specify it");
-        }
-        return policyRepository.save(policy);
+    public Policy create(Policy policy) throws UnsupportedOperationException {
+        throw new UnsupportedOperationException("Not supported yet."); // nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    } //https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html
+
+
+    public Policy edit(Policy t) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public Policy edit(Policy policy) throws ResourceNotFoundException, EmptyFieldException{
-        if(policy.getId() == null){
-            throw new EmptyFieldException("City must have an id to edit");
-        }
-        findById(policy.getId());
-        return policyRepository.save(policy);
+
+    public Policy delete(Policy t) throws UnsupportedOperationException{
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public Policy delete(Policy policy) throws ResourceNotFoundException, EmptyFieldException {
-        if(policy.getId() == null){
-            throw new EmptyFieldException("City must have an id to delete");
-        }
-        policyRepository.delete(policy);
-        return policy;
+
+    public Policy deleteById(Long id) throws UnsupportedOperationException {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public Policy deleteById(Long id) throws ResourceNotFoundException {
-        List<Product> productos = policyRepository.findAllByPolicyId(id);
-        if(productos.size() != 0){
-            //MODIFICAR CREANDO NUEVA EXCEPTION
-            throw new ResourceNotFoundException("Cannot delete cities with associated products");
-        }
-        Policy result = findById(id);
-        policyRepository.delete(result);
-        return result;
-    }
+
+
+
 
 }

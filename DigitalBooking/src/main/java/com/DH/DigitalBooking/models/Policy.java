@@ -14,7 +14,9 @@ import javax.persistence.*;
 public class Policy {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "policy_sequence")
+    @SequenceGenerator(name="policy_sequence",sequenceName = "policy_sequence")
+    @Column(name="id",insertable=false,updatable=false)
     private Long id;
     @Column(name="id", insertable=false,updatable=false)
     private String documentation;
