@@ -62,22 +62,24 @@ public class ProductService {
         //revisar tema null
         //recibe dto producto y ese dto producto se lo pasas al metodo privado, y el metodo devuelve el objeto producto.
 
-        if (product.getTitle() == null || product.getTitle().trim().isEmpty()) {
+      if (product.getTitle() == null || product.getTitle().trim().isEmpty()) {
             throw new EmptyFieldException("Empty field for: title");
         }
-       if (product.getId() != null) {
+        /* if (product.getId() != null) {
             throw new CreatingExistingEntityException("Products' IDs are auto-generated, you cannot specify it");
-       }
+       }*/
+
         Product savedproduct= new Product();
 
         //product.setCategory(categoryService.findById(product.getCategory_id()));
         product.setCategory(categoryService.findById(product.getCategory().getId()));
 
         // HACERLO AGREGANDO LA CLASE product.setPolicy(policyService.findById(dtoProductBuilder.getPolicy_id()));
-        product.setPolicy(policyService.findById(1L));
+        product.setPolicy(policyService.findById(product.getPolicy().getId()));
         //NO VA product.setCity(cityService.findById(dtoProductBuilder.getCity().getId()));
         product.setCity(cityService.findById(product.getCity().getId()));
 
+        product.setId(null);
         Product savedProduct = productRepository.save(product);
 
         Iterator<Image> itI = product.getImages().iterator();

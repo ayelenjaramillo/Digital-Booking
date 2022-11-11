@@ -17,7 +17,7 @@ import java.util.Set;
         //@SequenceGenerator(name="image_sequence",sequenceName = "image_sequence",initialValue = 1)
         @SequenceGenerator(name="image_sequence",sequenceName = "image_sequence")
         @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "image_sequence")
-        @NotNull
+        //@NotNull
         private Long id;
         @Column
         private String title;
@@ -49,7 +49,6 @@ import java.util.Set;
         @ManyToOne(fetch = FetchType.EAGER)
         @JoinColumn(name = "policies_id", referencedColumnName = "id")
         private Policy policy;
-
 
 
         public Product() {

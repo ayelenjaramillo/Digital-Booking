@@ -19,7 +19,6 @@ public class DTOProductBuilder {
     private String address;
     private long category_id;
     private long city_id;
-    //the return value of "com.DH.DigitalBooking.models.DTOProductBuilder.getCity()" is null
     private Set<Image> images = new HashSet<>();
     private Set<Feature> features = new HashSet<>();
     private String policy;

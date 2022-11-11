@@ -16,7 +16,8 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:8080")
+//@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/categories")
 public class CategoryController {
@@ -25,12 +26,6 @@ public class CategoryController {
     private CategoryRepository categoryRepository;
     @Autowired
     private CategoryService categoryService;
-
-
-    //listCategories()
-    //addCategory
-    //editCategory
-    //deleteCategory
 
 
     @CrossOrigin(origins = "*")

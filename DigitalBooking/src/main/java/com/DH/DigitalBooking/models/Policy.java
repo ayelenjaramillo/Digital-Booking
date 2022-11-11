@@ -16,13 +16,12 @@ public class Policy {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-    @Column
+    @Column(name="id", insertable=false,updatable=false)
     private String documentation;
 
     public Policy(String documentation) {
         this.documentation = documentation;
     }
-
 
 
 }
