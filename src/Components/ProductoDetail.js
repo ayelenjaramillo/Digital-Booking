@@ -51,7 +51,7 @@ return(
  </div>
    <div className="infolocation-hotel">
     <p className="p-hotel">
-        <i class="fa-solid fa-location-dot"></i>
+        <i class="ubicacion fa-solid fa-location-dot"></i>
         {DataList[id-1].producto.location}
         <p>{DataList[id-1].producto.description} </p>
     </p>

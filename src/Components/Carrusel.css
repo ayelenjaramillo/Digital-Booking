@@ -15,7 +15,7 @@
     margin-right: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 193px;
+    grid-auto-rows: 13.5rem;
     gap:.5rem; 
    
     
@@ -33,8 +33,8 @@
     border-radius: .73rem;
 }
 .img-text{
-    top: 10rem;
-    left: 12rem;
+    top: 11rem;
+    left: 8rem;
     content: "Ver Mas"; 
     color: white;
     position: absolute;
@@ -52,22 +52,41 @@ figure{
 .carousel-control-next{
     display: none;
 }
+.mobileslider{
+    display: none;
+}
+.mobile-slider{
+    display: none;
+}
 
-@media(max-width:750px){ 
+@media(max-width:731px){ 
     .principal{
-        display: flex;
-        width: 100%;
-        height: 100%;
+        display: none;
     }
+    .gallery{
+        display: none;
+    }
+    .mobile-slider{
+        display: flex;
+    }
+    .carousel-root{
+        width: 100%;
+        height: 30%;
+        margin: 1rem;
+    }
+   
     
-   .gallery{
+    
+    
+}
+   /* .gallery{
         display: flex; 
         position: relative;
         justify-content: center;
         margin-bottom: 2rem;
         width: 90%;
         /* si le sacan el overflow van a ver que las imagenes estan todas atras en hilerita :) */
-        overflow: hidden;  
+        /* overflow: hidden;  
         max-width: 1000px;
         transition: all 600ms;
         animation-duration: 3s;
@@ -97,6 +116,6 @@ figure{
     margin-top: 3rem;
     margin-right: 3rem;
     display: flex;
-   }
-   
-  }
+   } */
+    
+  
