@@ -6,6 +6,12 @@
     height: 17rem;
 }
 
+.cardlist a{
+    text-decoration: none;
+    color: white;
+}
+
+
 .imagelist{
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;

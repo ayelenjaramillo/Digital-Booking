@@ -6,7 +6,7 @@
             "category": "Hotel",
             "title": "Hotel A",
             "location": "Cordoba, Argentina",
-            "description": "Tremendo lugar.",
+            "description": "Lorem ipsum dolor sit amet",
             "id": "1"
         }
     },
@@ -17,7 +17,7 @@
             "category": "Hotel",
             "title": "Hotel B",
             "location": "Salta, Argentina",
-            "description": "Salta la linda.",
+            "description": "Lorem ipsum dolor sit amet",
             "id": "2"
         }
     },
@@ -28,7 +28,7 @@
             "category": "Hostel",
             "title": "Hostel A",
             "location": "Buenos Aires, Argentina",
-            "description": "A 200mts del Monumental.",
+            "description": "Lorem ipsum dolor sit amet",
             "id": "3"
         }
     },
@@ -39,7 +39,7 @@
             "category": "Hostel",
             "title": "Hostel B",
             "location": "Santa Fe, Argentina",
-            "description": "Comegato.",
+            "description": "Lorem ipsum dolor sit amet",
             "id": "4"
         }
     },
@@ -50,7 +50,7 @@
             "category": "Bed and breakfast",
             "title": "Bed and breakfast A",
             "location": "Tucuman",
-            "description": "Cuida que son rapidos.",
+            "description": "Lorem ipsum dolor sit amet",
             "id": "5"
         }
     },
@@ -61,7 +61,7 @@
             "category": "Bed and breakfast",
             "title": "Bed and breakfast B",
             "location": "Mendoza, Argentina",
-            "description": "De diez.",
+            "description": "Lorem ipsum dolor sit amet",
             "id": "6"
         }
     },
@@ -72,7 +72,7 @@
             "category": "Departamento",
             "title": "Departamento A",
             "location": "Santiago del Estero, Argentina",
-            "description": "Con la prima no eh.",
+            "description": "Lorem ipsum dolor sit amet",
             "id": "7"
         }
     },
@@ -83,7 +83,7 @@
             "category": "Departamento",
             "title": "Departamento B",
             "location": "Corrientes, Argentina",
-            "description": "Eh chango.",
+            "description": "Lorem ipsum dolor sit amet",
             "id": "8"
         }
     }
