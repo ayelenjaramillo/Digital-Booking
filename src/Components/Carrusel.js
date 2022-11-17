@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Carousel } from "react-responsive-carousel";
 import "../Components/Carrusel.css"; 
+import "react-responsive-carousel/lib/styles/carousel.css"; 
+
 const Carrusel=()=>{
 return(
     <main>
@@ -12,7 +15,6 @@ return(
                 <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="gallery-img"/>
             </figure>
         </section>
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <section className="gallery">
             <figure className="gallery-picture galeria-1">
                 <img src="../Hostel.jpg" alt="Hostel" className="gallery-img"/>
@@ -27,16 +29,23 @@ return(
             <figure className="gallery-picture galeria-5">
             <Link to="/CarruselB">
                 <a href="#" target="blank">
-                <img src="../Hostel.jpg" alt="Hostel" className="gallery-img "/>
-                <div class="img-text">Ver Mas </div></a></Link>
+                    <img src="../Hostel.jpg" alt="Hostel" className="gallery-img "/>
+                        <div class="img-text">
+                            Ver Mas
+                        </div>
+                </a>
+            </Link>
             </figure>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
         </section>
-        </div>
-        </div>
+    </div>
+    <div className="mobile-slider">
+        <Carousel>
+            <div><img src="../Hostel.jpg" className="img-slider"/></div>
+            <div><img src="../Hostel.jpg" className="img-slider"/></div>
+            <div><img src="../Hotel.jpg" className="img-slider"/></div>
+            <div><img src="../bed_and_breakfast.jpg" className="img-slider"/></div>
+        </Carousel>
+    </div>
     </main>
 )
 }
