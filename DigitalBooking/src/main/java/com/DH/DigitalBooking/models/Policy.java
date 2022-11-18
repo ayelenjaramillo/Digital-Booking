@@ -18,12 +18,13 @@ public class Policy {
     @SequenceGenerator(name="policy_sequence",sequenceName = "policy_sequence")
     @Column(name="id",insertable=false,updatable=false)
     private Long id;
-    @Column(name="id", insertable=false,updatable=false)
+    @Column
     private String documentation;
 
     public Policy(String documentation) {
         this.documentation = documentation;
     }
+
 
 
 }
