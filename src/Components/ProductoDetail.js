@@ -9,12 +9,16 @@ import DatePicker from "react-datepicker";
 import Carrusel from "./Carrusel";
 import CarruselB from "./CarruselB";
 import DataList from './dataList.json';
+import Spinner from "./Spinner";
 
 const ProductoDetail=()=>{
     const[startDate, setStartDate] = useState(); 
     const [endDate, setEndDate]= useState(); 
     const[product, setProduct]= useState({})
+    const [isLoading, setIsLoading] = useState(true);
     const {id} = useParams();
+
+    console.log("PRODUCTO ES " + product)
 
     function onChangeDateHandler(value){
         setStartDate(value[0]); 
@@ -24,7 +28,7 @@ const ProductoDetail=()=>{
     const baseUrl = "http://localhost:8080/"
 
 
-    const getProductById = async(id) => {
+    const getProductById = async (id) => {
         const endpoint = `${baseUrl}products/${id}`;
         return await axios.get(endpoint);
     }
@@ -40,26 +44,51 @@ const ProductoDetail=()=>{
             console.log(response.data)
             console.log("PRODUCTO")
             console.log(product)
+            console.log("RRESPONSE CATEGORY TITLE")
+            console.log(response.data.category.title)
+            console.log("RESPONSE TITLE")
+            console.log(response.data.title)
+            console.log("PRODUCTO CATEGORY TITLE")
+            console.log(product.category.title)
+            console.log("PRODUCTO TITLE")
+            console.log(product.title)
+            
+
+        }).catch((error) => {
+            console.log(error)
         })
+
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 1000)
+
+
     }, [id])
+
+    useEffect(() => {
+
+    }, [isLoading])
+
 
 
 return(
 <div className="main-imagenes">
-   <div className="header-hotel">
-    <p className="p-hotel">{DataList[id-1].producto.category}
-        <h4>{DataList[id-1].producto.title}</h4>
+    
+    <div className="header-hotel">
+    <p className="p-hotel"> { isLoading ?  <Spinner />  : product.category.title}
+        <h4>{isLoading ?  <Spinner />  : product.title}</h4>
     </p>
     <span className="iconos">
         <Link to="/Home"><i class="flecha fa-solid fa-arrow-left"></i></Link>
     </span>
- </div>
+    
+    </div>
    <div className="infolocation-hotel">
-    <p className="p-hotel">
-        <i class="ubicacion fa-solid fa-location-dot"></i>
-        {DataList[id-1].producto.location}
-        <p>{DataList[id-1].producto.description} </p>
-    </p>
+        <p className="p-hotel">
+            <i class="ubicacion fa-solid fa-location-dot"></i>
+            { isLoading ?  <Spinner />  : (<span>{product.city.city_name}, {product.city.country} </span> )}
+            <p>{ isLoading ?  <Spinner />  : product.description} </p>
+        </p>
     <span>
         <h5 className="titleh5aloj">Muy Bueno</h5>
         <i class="puntuacion fa-solid fa-star"></i>
@@ -68,10 +97,10 @@ return(
         <i class="puntuacion fa-solid fa-star"></i>
 
     </span>
-
-   </div> 
-    <Carrusel/>
-    {/* <CarruselB/> */}
+    
+    </div> 
+        <Carrusel/>
+        {/* <CarruselB/> */}
     <span>
         <h3 className="titleh3aloj">Alojate en el corazon de Location</h3>
         <p className="p-hotel-negro">El Médanos Patagonia se encuentra en Las Grutas, a 500 metros de Primeras Bajadas, y ofrece alojamiento con aire acondicionado, wifi gratis y acceso a una terraza.
@@ -135,5 +164,6 @@ return(
 
 </div>
     )    
-}
+} 
+
 export default ProductoDetail; 
