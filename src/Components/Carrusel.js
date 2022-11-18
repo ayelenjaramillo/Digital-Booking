@@ -3,12 +3,16 @@ import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "../Components/Carrusel.css"; 
 import "react-responsive-carousel/lib/styles/carousel.css"; 
+import { faHeart, faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const Carrusel=()=>{
 return(
     <main>
-        <i class="iconoscarrusel fa-solid fa-share-nodes"></i>
-        <i class="iconoscarrusel fa-regular fa-heart"></i>
+        <FontAwesomeIcon icon="fa-sharp fa-solid fa-heart" />
+        <FontAwesomeIcon className="iconoscarrusel" icon={faHeart} />
+        <FontAwesomeIcon  className="iconoscarrusel" icon={faShareNodes} />
         <div className="principal">
        <section className="img-alone">
         <figure>

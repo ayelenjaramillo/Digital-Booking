@@ -7,8 +7,9 @@ import "../Components/ProductoDetail.css";
 import "react-datepicker/dist/react-datepicker.css"; 
 import DatePicker from "react-datepicker";
 import Carrusel from "./Carrusel";
-import CarruselB from "./CarruselB";
 import DataList from './dataList.json';
+import { faLocationDot, faAngleLeft, faStar} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ProductoDetail=()=>{
     const[startDate, setStartDate] = useState(); 
@@ -46,27 +47,26 @@ return(
         <h4>{DataList[id-1].producto.title}</h4>
     </p>
     <span className="iconos">
-        <Link to="/Home"><i class="flecha fa-solid fa-arrow-left"></i></Link>
+        <Link to="/Home"><FontAwesomeIcon className="flecha" icon={faAngleLeft} /></Link>
     </span>
  </div>
    <div className="infolocation-hotel">
     <p className="p-hotel">
-        <i class="ubicacion fa-solid fa-location-dot"></i>
+        <FontAwesomeIcon className="ubicacion" icon={faLocationDot} />
         {DataList[id-1].producto.location}
         <p>{DataList[id-1].producto.description} </p>
     </p>
     <span>
         <h5 className="titleh5aloj">Muy Bueno</h5>
         <div className="estrellas">
-        <i class="puntuacion fa-solid fa-star"></i>
-        <i class="puntuacion fa-solid fa-star"></i>
-        <i class="puntuacion fa-solid fa-star"></i>
-        <i class="puntuacion fa-solid fa-star"></i>
-        <i style={{color: "#CBCBCF"}} class="puntuacion fa-solid fa-star"></i>
+        <FontAwesomeIcon className="puntuacion" icon={faStar} />
+        <FontAwesomeIcon className="puntuacion" icon={faStar} />
+        <FontAwesomeIcon className="puntuacion" icon={faStar} />
+        <FontAwesomeIcon className="puntuacion" icon={faStar} />
+        <FontAwesomeIcon style={{color: "#CBCBCF"}} className="puntuacion" icon={faStar} />
         </div>
     </span>
-
-   </div> 
+    </div> 
     <Carrusel/>
     {/* <CarruselB/> */}
     <span>
@@ -77,9 +77,9 @@ return(
     </span>
     <div>
         <h3 className="titleh3aloj"> Que ofrece este lugar?</h3>
-        <hr style={{color:"#1DBEB4",background:"#1DBEB4", opacity:20}}/>
+        <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
         <div className="servicios-alojamiento">
-            <figure><i class="icons fa-solid fa-kitchen-set"></i>cocina</figure>
+            <figure><i class="icons fa-solid fa-kitchen-set"></i>Cocina</figure>
             <figure><i class="icons plus fa-solid fa-car"></i> Parking</figure>
             <figure><i class="icons fa-solid fa-tv"></i> Television</figure>
             <figure><i class="icon fa-solid fa-paw"></i> Apto mascotas</figure>
@@ -88,7 +88,7 @@ return(
             <figure><i class="icons fa-solid fa-wifi"></i>WIFI</figure>
         </div>
         <h3 className="titleh3aloj">Que tenes que saber</h3>
-        <hr style={{color:"#1DBEB4", opacity:20}}/>
+        <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
         <div className="politicas-alojamiento">
            <div className="politicas-pautas-div">
             <h5 className="titleh5aloj">Normas de la casa</h5>
