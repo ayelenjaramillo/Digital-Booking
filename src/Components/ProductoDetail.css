@@ -10,6 +10,9 @@
     padding: 1rem;
     
 }
+.iconos{
+    padding-left: 3.5rem;
+}
 .infolocation-hotel{
     display: flex;
     margin: 0;
@@ -18,7 +21,7 @@
     background-color: #E5E5E7;
 }
 .p-hotel{
-    width: 85%;
+    width: 92%;
     justify-content: center;
     padding: 0 1rem;
     margin-bottom: 0;
@@ -30,6 +33,9 @@
     padding: 0%;
     color: #1DBEB4;
     font-size: 12px;
+}
+.estrellas{
+    padding-left: 1.4rem;
 }
 .flecha{
     font-size: 2.5rem;
@@ -77,20 +83,27 @@
     margin: 0.5rem ; 
     padding: 0.5rem ;
     color:#545776; 
+    padding-left: 1.1rem;
 }
 .datepicker-div{
     background-color: #E5E5E7;
-    padding: 2rem 8rem ;  
+    padding: 2rem 1rem ;  
     justify-content: center;
+    width: 80rem;
+    
     
 }
 .cajaauxiliarfechas{
     padding-top: 1.5rem;
-    margin: 1rem ;
+    margin: .5rem ;
     justify-content: center;
-    border-radius: 3px;
-    width: 27rem;
+    border-radius: 1px;
+    width: 22rem;
     background-color:#E5E5E7;
+}
+
+.react-datepicker{
+    width: 47rem;
 }
 .react-datepicker__month-container{
     width: 100%;
@@ -100,6 +113,7 @@
     background-color: #1DBEB4;
     width: 27rem;
     color: white;
+    border-radius: .4rem;
 }
 
 .titleh5aloj{
@@ -107,10 +121,12 @@
     width: 100%;
     font-size: 18px;
     padding: 0;
+    margin-bottom: 1.8rem;
 }
 .iconoscarrusel{
     color: #545776
 }
+
 
 
 @media(min-width:1150px){
@@ -131,11 +147,14 @@
  }
  
  .servicios-alojamiento{
-    width: 1000px; 
+    width: 1060px; 
     display: grid;
     grid-template-columns: repeat(4, 2fr);
-    grid-auto-rows:60px;
-    gap: 6px;    
+    grid-auto-rows:70px;
+    gap: 6px;  
+    padding-left: 20px;  
+    margin-right: 24px;
+    margin-top: 4rem;
     
  }
  .icons{

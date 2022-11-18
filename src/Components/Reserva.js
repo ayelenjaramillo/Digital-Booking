@@ -4,19 +4,38 @@ import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import React from "react";
 import axios from "axios";
-import { useState, useEffect, useParams } from "react";
+import { useState, useEffect} from "react";
+import { useParams } from "react-router-dom"; 
 import DataList from './dataList.json';
 
 
 const Reserva = () =>{
     const[startDate, setStartDate] = useState(); 
     const [endDate, setEndDate]= useState();
+    const[product, setProduct]= useState({})
+    const {id} = useParams();
     
 
     function onChangeDateHandler(value){
         setStartDate(value[0]); 
         setEndDate(value[1]);
-        }   
+        }  
+        
+        const baseUrl = "http://localhost:3000/"
+
+
+        const getProductById = async(id) => {
+            const endpoint = `${baseUrl}producto/${id}`;
+            return await axios.get(endpoint);
+        }
+    
+    useEffect( () => {
+            getProductById(id).then( (response) => {
+                setProduct(response.data)
+                console.log(response.data)
+            })
+        }, [id]); 
+    
     return(
     <div>
         <div>
@@ -32,6 +51,12 @@ const Reserva = () =>{
              <div> 
             <figure><i class="fa-solid fa-circle-check"></i> Tu habitacion va a estar lista para el check-in entre las 10.00AM y las 11.30PM</figure>
             <p> Inclui tu horario estimado de llegada</p>
+            <p className="p-hotel">
+        <i class="ubicacion fa-solid fa-location-dot"></i>
+        {console.log(id + "este es el que puse yo")}
+        {DataList[id].producto.location}
+        <p>{DataList[id-1].producto.description} </p>
+    </p>
             <select>
                 <option> 10:00 AM</option>
                 <option> 12:00 AM</option>

@@ -15,7 +15,7 @@
     margin-right: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 14.3rem;
+    grid-auto-rows: 14.5rem;
     gap:.5rem; 
    
     
@@ -33,8 +33,8 @@
     border-radius: .73rem;
 }
 .img-text{
-    top: 11rem;
-    left: 8rem;
+    top: 12rem;
+    left: 9rem;
     content: "Ver Mas"; 
     color: white;
     position: absolute;
