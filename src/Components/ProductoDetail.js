@@ -14,7 +14,7 @@ import Spinner from "./Spinner";
 const ProductoDetail=()=>{
     const[startDate, setStartDate] = useState(); 
     const [endDate, setEndDate]= useState(); 
-    const[product, setProduct]= useState({})
+    const [product, setProduct] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {id} = useParams();
 
@@ -49,9 +49,9 @@ const ProductoDetail=()=>{
             console.log("RESPONSE TITLE")
             console.log(response.data.title)
             console.log("PRODUCTO CATEGORY TITLE")
-            console.log(product.category.title)
-            console.log("PRODUCTO TITLE")
-            console.log(product.title)
+            // console.log(product.category.title)
+            // console.log("PRODUCTO TITLE")
+            // console.log(product.title)
             
 
         }).catch((error) => {
@@ -65,9 +65,12 @@ const ProductoDetail=()=>{
 
     }, [id])
 
-    useEffect(() => {
+    // useEffect(() => {
+    //     setIsLoading(false);
+    //     console.log("DESDE 2do useEffect. Product.title")
+    //     console.log(product)
 
-    }, [isLoading])
+    // }, [product])
 
 
 
