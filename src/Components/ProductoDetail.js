@@ -21,11 +21,11 @@ const ProductoDetail=()=>{
         setEndDate(value[1]);
         }   
 
-    const baseUrl = "http://localhost:3000/"
+    const baseUrl = "http://localhost:8080/"
 
 
     const getProductById = async(id) => {
-        const endpoint = `${baseUrl}producto/${id}`;
+        const endpoint = `${baseUrl}products/${id}`;
         return await axios.get(endpoint);
     }
 
@@ -34,7 +34,12 @@ const ProductoDetail=()=>{
     useEffect( () => {
         getProductById(id).then( (response) => {
             setProduct(response.data)
+            console.log("Response")
+            console.log(response)
+            console.log("Response Data")
             console.log(response.data)
+            console.log("PRODUCTO")
+            console.log(product)
         })
     }, [id])
 

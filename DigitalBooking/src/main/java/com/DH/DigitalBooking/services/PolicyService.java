@@ -1,3 +1,29 @@
+package com.DH.DigitalBooking.services;
+import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
+import com.DH.DigitalBooking.exceptions.EmptyFieldException;
+import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
+import com.DH.DigitalBooking.models.City;
+import com.DH.DigitalBooking.models.Policy;
+import com.DH.DigitalBooking.models.Product;
+import com.DH.DigitalBooking.repositories.PolicyRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class PolicyService {
+
+    @Autowired
+    private PolicyRepository policyRepository;
+
+
+    public List<Policy> listAll() {
+        return policyRepository.findAll();
+    }
+
+
     public Policy findById(Long id) throws ResourceNotFoundException {
      /*   Optional<Policy> result = policyRepository.findById(id);
         if(result.isPresent()){
