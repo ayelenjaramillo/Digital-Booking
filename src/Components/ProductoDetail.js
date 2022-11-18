@@ -57,12 +57,13 @@ return(
     </p>
     <span>
         <h5 className="titleh5aloj">Muy Bueno</h5>
+        <div className="estrellas">
         <i class="puntuacion fa-solid fa-star"></i>
         <i class="puntuacion fa-solid fa-star"></i>
         <i class="puntuacion fa-solid fa-star"></i>
         <i class="puntuacion fa-solid fa-star"></i>
         <i style={{color: "#CBCBCF"}} class="puntuacion fa-solid fa-star"></i>
-
+        </div>
     </span>
 
    </div> 
@@ -71,15 +72,13 @@ return(
     <span>
         <h3 className="titleh3aloj">Alojate en el corazon de Location</h3>
         <p className="p-hotel-negro">El Médanos Patagonia se encuentra en Las Grutas, a 500 metros de Primeras Bajadas, y ofrece alojamiento con aire acondicionado, wifi gratis y acceso a una terraza.
-        <br/>
         Todos los alojamientos incluyen zona de cocina con zona de comedor y heladera, sala de estar con sofá y baño privado con secador de pelo.A las parejas les gusta la ubicación. Le pusieron un puntaje de 9,4 para un viaje de a dos.
-        <br/>
         Médanos Patagonia recibe usuarios de Booking.com desde el 30 de mayo de 2018.</p>
     </span>
     <div>
         <h3 className="titleh3aloj"> Que ofrece este lugar?</h3>
+        <hr style={{color:"#1DBEB4",background:"#1DBEB4", opacity:20}}/>
         <div className="servicios-alojamiento">
-           
             <figure><i class="icons fa-solid fa-kitchen-set"></i>cocina</figure>
             <figure><i class="icons plus fa-solid fa-car"></i> Parking</figure>
             <figure><i class="icons fa-solid fa-tv"></i> Television</figure>
@@ -89,6 +88,7 @@ return(
             <figure><i class="icons fa-solid fa-wifi"></i>WIFI</figure>
         </div>
         <h3 className="titleh3aloj">Que tenes que saber</h3>
+        <hr style={{color:"#1DBEB4", opacity:20}}/>
         <div className="politicas-alojamiento">
            <div className="politicas-pautas-div">
             <h5 className="titleh5aloj">Normas de la casa</h5>
@@ -109,7 +109,6 @@ return(
             </div>
         </div><h3 className="titleh3aloj">Fechas disponibles</h3>
         <div className="datepicker-div">
-        
         <DatePicker placeholderText= " CheckIn - CheckOut" selectsRange={true}
                     onChange = {onChangeDateHandler}
                     startDate={startDate}
@@ -118,12 +117,12 @@ return(
                     inline
                     dateFormat="dd MM yyyy"/>
 
-                    <div className="cajaauxiliarfechas">
-                        <p>Agrega tus fechas para obtener precios exactos</p>
-                        <Link to="/Reserva">
-                        <button>Iniciar reserva</button>
-                        </Link>
-                    </div>
+        <div className="cajaauxiliarfechas">
+            <p style={{"font-weight":"bold"}}>Agrega tus fechas para obtener precios exactos</p>
+            <Link to="/Reserva">
+                <button style={{"font-weight":"bold"}}>Iniciar reserva</button>
+            </Link>
+        </div>
         </div>
     </div>
 
