@@ -15,7 +15,7 @@
     margin-right: 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: 13.5rem;
+    grid-auto-rows: 14.3rem;
     gap:.5rem; 
    
     
@@ -54,6 +54,7 @@ figure{
 }
 .mobileslider{
     display: none;
+    
 }
 .mobile-slider{
     display: none;
@@ -68,54 +69,18 @@ figure{
     }
     .mobile-slider{
         display: flex;
+        width: 70%;
+        margin: 8px 80px;
     }
     .carousel-root{
         width: 100%;
         height: 30%;
-        margin: 1rem;
+        margin: 16px;
     }
    
     
     
     
 }
-   /* .gallery{
-        display: flex; 
-        position: relative;
-        justify-content: center;
-        margin-bottom: 2rem;
-        width: 90%;
-        /* si le sacan el overflow van a ver que las imagenes estan todas atras en hilerita :) */
-        /* overflow: hidden;  
-        max-width: 1000px;
-        transition: all 600ms;
-        animation-duration: 3s;
-        height: 100%;
-
-   }
-   .gallery-picture{
-    position: relative;
-    
-    flex-direction: column;
-    flex-shrink: 0;
-    flex-grow: 0;
-    max-width: 80%;
-    margin-top: 2rem; 
-   }
-   .img-alone{
-    display: none;
-   }
-   .galeria-1, .galeria-2, .galeria-3,.galeria-4{
-    position: absolute;
-    width: 100%;
-   }
-   .img-text{
-    display: none;
-   }
-   .carousel-control-next{
-    margin-top: 3rem;
-    margin-right: 3rem;
-    display: flex;
-   } */
-    
+   
   

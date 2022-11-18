@@ -61,6 +61,7 @@ return(
         <i class="puntuacion fa-solid fa-star"></i>
         <i class="puntuacion fa-solid fa-star"></i>
         <i class="puntuacion fa-solid fa-star"></i>
+        <i style={{color: "#CBCBCF"}} class="puntuacion fa-solid fa-star"></i>
 
     </span>
 
@@ -78,23 +79,19 @@ return(
     <div>
         <h3 className="titleh3aloj"> Que ofrece este lugar?</h3>
         <div className="servicios-alojamiento">
-           <div>
-            <i class="icons fa-solid fa-kitchen-set"></i>cocina
-            <i class="icons plus fa-solid fa-car"></i> Estacionamiento gratuito
-            <i class="icons fa-solid fa-tv"></i> Television
-            <i class="icons fa-solid fa-paw"></i> Apto mascotas
-            </div>
-            <div>
-            <i class="icons fa-solid fa-person-swimming"></i>Pileta
-            <i class="icons plus fa-solid fa-snowflake"></i>Aire Acondicionado
-           <i class="icons fa-solid fa-wifi"></i>WIFI
-
-           </div>
+           
+            <figure><i class="icons fa-solid fa-kitchen-set"></i>cocina</figure>
+            <figure><i class="icons plus fa-solid fa-car"></i> Parking</figure>
+            <figure><i class="icons fa-solid fa-tv"></i> Television</figure>
+            <figure><i class="icon fa-solid fa-paw"></i> Apto mascotas</figure>
+            <figure><i class="icons fa-solid fa-person-swimming"></i>Pileta</figure>
+            <figure style={{width: 300}}><i class="icons plus fa-solid fa-snowflake"></i>Aire Acondicionado</figure>
+            <figure><i class="icons fa-solid fa-wifi"></i>WIFI</figure>
         </div>
         <h3 className="titleh3aloj">Que tenes que saber</h3>
         <div className="politicas-alojamiento">
            <div className="politicas-pautas-div">
-            <h5>Normas de la casa</h5>
+            <h5 className="titleh5aloj">Normas de la casa</h5>
             <p>Check out:10am</p>
             <p>No se permiten fiestas</p>
             <p>No fumar</p>
@@ -123,7 +120,9 @@ return(
 
                     <div className="cajaauxiliarfechas">
                         <p>Agrega tus fechas para obtener precios exactos</p>
+                        <Link to="/Reserva">
                         <button>Iniciar reserva</button>
+                        </Link>
                     </div>
         </div>
     </div>
