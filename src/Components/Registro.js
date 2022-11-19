@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import "../Components/Registro.css"
 import Componente from "../assets/Componente.png"; 
 import NavBar from "../Components/Navbar";
-import { BsEyeSlash } from 'react-icons/bs';
+
 
 const Registro =()=>{
     return(
@@ -31,26 +31,6 @@ const Registro =()=>{
             <p className="loginalign">Ya tienes una cuenta?<Link to="/LogIn" className="r-text">Iniciar sesion</Link></p>
         </form>
         </div>
-
-        {/* <div className="container-registro">
-            <form className="formulario">
-            <p className="ptext"> Crear cuenta</p>
-            <div className="r-l-especial">
-                <label> Nombre</label>
-                    <input type ="text"/>
-                <label > Apellido </label>
-                    <input type="text"/>
-            </div>
-                <label > Email</label>
-                    <input type="email"/>
-                <label>Contraseña</label>
-                    <input  type="password"/><BsEyeSlash />
-                <label> Confirmar Contraseña</label>
-                <input type="password"/>                
-                <button >Crear Cuenta</button>
-                <p>Ya tenes cuenta?<Link to="/LogIn" className="r-text">Iniciar sesion</Link></p>
-            </form>
-        </div> */}
 
         </div> 
     ); 
