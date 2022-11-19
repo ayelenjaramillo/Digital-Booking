@@ -35,7 +35,7 @@
     font-size: 12px;
 }
 .estrellas{
-    padding-left: 1.4rem;
+    padding-left: 1rem;
 }
 .flecha{
     font-size: 2.5rem;
@@ -93,14 +93,43 @@
 .iconoscarrusel{
     color: #545776
 }
+.map-img{
+    width: 80%;
+    margin: .5rem 5rem; 
+    height: 400px;
+    flex-shrink: 0;
+    padding: 1.5rem;
+}
+.cajaauxiliarfechas button{
+    margin-top: 10px;
+    width: 360px;
+    border-radius: 3px;
+    
+
+ }
+.map_location{
+background-color: #E5E5E7;
+margin: 0;}
 
 
 
 @media(min-width:992px) {
-    .politicas-alojamiento{
+.politicas-alojamiento{
         display: flex;
         padding: 16px 52px;
     }
+.map-img{
+        width: 80%;
+        margin: 10px 162px;
+        height: 500px;
+        flex-shrink: 0;
+}
+.map_location{
+    background-color: #E5E5E7;
+    margin: 0;
+    
+
+}
  .datepicker-div{
     display: flex;
     justify-content: space-between;
@@ -113,12 +142,14 @@
  }
  .cajaauxiliarfechas{
     background-color: white;
-    margin: 40px 40px;
-    height: 160px;
+    margin: 40px 50px;
+    height: 140px;
     padding: 20px;
  }
  .cajaauxiliarfechas button{
-    margin: 10px;
+    margin-top: 10px;
+    width: 360px;
+    border-radius: 3px ;
  }
  .titleh3aloj{
     margin-left:16px; 
@@ -158,10 +189,27 @@
     grid-auto-rows: 175px;
     gap:.5rem; 
 }
+.map-img{
+    width: 80%;
+    margin: 10px 70px;
+    height: 500px;
+    flex-shrink: 0;
+}
+.map_location{
+background-color: #E5E5E7;
+margin: 0;}
+
 .cajaauxiliarfechas{
     display: flex;
-    margin: 20px;
-    width: 450px;
+    margin: 20px 0; 
+    width: 500px;
+    gap: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.cajaauxiliarfechas button{
+    width: 300px;
+    
 }
 }
 
