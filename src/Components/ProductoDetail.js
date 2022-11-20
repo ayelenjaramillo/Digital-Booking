@@ -151,7 +151,12 @@ return(
                 <h5 className="titleh5aloj">Politicas de cancelacion</h5>
                 <p>Agrega las fechas de tu viaje para obtener los detalles de cancelacion de esta estadia</p>
             </div>
-        </div><h3 className="titleh3aloj">Fechas disponibles</h3>
+        </div>
+        <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
+        <div className="map_location">
+        <img src="../map.jpg" alt="map_location" className="map-img"/>
+        <h3 className="titleh3aloj">Fechas disponibles</h3>
+        
         <div className="datepicker-div">
         <DatePicker placeholderText= " CheckIn - CheckOut" selectsRange={true}
                     onChange = {onChangeDateHandler}
@@ -165,7 +170,7 @@ return(
             <p style={{"font-weight":"bold"}}>Agrega tus fechas para obtener precios exactos</p>
             <Link to="/Reserva">
                 <button style={{"font-weight":"bold"}}>Iniciar reserva</button>
-            </Link>
+            </Link></div>
         </div>
         </div>
     </div>
