@@ -40,6 +40,9 @@ const ProductoDetail=()=>{
     useEffect( () => {
         getProductById(id).then( (response) => {
             setProduct(response.data)
+
+            console.log(response.data?.title)
+
             console.log("Response")
             console.log(response)
             console.log("Response Data")
@@ -50,10 +53,7 @@ const ProductoDetail=()=>{
             console.log(response.data.category.title)
             console.log("RESPONSE TITLE")
             console.log(response.data.title)
-            console.log("PRODUCTO CATEGORY TITLE")
-            // console.log(product.category.title)
-            // console.log("PRODUCTO TITLE")
-            // console.log(product.title)
+
             
 
         }).catch((error) => {
@@ -71,6 +71,11 @@ const ProductoDetail=()=>{
     //     setIsLoading(false);
     //     console.log("DESDE 2do useEffect. Product.title")
     //     console.log(product)
+    //     console.log(product?.title)
+    //     console.log("PRODUCTO CATEGORY TITLE")
+    //     console.log(product.category.title)
+    //     console.log("PRODUCTO TITLE")
+    //     console.log(product.title)
 
     // }, [product])
 
