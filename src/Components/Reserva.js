@@ -7,9 +7,11 @@ import axios from "axios";
 import { useState, useEffect} from "react";
 import { useParams } from "react-router-dom"; 
 import DataList from './dataList.json';
+import Categoria from "./Categoria";
+import { Card } from "@material-ui/core";
 
 
-const Reserva = () =>{
+const Reserva = (props) =>{
     const[startDate, setStartDate] = useState(); 
     const [endDate, setEndDate]= useState();
 
@@ -18,8 +20,10 @@ const Reserva = () =>{
         setEndDate(value[1]);
         }  
  return(
-    <div>
-        <div>
+    
+    <div className="container-principal-reservas">
+        <div className="reservas-horiz">
+            <div className="datepicket-reservas">
             <DatePicker placeholderText= "CheckIn - CheckOut" selectsRange={true}
                     onChange = {onChangeDateHandler}
                     startDate={startDate}
@@ -27,36 +31,47 @@ const Reserva = () =>{
                     monthsShown={2}
                     inline
                     dateFormat="dd MM yyyy"/>
-             <p> Tu horario de llegada </p>
-             <div> 
-            <figure><i class="fa-solid fa-circle-check"></i> Tu habitacion va a estar lista para el check-in entre las 10.00AM y las 11.30PM</figure>
+            </div>
+             <p className="title"> Tu horario de llegada </p>
+            <div className="hs-llegada-reservacion"> 
+            <figure className="info-reservas">
+                <i class="fa-solid fa-circle-check"></i> Tu habitacion va a estar lista para el check-in entre las 10.00AM y las 11.30PM</figure>
             <p> Inclui tu horario estimado de llegada</p>
-            <p className="p-hotel">
-        <i class="ubicacion fa-solid fa-location-dot"></i>
-            </p>
-            <select>
+            <select className="select-reserv">
                 <option> 10:00 AM</option>
                 <option> 12:00 AM</option>
                 <option> 14:00 PM</option>
                 <option> 16:00 AM</option>
                 <option> 18:00 AM</option>
             </select>
+            <hr style={{color:"#1DBEB4"}}></hr>
             </div> 
-            <div>
-            <span>
+            </div>
+            <div className="reservas-vert">
+            <p style={{"font-weight": "bold", "font-size":15, color:"#545776"}}> HOTEL</p>
+             <span>
                 <i class="puntuacion fa-solid fa-star"></i>
                 <i class="puntuacion fa-solid fa-star"></i>
                 <i class="puntuacion fa-solid fa-star"></i>
                 <i class="puntuacion fa-solid fa-star"></i>
                 <i style={{color: "#CBCBCF"}} class="puntuacion fa-solid fa-star"></i>
             </span>
-            <span>
-            <i class="ubicacion fa-solid fa-location-dot"></i>
+            <span className="vert-location">
+                <p style={{"font-weight":"bold", "font-size":25, color: "#545776"}}> Pepito Hotel </p>
+                <p style={{color: "#545776"}}><span><i class="ubicacion fa-solid fa-location-dot"></i></span> Av. Colon 1643, Buenos Aires, Ciudad Autonoma de Bs As, Argentina.</p>
+                <hr style={{color:"#1DBEB4"}}/>
             </span>
-            <p>{null}</p>
-            <p> Check In:</p>
-            <p>Check Out: </p>
-            </div> 
+            <span className="vert-check-in">
+                <p> Check In: </p>
+                <p className="fecha"> 23/12/2022 </p>
+            </span>
+            <hr style={{color:"#1DBEB4"}}></hr>
+            <span className="vert-check-out">
+                <p> Check out: </p>
+                <p className="fecha"> 09/01/2023 </p>
+            </span>
+            
+            <button className="btn-confirmacion"> Confirmar Reserva </button>
         </div>
     </div>
     )
