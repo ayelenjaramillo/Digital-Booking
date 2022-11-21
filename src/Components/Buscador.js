@@ -1,28 +1,60 @@
 import "react-datepicker/dist/react-datepicker.css"; 
 import DatePicker from "react-datepicker";
 import "../Components/Buscador.css"; 
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
+import axios from "axios";
+
 
 
 const Buscador =()=>{
 const[startDate, setStartDate] = useState(); 
 const [endDate, setEndDate]= useState(); 
+const [ciudades, setCiudades] = useState([])
+const [elegirCiudad, serElegirCiudad] = useState(true)
+
+const baseUrl = "http://localhost:8080/"
+
+const buscarCiudades = async () => {
+    try {
+        const res = await axios.get(`${baseUrl}/cities`)
+        setCiudades(res.data);
+        console.log("RES DATA")
+        console.log(res.data)
+        serElegirCiudad(false)
+    } catch (err) {
+        console.log(err);
+    }
+};
+
+
 function onChangeDateHandler(value){
     setStartDate(value[0]); 
     setEndDate(value[1]);
     }
+
+    
+
+
+
+
+
 return(
     <div>
         <div className="h-principal">
         <form> 
             <p>Busca ofertas en hoteles, casas y mucho más</p>
             <div className="h-sec">
-                <select name="ciudad">
-                    <option disabled selected hidden >A dónde vamos?</option>
+                <select name="ciudad" onClick={ () => buscarCiudades()}>
+                    {/* <option disabled selected hidden >A dónde vamos?</option>
                     <option>Trelew, Chubut, Argentina</option>
                     <option>Rio Cuarto, Cordoba, Argentina</option>
                     <option>Capital Federal, Buenos Aires, Argentina</option>
-                    <option>Villa La Angostura, Neuquen, Argentina</option>
+                    <option>Villa La Angostura, Neuquen, Argentina</option> */}
+
+                    {elegirCiudad ? <option disabled selected hidden >A dónde vamos?</option> : (  ciudades.map(e => (
+                        <option key={e.id} value={e.i}>{e.city_name}</option>
+                    )
+                    ) ) }
                 </select>
                 <DatePicker placeholderText="Check in - Check out" selectsRange={true}
                     onChange = {onChangeDateHandler}
