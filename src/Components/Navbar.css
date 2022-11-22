@@ -80,6 +80,9 @@
         margin-right: 1rem;
     }
 
+    .navBar-mobile a{
+      color: #383B58;
+    }
 
     .h-list{
         display: none;

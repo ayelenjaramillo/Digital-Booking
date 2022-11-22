@@ -15,7 +15,7 @@ const MenuPrincLogin =(props)=>{
     return(
         <div>
             <div className="div-header-menuprinc">
-                <Link to="/Home"><img className="image" src={Componente} alt="title"/></Link>
+                <Link to="/"><img className="image" src={Componente} alt="title"/></Link>
                 {/* <Outlet/> */}
                 <p className="text-avatar">
                     <button src={usuario?usuario: ""} className="avatar">{usuario[0].toUpperCase()}</button>

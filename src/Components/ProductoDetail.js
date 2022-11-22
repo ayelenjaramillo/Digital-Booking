@@ -89,7 +89,7 @@ return(
         <h4>{isLoading ?  <Spinner />  : product.title}</h4>
     </p>
     <span className="iconos">
-        <Link to="/Home"><FontAwesomeIcon className="flecha" icon={faAngleLeft} /></Link>
+        <Link to="/"><FontAwesomeIcon className="flecha" icon={faAngleLeft} /></Link>
     </span>
     
     </div>

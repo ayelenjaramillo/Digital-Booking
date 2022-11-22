@@ -44,13 +44,12 @@ const LogIn =()=>{
             <p className="titlelogin">Iniciar sesion</p>
                 <label>Correo Electronico</label>
                 <input className="input-login" type="email" placeholder="@..." required pattern=".+@hotmail\.com" 
-                    onChange={(event)=>{const value = event.target.value; 
-                    console.log(value);
-                    setLoginState({...loginState, usuario: value})
+                    onBlur={(event)=>{
+                        setLoginState({...loginState, usuario: event.target.value})
                 }}/>
                 <label>Contraseña</label>
                 <input className="input-login" type="password" minLength={6} required 
-                    onChange={(event)=>{
+                    onBlur={(event)=>{
                     const value = event.target.value; 
                     setLoginState({...loginState, contrasenia: value})}}/>
                 <div className="buttonholderlog">

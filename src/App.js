@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Alojamiento from "./Components/Alojamiento";
+// import Alojamiento from "./Components/Alojamiento";
 import NavBar from "./Components/Navbar";
 import Home from "./Components/Home"; 
 import Registro from "./Components/Registro"; 
@@ -18,11 +18,12 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
+      <NavBar/>
         <Routes>
-          <Route path="/" element={<NavBar/>}></Route>
-          <Route index element = {<Home/>}></Route>
-          <Route path="/home" element= {<Home/>}></Route>
-          <Route path="/Alojamiento" element= {<Alojamiento/>}></Route>
+          <Route path="/" element={<Home/>}></Route>
+          {/* <Route index element = {<Home/>}></Route>
+          <Route path="/home" element= {<Home/>}></Route> */}
+          {/* <Route path="/Alojamiento" element= {<Alojamiento/>}></Route> */}
           <Route path="/CarruselB" element={<CarruselB/>}></Route>
           <Route path="/Login" element= {<LogIn/>}></Route>
           <Route path="/MenuPrincLogin" element = {<MenuPrincLogin/>}></Route> 

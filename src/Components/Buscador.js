@@ -44,6 +44,7 @@ return(
         <form> 
             <p>Busca ofertas en hoteles, casas y mucho más</p>
             <div className="h-sec">
+            {/* VER ESTO CON WIN PORQUE TENEMOS QUE ELIMINAR EL SELECT Y CAMBIARLO POR UN INPUT<input placeholder= "A donde vamos?"></input> */}
                 <select name="ciudad" onClick={ () => buscarCiudades()}>
                     {/* <option disabled selected hidden >A dónde vamos?</option>
                     <option>Trelew, Chubut, Argentina</option>
