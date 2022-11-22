@@ -61,7 +61,7 @@ return(
                     onChange = {onChangeDateHandler}
                     startDate={startDate}
                     endDate={endDate}
-                    dateFormat="dd MM yyyy"/>
+                    dateFormat="dd/MM/yyyy"/>
                 <button className = "boton-principal"type="submit"> Buscar </button>
             </div>
         </form>

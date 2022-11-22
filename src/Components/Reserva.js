@@ -4,21 +4,21 @@ import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import React from "react";
 import axios from "axios";
+import { Link, Outlet } from "react-router-dom";
 import { useState, useEffect} from "react";
-import { useParams } from "react-router-dom"; 
-import DataList from './dataList.json';
-import Categoria from "./Categoria";
-import { Card } from "@material-ui/core";
 
 
-const Reserva = (props) =>{
+
+const Reserva = () =>{
     const[startDate, setStartDate] = useState(); 
     const [endDate, setEndDate]= useState();
 
     function onChangeDateHandler(value){
+        console.log(value)
         setStartDate(value[0]); 
         setEndDate(value[1]);
         }  
+        console.log(endDate)
  return(
     
     <div className="container-principal-reservas">
@@ -30,12 +30,14 @@ const Reserva = (props) =>{
                     endDate={endDate}
                     monthsShown={2}
                     inline
-                    dateFormat="dd MM yyyy"/>
+                    dateFormat="dd/MM/yyyy"
+                    />
             </div>
              <p className="title"> Tu horario de llegada </p>
             <div className="hs-llegada-reservacion"> 
             <figure className="info-reservas">
-                <i class="fa-solid fa-circle-check"></i> Tu habitacion va a estar lista para el check-in entre las 10.00AM y las 11.30PM</figure>
+                <i class="fa-solid fa-circle-check"></i> Tu habitacion va a estar lista para el check-in entre las 10.00AM y las 11.30PM
+            </figure>
             <p> Inclui tu horario estimado de llegada</p>
             <select className="select-reserv">
                 <option> 10:00 AM</option>
@@ -48,6 +50,10 @@ const Reserva = (props) =>{
             </div> 
             </div>
             <div className="reservas-vert">
+            <p style={{color:"#545776", "font-weight":"bold"}}> Detalle de la reserva </p>
+            <figure>
+                <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="gallery-img"/>
+            </figure>
             <p style={{"font-weight": "bold", "font-size":15, color:"#545776"}}> HOTEL</p>
              <span>
                 <i class="puntuacion fa-solid fa-star"></i>
@@ -63,15 +69,16 @@ const Reserva = (props) =>{
             </span>
             <span className="vert-check-in">
                 <p> Check In: </p>
-                <p className="fecha"> 23/12/2022 </p>
+                <p className="fecha"> {startDate?.toLocaleDateString()}</p>
             </span>
             <hr style={{color:"#1DBEB4"}}></hr>
             <span className="vert-check-out">
                 <p> Check out: </p>
-                <p className="fecha"> 09/01/2023 </p>
+                <p className="fecha">  {endDate?.toLocaleDateString()}</p>
             </span>
-            
+            <Link to="/ConfirmacionReserva">
             <button className="btn-confirmacion"> Confirmar Reserva </button>
+            </Link><Outlet/>
         </div>
     </div>
     )
