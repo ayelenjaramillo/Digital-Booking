@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleCheck} from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import React from "react";
 import "../Components/ConfirmacionReserva.css"; 
 const ConfirmacionReserva = () =>{
@@ -11,7 +12,8 @@ const ConfirmacionReserva = () =>{
         </figure>
         <p style={{"font-weight":"bold", "font-size":23, color: "#1DBEB4", "background-color":"white"}} className="p-reservas"> Muchas Gracias! </p>
         <p style={{"font-weight":"bold", "font-size":15, "background-color":"white"}} className="p-reservasbis"> Su reserva se ha realizado con exito </p>
-        <button className="botton-check">ok</button></div>
+        <Link to="/" className="l-text"><button className="botton-check">ok</button></Link>
+        </div>
     </div>
     )
 }
