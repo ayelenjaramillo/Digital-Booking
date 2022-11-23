@@ -20,11 +20,17 @@ public class Policy {
     private Long id;
     @Column
     private String documentation;
+    @Column(name="penalty_fee")
+    private String penalty_fee;
 
     public Policy(String documentation) {
         this.documentation = documentation;
     }
 
+    public Policy(String documentation, String penalty_fee){
+        this.documentation = documentation;
+        this.penalty_fee = penalty_fee;
+    }
 
 
 }

@@ -13,6 +13,7 @@ import java.util.Set;
     @Entity
     @Table(name = "products")
     public class Product {
+        //Unable to find column with logical name: idProduct in org.hibernate.mapping.Table(products)
         @Id
         //@SequenceGenerator(name="image_sequence",sequenceName = "image_sequence",initialValue = 1)
         @SequenceGenerator(name="image_sequence",sequenceName = "image_sequence")
@@ -35,8 +36,10 @@ import java.util.Set;
         @JoinColumn(name = "categories_id", referencedColumnName = "id")
         private Category category;
 
-        @ManyToOne(fetch = FetchType.EAGER)
-        @JoinColumn(name = "cities_id", referencedColumnName = "id")
+        @ManyToOne
+        @JoinColumn(name = "cities_id", insertable = false, updatable = false, referencedColumnName = "id")
+        //insertable = "false", updatable = "false"
+        // para que no permita crear nuevos productos a través de esta relación sino que si queremos crear un nuevo cliente lo tengamos que hacer directamente en ese entity
         private City city;
 
         //VALIDAR EXISTAN HACIENDO BUSQUEDA AL MOMENTO DE SETEAR
@@ -46,8 +49,10 @@ import java.util.Set;
         @OneToMany(mappedBy = "product", cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
         private Set<Feature> features = new HashSet<>();
 
-        @ManyToOne(fetch = FetchType.EAGER)
-        @JoinColumn(name = "policies_id", referencedColumnName = "id")
+        @ManyToOne
+        @JoinColumn(name = "policies_id", insertable = false, updatable = false, referencedColumnName = "id")
+        //insertable = "false", updatable = "false"
+        // para que no permita crear nuevos productos a través de esta relación sino que si queremos crear un nuevo cliente lo tengamos que hacer directamente en ese entity
         private Policy policy;
 
 

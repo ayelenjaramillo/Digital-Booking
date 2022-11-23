@@ -133,11 +133,7 @@ public class ProductService {
         }
 
         //hacer metodo privado y hacer transformacion aca. Y que devuelva el objeto en el que quiero que se transforme.
-      /*  private Product toProduct(DTOProductBuilder dtoProductBuilder){
-            return new Product(dtoProductBuilder.getTitle(), dtoProductBuilder.getDescription(), dtoProductBuilder.getDescription_title(), dtoProductBuilder.getRating(), dtoProductBuilder.getAddress(),
-                    new Category( null, null, null),
-                    new City(dtoProductBuilder.getCity_id(), null, null), images,features,"Aquí van las políticas de este establecimiento");
-        }*/
+
 
 
 

@@ -17,9 +17,11 @@ public class Image {
     @SequenceGenerator(name="image_generator",sequenceName = "image_seq", allocationSize = 1)
     //@Column(name = "id", updatable = false, nullable = false)
     private Long id;
-    @Column(name = "title_image")
+    //@Column(name = "title_image")
+    @Column
     private String title_image;
-    @Column(name="url_image")
+    //@Column(name="url_image")
+    @Column
     private String url_image;
 
     @ManyToOne(fetch = FetchType.EAGER)

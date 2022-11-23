@@ -2,8 +2,6 @@ package com.DH.DigitalBooking.controllers;
 import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
-import com.DH.DigitalBooking.models.DTOProductBuilder;
-import com.DH.DigitalBooking.models.DTOProductUpdate;
 import com.DH.DigitalBooking.models.Product;
 import com.DH.DigitalBooking.services.ProductService;
 import io.swagger.v3.oas.annotations.Operation;

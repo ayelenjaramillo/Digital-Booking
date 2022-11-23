@@ -2,12 +2,14 @@ package com.DH.DigitalBooking.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "features")
 public class Feature {
@@ -24,9 +26,6 @@ public class Feature {
     @JoinColumn(name = "products_id", referencedColumnName = "id")
     @JsonIgnore
     private Product product;
-
-    public Feature() {
-    }
 
     public Feature(String description, String icon, Product product) {
         this.description = description;
