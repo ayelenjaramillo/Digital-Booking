@@ -59,9 +59,11 @@ return(
                 </select>
                 <DatePicker placeholderText="Check in - Check out" selectsRange={true}
                     onChange = {onChangeDateHandler}
+                    monthsShown={2}
                     startDate={startDate}
                     endDate={endDate}
-                    dateFormat="dd MM yyyy"/>
+                    dateFormat="dd/MM/yyyy"/>
+                    
                 <button className = "boton-principal"type="submit"> Buscar </button>
             </div>
         </form>

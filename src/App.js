@@ -8,11 +8,10 @@ import MenuPrincLogin from "./Components/MenuPrincLogin";
 import Footer from "./Components/Footer";
 import ProductoDetail from "./Components/ProductoDetail";
 import Avatar from "@material-ui/core/Avatar"; 
-
-
 import "./App.css"; 
 import CarruselB from "./Components/CarruselB";
 import Reserva from "./Components/Reserva";
+import ConfirmacionReserva from "./Components/ConfirmacionReserva";
 const App = () => {
   
   return (
@@ -30,6 +29,7 @@ const App = () => {
           <Route path="/registro" element = {<Registro/>}></Route>
           <Route path="/producto/:id" element= {<ProductoDetail/>} ></Route> 
           <Route path="/Reserva" element = {<Reserva/>}></Route>
+          <Route path="/ConfirmacionReserva" element= {<ConfirmacionReserva/>}></Route>
       </Routes>
       </BrowserRouter>
       {/* <Avatar src="./gatonegro.png" />  */}
