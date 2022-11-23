@@ -18,7 +18,7 @@ public class Role {
     @Id
     //@Column(name = "idRoles")
     @Column
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     //@Column(name = "role_name")
     @Column

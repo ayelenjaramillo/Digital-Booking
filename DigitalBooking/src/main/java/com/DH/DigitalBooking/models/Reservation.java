@@ -18,8 +18,9 @@ public class Reservation {
 
     @Id
     //@Column(name = "idReservations")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long idReservation;
 
     //@Column (name = "check_in_time")

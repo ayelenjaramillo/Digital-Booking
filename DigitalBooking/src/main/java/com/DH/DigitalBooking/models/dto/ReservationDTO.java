@@ -13,7 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class ReservationDTO extends Reservation {
+public class ReservationDTO {
 
     private LocalTime check_in_time;
     private Date check_in_date;

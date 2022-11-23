@@ -15,9 +15,10 @@ import java.util.Set;
     public class Product {
         //Unable to find column with logical name: idProduct in org.hibernate.mapping.Table(products)
         @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         //@SequenceGenerator(name="image_sequence",sequenceName = "image_sequence",initialValue = 1)
-        @SequenceGenerator(name="image_sequence",sequenceName = "image_sequence")
-        @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "image_sequence")
+        //@SequenceGenerator(name="image_sequence",sequenceName = "image_sequence")
+        //@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "image_sequence")
         //@NotNull
         private Long id;
         @Column
