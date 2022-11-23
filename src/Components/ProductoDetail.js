@@ -62,7 +62,7 @@ const ProductoDetail=()=>{
 
         setTimeout(() => {
             setIsLoading(false);
-        }, 7000)
+        }, 2000)
 
 
     }, [id])
