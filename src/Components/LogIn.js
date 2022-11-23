@@ -8,8 +8,24 @@ import "../Components/Login.css";
 
 
 const LogIn =()=>{
+
     //Variable/hook para redirigir despues de hacer las validaciones
     const navigate = useNavigate();
+    const SignIn = ({ handleEvent }) => {
+        return <button onClick={e => handleEvent(true)}>Sign In</button>;
+      };
+      
+      const Logout = ({ handleEvent }) => {
+        return <button onClick={e => handleEvent(false)}>Sign out</button>;
+      };
+      const Login = () => {
+        const [isLoggedIn, setIsLoggedIn] = useState(false);
+      
+        if (!isLoggedIn) return <SignIn handleEvent={setIsLoggedIn} />;
+      
+        return <Logout handleEvent={setIsLoggedIn} />;
+      };
+    
 
     //Usuario previo para comparar con el nuevo y ver las validaciones
     const prevLoginState = {
@@ -53,7 +69,7 @@ const LogIn =()=>{
                     const value = event.target.value; 
                     setLoginState({...loginState, contrasenia: value})}}/>
                 <div className="buttonholderlog">
-                <button className="boton_principal">Ingresar</button>
+                <button className="boton_principal" >Ingresar</button>
                 </div>
                 <p className="accalign"> Aun no tenes cuenta?<Link to="/Registro" className="l-text">Registrate</Link></p>
             </form>

@@ -8,7 +8,6 @@ import { Link, Outlet } from "react-router-dom";
 import { useState, useEffect} from "react";
 
 
-
 const Reserva = () =>{
     const[startDate, setStartDate] = useState(); 
     const [endDate, setEndDate]= useState();
@@ -20,10 +19,25 @@ const Reserva = () =>{
         }  
         console.log(endDate)
  return(
-    
+    <div>
     <div className="container-principal-reservas">
         <div className="reservas-horiz">
+            
+            <p className="title"> Completa tus datos </p> 
+            <div className="datos-personales-reserva">
+            <div className="datos-div">
+                <label for="lname" className="lblock">Nombre
+                <input className="input-registro" type="text" id="apellido" name="apellido"/></label>
+                <label for="lname" className="lblock">Apellido
+                <input className="input-registro" type="text" id="apellido" name="apellido"/></label>
+                <label for="lname" className="lblock">Correo Electronico
+                <input className="input-registro" type="text" id="apellido" name="apellido"/></label>
+                <label for="lname" className="lblock">Ciudad
+                <input className="input-registro" type="text" id="apellido" name="apellido"/></label>
+                </div>
+            </div>
             <div className="datepicket-reservas">
+            <p className="title"> Selecciona tu fecha de reserva</p>
             <DatePicker placeholderText= "CheckIn - CheckOut" selectsRange={true}
                     onChange = {onChangeDateHandler}
                     startDate={startDate}
@@ -52,7 +66,7 @@ const Reserva = () =>{
             <div className="reservas-vert">
             <p style={{color:"#545776", "font-weight":"bold"}}> Detalle de la reserva </p>
             <figure>
-                <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="gallery-img"/>
+                <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="image-reserva"/>
             </figure>
             <p style={{"font-weight": "bold", "font-size":15, color:"#545776"}}> HOTEL</p>
              <span>
@@ -79,8 +93,14 @@ const Reserva = () =>{
             <Link to="/ConfirmacionReserva">
             <button className="btn-confirmacion"> Confirmar Reserva </button>
             </Link><Outlet/>
-        </div>
+        </div>        
     </div>
+    <div className="politicas-alojamiento">
+
+   
+ </div>
+ </div>
+    
     )
 }
 export default Reserva; 

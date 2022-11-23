@@ -60,6 +60,11 @@
     width: 1.3rem; 
     color: #1DBEB4;
  }
+ .gallery{ display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 175px;
+    gap:.5rem; 
+}
 .plus{
     margin-left: 5rem;
 }
