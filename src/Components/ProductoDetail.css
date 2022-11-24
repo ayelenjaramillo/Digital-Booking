@@ -11,10 +11,11 @@
     margin-top: 5rem;
     
 }
-.p-reservas{
+.p-reservasprod{
     font-weight: bold;
     font-size: .8rem;
-    margin-left: 2rem;
+    /* margin-left: 2rem; */
+    text-align: center;
 }
 .boton-iniciar-reserva{
     font-weight: bold;

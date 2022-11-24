@@ -83,8 +83,8 @@ const Reserva = () =>{
                     <i style={{color: "#CBCBCF"}} class="puntuacion fa-solid fa-star"></i>
                 </span>
                 <span className="vert-location">
-                    <p className= "parrafo-info"> Pepito Hotel </p>
-                    <p style={{color: "#545776"}}><span><i class="ubicacion fa-solid fa-location-dot"></i></span> Av. Colon 1643, Buenos Aires, Ciudad Autonoma de Bs As, Argentina.</p>
+                    <p className= "parrafo-info"> Producto 2 </p>
+                    <p style={{color: "#545776"}}><span><i class="ubicacion fa-solid fa-location-dot"></i></span> Rosario, Argentina</p>
                     <hr style={{color:"#1DBEB4"}}/>
                 </span>
                 <span className="vert-check-in">

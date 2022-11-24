@@ -14,8 +14,8 @@
     padding-top: .5em;
     margin-right: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 200px);
-    grid-auto-rows: 15rem;
+    grid-template-columns: repeat(2, 15rem);
+    grid-auto-rows: 15.75rem;
     gap:.5rem; 
    
     

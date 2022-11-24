@@ -158,7 +158,7 @@ return(
         </div>
         <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
         <div className="map_location">
-        <img src="../map.jpg" alt="map_location" className="map-img"/>
+        {/* <img src="../map.jpg" alt="map_location" className="map-img"/> */}
         <h3 className="titleh3aloj">Fechas disponibles</h3>
         
         <div className="datepicker-div">
@@ -171,8 +171,8 @@ return(
                     dateFormat="dd MM yyyy"/>
 
         <div className="cajaauxiliarfechas">
-            <p className= "p-reservas">Agrega tus fechas para obtener precios exactos</p>
-            <Link to="/Reserva">
+            <p className= "p-reservasprod">Agrega tus fechas para obtener precios exactos</p>
+            <Link to="/LogIn">
                 <button className="boton-iniciar-reserva">Iniciar reserva</button>
             </Link></div>
         </div>
