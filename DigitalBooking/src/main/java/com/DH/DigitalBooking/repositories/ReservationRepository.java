@@ -17,8 +17,8 @@ public interface ReservationRepository extends JpaRepository<Reservation, Object
     @Query("FROM Reservation r WHERE r.product.id = :product_id")
     List<Reservation> filterReservationsByProductId(@Param("product_id") Long product_id);
 
-    //TODO OPCIONAL
-   /* @Query("select r from reservation b where " +
+    /* TODO OPCIONAL
+   @Query("select r from reservation b where " +
             "((check_in_date between :check_in_date AND :check_out_date) " +
             "OR (check_out_date between :check_in_date AND :check_out_date) " +
             "OR ((:check_out_date between check_in_date AND check_out_date) AND " +
@@ -27,6 +27,6 @@ public interface ReservationRepository extends JpaRepository<Reservation, Object
     List<Reservation> findByDatesBetweenWithProductId(
             @Param("check_in_date") LocalDate check_in_date,
             @Param("check_out_date") LocalDate check_out_date,
-            @Param("product_id") Long id);
-*/
+            @Param("product_id") Long id); */
+
 }

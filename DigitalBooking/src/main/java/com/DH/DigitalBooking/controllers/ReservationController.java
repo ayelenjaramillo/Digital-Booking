@@ -112,4 +112,13 @@ public class ReservationController {
         return  ResponseEntity.ok(reservationService.deleteById(id));
     }
 
+
+    /*
+    @PostMapping("/findBetweenDates")
+    public ResponseEntity<List<ReservationDTO>> findByDate(@RequestBody ReservationDTO reservationDTO) throws ResourceNotFoundException {
+        return ResponseEntity.ok(ReservationService.findBetweenTwoDates(reservationDTO.getCheck_in_date(), reservationDTO.getCheck_out_date()));
+    } */
+
+
+
 }

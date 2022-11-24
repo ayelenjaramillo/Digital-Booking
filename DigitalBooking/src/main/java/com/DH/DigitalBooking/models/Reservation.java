@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -29,11 +30,11 @@ public class Reservation {
 
     //@Column(name = "check_in_date")
     @Column
-    private Date check_in_date;
+    private LocalDate check_in_date;
 
     //@Column(name="check_out_date")
     @Column
-    private Date check_out_date;
+    private LocalDate check_out_date;
 
     //TODO REVISAR NOMBRES DE COLUMNAS Y TABLAS EN BD
     @ManyToOne(fetch = FetchType.EAGER)
@@ -45,7 +46,7 @@ public class Reservation {
     private Product product;
 
     //all args SIN ID
-    public Reservation(LocalTime check_in_time, Date check_in_date, Date check_out_date,  User user, Product product) {
+    public Reservation(LocalTime check_in_time, LocalDate check_in_date, LocalDate check_out_date,  User user, Product product) {
     this.check_in_time = check_in_time;
     this.check_in_date= check_in_date;
     this.check_out_date= check_out_date;

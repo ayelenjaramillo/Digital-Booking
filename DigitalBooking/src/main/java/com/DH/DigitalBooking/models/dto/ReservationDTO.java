@@ -5,7 +5,7 @@ import com.DH.DigitalBooking.models.Reservation;
 import com.DH.DigitalBooking.models.User;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Date;
 
@@ -16,8 +16,8 @@ import java.util.Date;
 public class ReservationDTO {
 
     private LocalTime check_in_time;
-    private Date check_in_date;
-    private Date check_out_date;
+    private LocalDate check_in_date;
+    private LocalDate check_out_date;
     private long product_id;
     private long user_id;
 
