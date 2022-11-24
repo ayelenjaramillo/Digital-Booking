@@ -24,7 +24,6 @@ public class Role {
     @Column
     private String role_name;
 
-    //TODO REVISAR SI SON NECESARIOS ESTOS DOS ATRIBUTOS
     /*@Column(name = "description")
     private String description;
     @Column(name = "snactive")

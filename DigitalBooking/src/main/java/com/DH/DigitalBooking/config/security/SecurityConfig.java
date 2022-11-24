@@ -63,7 +63,7 @@ public class SecurityConfig {
      * Registro de los endpoints, definiendo quien tiene acceso a cada uno de ellos, esto con el fin de darle
      * seguridad a nuestra aplicación
      */
-    
+
     @Primary
     @Bean
     protected HttpSecurity configure(HttpSecurity http) throws Exception {

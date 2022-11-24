@@ -2,6 +2,7 @@ package com.DH.DigitalBooking.controllers;
 import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
+import com.DH.DigitalBooking.models.dto.ReservationDTO;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -60,13 +61,20 @@ public class ReservationController {
             @ApiResponse(responseCode = "400", description = "Reservation already exists", content = @Content)
     })
 
-    @PostMapping
+   /* @PostMapping
     public ResponseEntity addReservation(@RequestBody Reservation reservation)throws CreatingExistingEntityException, EmptyFieldException, ResourceNotFoundException{
 
         //response.put("response", reservation);
         //response.put("message", "reservation made")
         return ResponseEntity.ok(reservationService.create(reservation));
+    }*/
+
+
+    @PostMapping
+    public ResponseEntity<Reservation> addReservation(@RequestBody ReservationDTO reservation)throws EmptyFieldException, CreatingExistingEntityException, ResourceNotFoundException{
+        return ResponseEntity.ok(reservationService.create(reservation.toReservation()));
     }
+
 
     /* EDIT FUNCTIONS */
     @Operation(summary = "Edits a reservation")
