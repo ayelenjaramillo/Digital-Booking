@@ -22,10 +22,10 @@ import java.io.IOException;
 public class JwtTokenFilterConfig extends OncePerRequestFilter {
 //LLEGA ACÁ ANTES DE LLEGAR A CUALQUIER CONTROLADOR
 
-    //inyecto los provider (para acceder a los metodos)
+    //inyecto los provider (la configuracion para acceder a los metodos)
     @Autowired
     private JwtProviderConfig jwtProviderConfig;
-    //inyectamos la capa de lógica para poder buscar un usuario y autenticarlo
+    //inyectamos la capa de lógica para poder buscar un usuario y autenticarlo en el scope de springsecurity
     @Autowired
     private UserDetailsServiceImpl userDetailsService;
 

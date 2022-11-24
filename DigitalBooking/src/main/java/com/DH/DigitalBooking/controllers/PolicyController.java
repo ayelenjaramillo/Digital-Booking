@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/policies")
+@RequestMapping("/api/v1/city")
 public class PolicyController {
 
     @Autowired

@@ -28,6 +28,7 @@ public class UserController {
     @PostMapping()
     public ResponseEntity<Map<String,Object>> create(@RequestBody UserDTO user){
         Map<String, Object> response = new HashMap<>();
+        //esta linea va a buscar el password
         String passWEncrypt = passwordEncoder.encode(user.getPassword());
         user.setPassword(passWEncrypt);
         response.put("respuesta",userService.save(user));

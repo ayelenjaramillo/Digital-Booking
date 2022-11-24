@@ -37,7 +37,7 @@ public class Reservation {
 
     //TODO REVISAR NOMBRES DE COLUMNAS Y TABLAS EN BD
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "Users_idUser", referencedColumnName = "idUser")
+    @JoinColumn(name = "Users_idUser", referencedColumnName = "id")
     private User user;
 
     @ManyToOne(fetch = FetchType.EAGER)

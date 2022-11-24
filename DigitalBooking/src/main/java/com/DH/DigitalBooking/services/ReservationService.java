@@ -9,8 +9,9 @@ import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class ReservationService implements IService<Reservation> {
 
     @Autowired
@@ -55,18 +56,20 @@ public class ReservationService implements IService<Reservation> {
 
     @Override
     public Reservation edit(Reservation t) throws ResourceNotFoundException, EmptyFieldException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
     public Reservation delete(Reservation t) throws ResourceNotFoundException, EmptyFieldException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
     @Override
-    public Reservation deleteById(Long id) throws ResourceNotFoundException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Reservation deleteById(Long id)  throws ResourceNotFoundException {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
-
+    public List<Reservation> filterByProduct(Long product_id) throws ResourceNotFoundException{
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }
