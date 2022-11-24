@@ -10,8 +10,8 @@ const ConfirmacionReserva = () =>{
         <figure className="check">
         <FontAwesomeIcon style={{"background-color":"white"}} icon={faCircleCheck} />
         </figure>
-        <p style={{"font-weight":"bold", "font-size":23, color: "#1DBEB4", "background-color":"white"}} className="p-reservas"> Muchas Gracias! </p>
-        <p style={{"font-weight":"bold", "font-size":15, "background-color":"white"}} className="p-reservasbis"> Su reserva se ha realizado con exito </p>
+        <p className="p-reservass"> Muchas Gracias! </p>
+        <p className="p-reservasbis"> Su reserva se ha realizado con exito </p>
         <Link to="/" className="l-text"><button className="botton-check">ok</button></Link>
         </div>
     </div>
