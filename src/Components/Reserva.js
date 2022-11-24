@@ -13,11 +13,11 @@ const Reserva = () =>{
     const [endDate, setEndDate]= useState();
 
     function onChangeDateHandler(value){
-        console.log(value)
+      
         setStartDate(value[0]); 
         setEndDate(value[1]);
         }  
-        console.log(endDate)
+        
  return(
     <div>
     <div className="container-principal-reservas">
@@ -96,10 +96,8 @@ const Reserva = () =>{
         </div>        
     </div>
     <div className="politicas-alojamiento">
-
-   
- </div>
- </div>
+    </div>
+     </div>
     
     )
 }

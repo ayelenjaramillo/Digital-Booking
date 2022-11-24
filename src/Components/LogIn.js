@@ -11,22 +11,7 @@ const LogIn =()=>{
 
     //Variable/hook para redirigir despues de hacer las validaciones
     const navigate = useNavigate();
-    const SignIn = ({ handleEvent }) => {
-        return <button onClick={e => handleEvent(true)}>Sign In</button>;
-      };
-      
-      const Logout = ({ handleEvent }) => {
-        return <button onClick={e => handleEvent(false)}>Sign out</button>;
-      };
-      const Login = () => {
-        const [isLoggedIn, setIsLoggedIn] = useState(false);
-      
-        if (!isLoggedIn) return <SignIn handleEvent={setIsLoggedIn} />;
-      
-        return <Logout handleEvent={setIsLoggedIn} />;
-      };
-    
-
+ 
     //Usuario previo para comparar con el nuevo y ver las validaciones
     const prevLoginState = {
         usuario:"usuario@hotmail.com", 
@@ -51,10 +36,6 @@ const LogIn =()=>{
     return(
     <div> 
     <NavBar/>
-        {/* <div className="r-navbar">
-        <Link to="/Home"><img  src={Componente} alt="title"/></Link>
-        <button className="l-botonnavbar" ><Link to = "/Registro"> Crear Cuenta </Link></button>
-        <Outlet/></div> */}
         <div className="container_principal"> 
             <form onSubmit={compararDatos}>
             <p className="titlelogin">Iniciar sesion</p>
@@ -71,7 +52,7 @@ const LogIn =()=>{
                 <div className="buttonholderlog">
                 <button className="boton_principal" >Ingresar</button>
                 </div>
-                <p className="accalign"> Aun no tenes cuenta?<Link to="/Registro" className="l-text">Registrate</Link></p>
+                <p className="accalign" > Aun no tenes cuenta?<Link to="/Registro" className="l-text" style={{color:"black"}}>Registrate</Link></p>
             </form>
         </div>
     </div>
