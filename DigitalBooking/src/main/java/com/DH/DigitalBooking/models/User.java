@@ -42,7 +42,7 @@ public class User {
 
     @ManyToOne
     //@JoinColumn(name = "Roles_idRoles")
-    @JoinColumn
+    @JoinColumn(name = "role_id")
     private Role role;
 
     @JsonIgnore
