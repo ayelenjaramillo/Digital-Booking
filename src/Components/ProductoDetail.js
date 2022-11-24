@@ -9,7 +9,7 @@ import DatePicker from "react-datepicker";
 import Carrusel from "./Carrusel";
 import DataList from './dataList.json';
 import Spinner from "./Spinner";
-import { faLocationDot, faAngleLeft, faStar} from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faAngleLeft, faStar, faCar, faTv, faPaw, faPersonSwimming, faSnowflake, faWifi, faKitchenSet} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
@@ -127,13 +127,13 @@ return(
         <h3 className="titleh3aloj"> Que ofrece este lugar?</h3>
         <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
         <div className="servicios-alojamiento">
-            <figure><i class="icons fa-solid fa-kitchen-set"></i>Cocina</figure>
-            <figure><i class="icons plus fa-solid fa-car"></i> Parking</figure>
-            <figure><i class="icons fa-solid fa-tv"></i> Television</figure>
-            <figure><i class="icon fa-solid fa-paw"></i> Apto mascotas</figure>
-            <figure><i class="icons fa-solid fa-person-swimming"></i>Pileta</figure>
-            <figure style={{width: 300}}><i class="icons plus fa-solid fa-snowflake"></i>Aire Acondicionado</figure>
-            <figure><i class="icons fa-solid fa-wifi"></i>WIFI</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faKitchenSet} />Cocina</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faCar} />Parking</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faTv} /> Television</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faPaw} />Apto Mascotas</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faPersonSwimming} /> Pileta</figure>
+            <figure style={{width: 300}}><FontAwesomeIcon className="icons" icon={faSnowflake} /> Aire Acondicionado </figure>
+            <figure><FontAwesomeIcon className="icons" icon={faWifi} /> WI FI </figure>
         </div>
         <h3 className="titleh3aloj">Que tenes que saber</h3>
         <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
@@ -171,9 +171,9 @@ return(
                     dateFormat="dd MM yyyy"/>
 
         <div className="cajaauxiliarfechas">
-            <p style={{"font-weight":"bold"}}>Agrega tus fechas para obtener precios exactos</p>
+            <p className= "p-reservas">Agrega tus fechas para obtener precios exactos</p>
             <Link to="/Reserva">
-                <button style={{"font-weight":"bold"}}>Iniciar reserva</button>
+                <button className="boton-iniciar-reserva">Iniciar reserva</button>
             </Link></div>
         </div>
         </div>
