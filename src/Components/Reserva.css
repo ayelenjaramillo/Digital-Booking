@@ -2,21 +2,35 @@
 
 .container-principal-reservas{
     background-color:#E5E5E7;
-    margin-top: 4rem;
-    
-}
-.react-datepicker{
-    width: 38rem;
-    margin-left: 2rem;
-}
-.input-registro{
-    background-color: #F1F1F5;
-    border-radius: .3rem;
+    /* margin-top: 2rem; */
     
 }
 
+
+.react-datepicker{
+    width: 100%;
+    margin-left: 2rem;
+}
+
+.lblock:nth-child(3){
+    padding-top: 1rem;
+}
+
+.lblock:nth-child(4){
+    padding-top: 1rem;
+}
+.input-registrorva{
+    background-color: #F1F1F5;
+    border-radius: .3rem;
+    width: 100%;
+    padding: 0.3rem;
+    border: none;
+}
+
 .reservas-horiz{
-    margin: 2rem 1rem;
+    /* margin: 0rem 1rem; */
+    width: 65%;
+    padding-left: 1rem;
   
 }
 .datos-div{
@@ -40,8 +54,8 @@
 }
 .datos-personales-reserva{
     background-color: white;
-    width: 39rem;
-    margin-left: 2rem;
+    width: 100%;
+    margin-left: 1rem;
     height: 12rem;
     padding: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
@@ -51,7 +65,7 @@
     font-size: 1.1rem;
     color: #545776 ;
     font-weight: bold;
-    margin-left: 2rem;
+    margin-left: 0rem;
 }
 .info-reservas{
     color: #545776;
@@ -74,12 +88,14 @@
     margin-top: 1rem
 }
 .reservas-vert{
-    margin: 2rem 4rem;
+    margin: 2rem 2rem;
     background-color: white; 
     padding-left: 4rem;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
     border-radius: .5rem;
     padding: 1rem;
+    width: 35%;
+
 }
 .vert-check-in{
     display: grid;
@@ -131,7 +147,7 @@
     .reservas-vert{
         width: 40%;
         margin-left: 40px;
-        margin-top: 3.5rem;
+        margin-top: 4.5rem;
         margin-bottom: 2.87rem;
     }
    .hs-llegada-reservacion{
@@ -159,9 +175,9 @@
     }
     .title{
         margin-top: 1.56rem;
-        margin-bottom: 1.87rem;
+        /* margin-bottom: 1.87rem; */
         font-size: 1.25rem;
-        margin-left: 2.18rem;
+        margin-left: 0.6rem;
     }
     .info-reservas{
         font-size: 0.93rem;
