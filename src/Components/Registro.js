@@ -33,7 +33,7 @@ const Registro =()=>{
                 <div className="buttonholder">
                     <input className="submit-registro" type="submit" value="Crear cuenta"/>
                 </div>
-                <p className="loginalign">Ya tienes una cuenta?<Link to="/LogIn" className="r-text">Iniciar sesion</Link></p>
+                <p className="loginalign">Ya tienes una cuenta?<Link to="/LogIn" className="r-text" style={{color:"black"}}>Iniciar sesion</Link></p>
             </div> 
 
         </form>

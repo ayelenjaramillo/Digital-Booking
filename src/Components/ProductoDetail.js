@@ -11,15 +11,19 @@ import DataList from './dataList.json';
 import Spinner from "./Spinner";
 import { faLocationDot, faAngleLeft, faStar} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 
-const ProductoDetail=()=>{
+const ProductoDetail=(props)=>{
+    const navigate = useNavigate();
     const[startDate, setStartDate] = useState(); 
     const [endDate, setEndDate]= useState(); 
     const [product, setProduct] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {id} = useParams();
-
+  
+       
+   
     console.log("PRODUCTO ES " + product)
 
     function onChangeDateHandler(value){
@@ -29,7 +33,7 @@ const ProductoDetail=()=>{
 
     const baseUrl = "http://localhost:8080/"
 
-
+    
     const getProductById = async (id) => {
         const endpoint = `${baseUrl}products/${id}`;
         return await axios.get(endpoint);
