@@ -14,5 +14,8 @@ public interface ProductRepository extends JpaRepository <Product, Long>{
     @Query("FROM Product p INNER JOIN City c WITH p.city.id = c.id WHERE c.city_name LIKE ?1")
     List<Product> filterProductsByCityName(String city_name);
 
+    @Query("FROM Product ORDER BY RAND()")
+    List<Product> getRandomProducts();
+
 
 }

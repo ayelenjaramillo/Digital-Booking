@@ -14,17 +14,24 @@ import javax.persistence.*;
 public class Policy {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "policy_sequence")
-    @SequenceGenerator(name="policy_sequence",sequenceName = "policy_sequence")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+   /* @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "policy_sequence")
+    @SequenceGenerator(name="policy_sequence",sequenceName = "policy_sequence")*/
     @Column(name="id",insertable=false,updatable=false)
     private Long id;
     @Column
     private String documentation;
+    @Column(name="penalty_fee")
+    private String penalty_fee;
 
     public Policy(String documentation) {
         this.documentation = documentation;
     }
 
+    public Policy(String documentation, String penalty_fee){
+        this.documentation = documentation;
+        this.penalty_fee = penalty_fee;
+    }
 
 
 }

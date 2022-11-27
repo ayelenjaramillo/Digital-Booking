@@ -16,13 +16,6 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    //listCategories()  //listAllCategories()
-    //addCategory  //createCategory
-
-    //NECESITAN  DE findById
-    //editCategory
-    //deleteCategory
-
     public Category createCategory(Category category)throws EmptyFieldException, CreatingExistingEntityException {
 
         if(category.getTitle() == null || category.getTitle().trim().isEmpty()){

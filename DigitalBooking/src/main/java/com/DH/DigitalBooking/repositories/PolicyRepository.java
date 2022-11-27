@@ -10,7 +10,6 @@ import java.util.List;
 
 @Repository
 public interface PolicyRepository extends JpaRepository<Policy, Long> {
-
     @Query("FROM Product p WHERE p.policy.id = ?1")
     List<Product> findAllByPolicyId(long id);
 }

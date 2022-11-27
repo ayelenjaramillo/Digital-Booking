@@ -1,5 +1,7 @@
-package com.DH.DigitalBooking.models;
+package com.DH.DigitalBooking.models.dto;
 
+import com.DH.DigitalBooking.models.Feature;
+import com.DH.DigitalBooking.models.Image;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
