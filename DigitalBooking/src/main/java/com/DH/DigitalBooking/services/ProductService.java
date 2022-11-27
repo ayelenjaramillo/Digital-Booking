@@ -56,6 +56,12 @@ public class ProductService {
     }
 
 
+    public List<Product> getRandomProducts(int n) {
+        List<Product> result = productRepository.getRandomProducts();
+        return result.subList(0, n);
+    }
+
+
     //USAR METODOS PRIVADOS (VALIDACIONES SEPARADAS) SI EL METODO LO VALIDA CON OK TRUE O FALSE, O QUE VUELVA EL OBJETO YA CREADO Y VALIDADO
     //Y SOLO QUE SE OCUPE DE HACER EL INSERT EN LA TABLA
     public Product create(Product product) throws EmptyFieldException, CreatingExistingEntityException, ResourceNotFoundException {
