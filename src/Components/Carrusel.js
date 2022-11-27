@@ -14,11 +14,11 @@ return(
         <FontAwesomeIcon className="iconoscarrusel" icon={faHeart} />
         <FontAwesomeIcon  className="iconoscarrusel" icon={faShareNodes} />
         <div className="principal">
-       <section className="img-alone">
+       <div className="img-alone">
         <figure>
                 <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="gallery-img"/>
             </figure>
-        </section>
+        </div>
         <section className="gallery">
             <figure className="gallery-picture galeria-1">
                 <img src="../Hostel.jpg" alt="Hostel" className="gallery-img"/>

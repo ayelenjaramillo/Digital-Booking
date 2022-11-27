@@ -9,17 +9,21 @@ import DatePicker from "react-datepicker";
 import Carrusel from "./Carrusel";
 import DataList from './dataList.json';
 import Spinner from "./Spinner";
-import { faLocationDot, faAngleLeft, faStar} from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faAngleLeft, faStar, faCar, faTv, faPaw, faPersonSwimming, faSnowflake, faWifi, faKitchenSet} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 
 
-const ProductoDetail=()=>{
+const ProductoDetail=(props)=>{
+    const navigate = useNavigate();
     const[startDate, setStartDate] = useState(); 
     const [endDate, setEndDate]= useState(); 
     const [product, setProduct] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {id} = useParams();
-
+  
+       
+   
     console.log("PRODUCTO ES " + product)
 
     function onChangeDateHandler(value){
@@ -29,7 +33,7 @@ const ProductoDetail=()=>{
 
     const baseUrl = "http://localhost:8080/"
 
-
+    
     const getProductById = async (id) => {
         const endpoint = `${baseUrl}products/${id}`;
         return await axios.get(endpoint);
@@ -40,6 +44,9 @@ const ProductoDetail=()=>{
     useEffect( () => {
         getProductById(id).then( (response) => {
             setProduct(response.data)
+
+            console.log(response.data?.title)
+
             console.log("Response")
             console.log(response)
             console.log("Response Data")
@@ -50,10 +57,7 @@ const ProductoDetail=()=>{
             console.log(response.data.category.title)
             console.log("RESPONSE TITLE")
             console.log(response.data.title)
-            console.log("PRODUCTO CATEGORY TITLE")
-            // console.log(product.category.title)
-            // console.log("PRODUCTO TITLE")
-            // console.log(product.title)
+
             
 
         }).catch((error) => {
@@ -62,7 +66,7 @@ const ProductoDetail=()=>{
 
         setTimeout(() => {
             setIsLoading(false);
-        }, 1000)
+        }, 2000)
 
 
     }, [id])
@@ -71,6 +75,11 @@ const ProductoDetail=()=>{
     //     setIsLoading(false);
     //     console.log("DESDE 2do useEffect. Product.title")
     //     console.log(product)
+    //     console.log(product?.title)
+    //     console.log("PRODUCTO CATEGORY TITLE")
+    //     console.log(product.category.title)
+    //     console.log("PRODUCTO TITLE")
+    //     console.log(product.title)
 
     // }, [product])
 
@@ -84,7 +93,7 @@ return(
         <h4>{isLoading ?  <Spinner />  : product.title}</h4>
     </p>
     <span className="iconos">
-        <Link to="/Home"><FontAwesomeIcon className="flecha" icon={faAngleLeft} /></Link>
+        <Link to="/"><FontAwesomeIcon className="flecha" icon={faAngleLeft} /></Link>
     </span>
     
     </div>
@@ -118,13 +127,13 @@ return(
         <h3 className="titleh3aloj"> Que ofrece este lugar?</h3>
         <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
         <div className="servicios-alojamiento">
-            <figure><i class="icons fa-solid fa-kitchen-set"></i>Cocina</figure>
-            <figure><i class="icons plus fa-solid fa-car"></i> Parking</figure>
-            <figure><i class="icons fa-solid fa-tv"></i> Television</figure>
-            <figure><i class="icon fa-solid fa-paw"></i> Apto mascotas</figure>
-            <figure><i class="icons fa-solid fa-person-swimming"></i>Pileta</figure>
-            <figure style={{width: 300}}><i class="icons plus fa-solid fa-snowflake"></i>Aire Acondicionado</figure>
-            <figure><i class="icons fa-solid fa-wifi"></i>WIFI</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faKitchenSet} />Cocina</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faCar} />Parking</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faTv} /> Television</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faPaw} />Apto Mascotas</figure>
+            <figure><FontAwesomeIcon className="icons" icon={faPersonSwimming} /> Pileta</figure>
+            <figure style={{width: 300}}><FontAwesomeIcon className="icons" icon={faSnowflake} /> Aire Acondicionado </figure>
+            <figure><FontAwesomeIcon className="icons" icon={faWifi} /> WI FI </figure>
         </div>
         <h3 className="titleh3aloj">Que tenes que saber</h3>
         <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
@@ -146,7 +155,12 @@ return(
                 <h5 className="titleh5aloj">Politicas de cancelacion</h5>
                 <p>Agrega las fechas de tu viaje para obtener los detalles de cancelacion de esta estadia</p>
             </div>
-        </div><h3 className="titleh3aloj">Fechas disponibles</h3>
+        </div>
+        <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
+        <div className="map_location">
+        {/* <img src="../map.jpg" alt="map_location" className="map-img"/> */}
+        <h3 className="titleh3aloj">Fechas disponibles</h3>
+        
         <div className="datepicker-div">
         <DatePicker placeholderText= " CheckIn - CheckOut" selectsRange={true}
                     onChange = {onChangeDateHandler}
@@ -157,10 +171,10 @@ return(
                     dateFormat="dd MM yyyy"/>
 
         <div className="cajaauxiliarfechas">
-            <p style={{"font-weight":"bold"}}>Agrega tus fechas para obtener precios exactos</p>
-            <Link to="/Reserva">
-                <button style={{"font-weight":"bold"}}>Iniciar reserva</button>
-            </Link>
+            <p className= "p-reservasprod">Agrega tus fechas para obtener precios exactos</p>
+            <Link to="/LogIn">
+                <button className="boton-iniciar-reserva">Iniciar reserva</button>
+            </Link></div>
         </div>
         </div>
     </div>

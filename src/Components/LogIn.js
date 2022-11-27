@@ -8,9 +8,10 @@ import "../Components/Login.css";
 
 
 const LogIn =()=>{
+
     //Variable/hook para redirigir despues de hacer las validaciones
     const navigate = useNavigate();
-
+ 
     //Usuario previo para comparar con el nuevo y ver las validaciones
     const prevLoginState = {
         usuario:"usuario@hotmail.com", 
@@ -27,7 +28,7 @@ const LogIn =()=>{
     const compararDatos = (event) => {
         event.preventDefault();
         console.log(loginState.contrasenia)
-        loginState.usuario === prevLoginState.usuario && loginState.contrasenia === prevLoginState.contrasenia ? navigate("/MenuPrincLogin", { state: {loginState: loginState}})
+        loginState.usuario === prevLoginState.usuario && loginState.contrasenia === prevLoginState.contrasenia ? navigate("/Reserva", { state: {loginState: loginState}})
         : alert("Por favor vuelva a intentarlo, sus credenciales son inválidas")
         
     }
@@ -35,28 +36,23 @@ const LogIn =()=>{
     return(
     <div> 
     <NavBar/>
-        {/* <div className="r-navbar">
-        <Link to="/Home"><img  src={Componente} alt="title"/></Link>
-        <button className="l-botonnavbar" ><Link to = "/Registro"> Crear Cuenta </Link></button>
-        <Outlet/></div> */}
         <div className="container_principal"> 
             <form onSubmit={compararDatos}>
             <p className="titlelogin">Iniciar sesion</p>
                 <label>Correo Electronico</label>
                 <input className="input-login" type="email" placeholder="@..." required pattern=".+@hotmail\.com" 
-                    onChange={(event)=>{const value = event.target.value; 
-                    console.log(value);
-                    setLoginState({...loginState, usuario: value})
+                    onBlur={(event)=>{
+                        setLoginState({...loginState, usuario: event.target.value})
                 }}/>
                 <label>Contraseña</label>
                 <input className="input-login" type="password" minLength={6} required 
-                    onChange={(event)=>{
+                    onBlur={(event)=>{
                     const value = event.target.value; 
                     setLoginState({...loginState, contrasenia: value})}}/>
                 <div className="buttonholderlog">
-                <button className="boton_principal">Ingresar</button>
+                <button className="boton_principal" >Ingresar</button>
                 </div>
-                <p className="accalign"> Aun no tenes cuenta?<Link to="/Registro" className="l-text">Registrate</Link></p>
+                <p className="accalign" > Aun no tenes cuenta?<Link to="/Registro" className="l-text" style={{color:"black"}}>Registrate</Link></p>
             </form>
         </div>
     </div>

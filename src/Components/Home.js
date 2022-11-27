@@ -7,7 +7,7 @@ import Listado from './Listado';
 export default function Home(props) {
     return (
     <div className="home">
-        <NavBar/> 
+        {/* <NavBar/>  */}
         <Buscador/>
         <Categoria/>
         <Listado/>
