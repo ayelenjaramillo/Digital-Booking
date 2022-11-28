@@ -6,15 +6,16 @@
     
 }
 .container-check{
-    margin: 10rem;
-    margin-right: 27rem;
-    margin-left: 27rem;
+   
     height: auto;
-    border-style:solid;
+    
 } */
-/* body{
-    background-color:#E5E5E7 ;
-} */
+
+.container-check{
+   
+    height: 100%;
+    
+}
 .check{
     font-size: 6rem;
     color:#1DBEB4;
@@ -24,23 +25,23 @@
 }
 
 .p-reservass{
-    
-    font-size: 23px;
+    margin-left: 3.7rem;
+    font-size: 20px;
     font-weight: bold;
     color: #1DBEB4;
     background-color: white;
 }
 .p-reservasbis{
-    margin-left: .5rem;
+    margin-left: 1rem;
     font-weight: bold;
     font-size: 15px;
     background-color: white;
 }
 .container-check{
-    height: 22rem;
+    height: 100%;
     border-style: none;
     margin: 10rem;
-    
+    margin-bottom: 22%;
     
     
 }
@@ -60,8 +61,9 @@
 }
 
 @media (min-width: 1000px){
+ 
     .cuadro-reserv{
-        width: 26.8rem;
+        width: 46%;
         margin-left: 16.25rem;
         padding-right: 1.87rem;
         padding-top: 0
@@ -70,13 +72,13 @@
     padding-left: 110px;
    
 }
-.p-reservas{
-    padding-left: 3.87rem;
+.p-reservass{
+    padding-left: 1rem;
 }
 .p-reservasbis{
-    padding-left: 1.56rem;
+    padding-left: .5rem;
 }
 .botton-check{
-    margin-left: 5.6rem;
+    margin-left: 5rem;
 }
 }
