@@ -101,7 +101,7 @@ const Reserva = () =>{
                 </Link><Outlet/>
             </div>        
         </div>
-        <div className="politicas-alojamiento"></div>
+        
     </div>
     )
 }
