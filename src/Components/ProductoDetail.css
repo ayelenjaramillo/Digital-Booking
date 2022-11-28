@@ -133,7 +133,7 @@
  }
  .cajaauxiliarfechas{
     width: 25rem ;
-    margin: 2rem 12rem;
+    margin: 2rem 9rem;
  }
  
 .map_location{
@@ -144,7 +144,7 @@ margin: 0 1.8rem;}
     margin-left: 0;
 }
 
-
+/* DESKTOP */
 @media(min-width:992px) {
 .politicas-alojamiento{
         display: flex;
@@ -163,24 +163,30 @@ margin: 0 1.8rem;}
 
 }
  .datepicker-div{
+    width: 95%;
     display: flex;
     justify-content: space-between;
-    padding: 1.25rem;
+    padding-left: 4rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
 }
  
  .react-datepicker{
     display: flex;
-    width: 56.2rem;
-    margin-left: 6.25rem;
-    margin-right: 1.8rem;
+    width: 50%;
+    margin-left: 8.25rem;
+    margin-right: 4rem;
     
     
  }
  .cajaauxiliarfechas{
+    width: 40%;
     background-color: white;
-    margin: 4.5rem 4.3rem;
+    margin: 4.5rem 3rem;
     height: 9.75rem;
     padding: 1.8rem;
+
  }
  .p-reservas{
     font-weight: bold;
@@ -189,7 +195,7 @@ margin: 0 1.8rem;}
 }
  .cajaauxiliarfechas button{
     margin-top: 0.62rem;
-    width: 22.5rem;
+    width: 100%;
     border-radius: 3px ;
  }
  .titleh3aloj{
@@ -242,8 +248,8 @@ margin: 0;}
 
 .cajaauxiliarfechas{
     display: flex;
-    margin: 1.25rem 0; 
-    width: 31.2rem;
+    margin: 2rem 5rem; 
+    width: 55%;
     gap: 0.62rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -252,6 +258,7 @@ margin: 0;}
     width: 18.75rem;
     
 }
+
 
 }
 
