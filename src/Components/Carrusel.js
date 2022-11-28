@@ -17,9 +17,9 @@ return(
        <div className="img-alone">
         <figure>
                 <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="gallery-img"/>
-            </figure>
+        </figure>
         </div>
-        <section className="gallery">
+        <div className="gallery">
             <figure className="gallery-picture galeria-1">
                 <img src="../Hostel.jpg" alt="Hostel" className="gallery-img"/>
             </figure>
@@ -40,7 +40,7 @@ return(
                 </a>
             </Link>
             </figure>
-        </section>
+        </div>
     </div>
     <div className="mobile-slider">
         <Carousel>

@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 .principal{
+    width: 90%;
+    height: 40%;
     padding: 1em;
     display: flex;
     margin: 0.5rem;
@@ -11,11 +13,13 @@
    
 }
 .gallery{
+    width: 40%;
+    height: 39%;
     padding-top: .5em;
     margin-right: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 15rem);
-    grid-auto-rows: 15.75rem;
+    grid-template-columns: repeat(2, 60%);
+    grid-auto-rows: 56.5%;
     gap:.5rem; 
    
     
@@ -28,12 +32,13 @@
 }
 .img-alone{
     width: 60%;
+    height: 38%;
     margin:.5rem; 
     border-radius: .73rem;
 }
 .img-text{
-    top: 12rem;
-    left:7rem;
+    top: 10rem;
+    left:10rem;
     content: "Ver Mas"; 
     color: white;
     position: absolute;
