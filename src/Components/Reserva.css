@@ -80,7 +80,7 @@
     height: 13rem;
 }
 .select-reserv{
-    width: 20rem;
+    width: 90%;
     margin-left: 1rem;
     height: 2.5rem;
     margin-top: 1rem
@@ -193,6 +193,7 @@
         height: 35rem;
     }
     .select-reserv{
+        width: 45%;
         margin-bottom: 1.25rem;
         margin-left: 0.3rem;
     }
