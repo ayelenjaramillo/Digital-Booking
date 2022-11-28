@@ -25,7 +25,7 @@ const Reserva = () =>{
     <div>
         <div className="header-hotel">
             {/* Esta parte tiene q salir de la API */}
-            <p className="p-hotel"> Hotel 2<h4>Producto 2</h4>            </p>
+            <p className="p-hotel"> Hotel 2<h4>Producto 2</h4></p>
             <span className="iconos"><Link to="/"><FontAwesomeIcon className="flecha" icon={faAngleLeft}/></Link>
             </span>
         </div>

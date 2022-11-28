@@ -1,11 +1,8 @@
-
-
 .container-principal-reservas{
     background-color:#E5E5E7;
     /* margin-top: 2rem; */
     
 }
-
 
 .react-datepicker{
     width: 100%;
@@ -34,7 +31,7 @@
   
 }
 .datos-div{
-    
+   
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-auto-rows: 3.2rem;
@@ -54,8 +51,8 @@
 }
 .datos-personales-reserva{
     background-color: white;
-    width: 100%;
-    margin-left: 1rem;
+    width: 93%;
+    margin-left: 2rem;
     height: 12rem;
     padding: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
@@ -65,7 +62,8 @@
     font-size: 1.1rem;
     color: #545776 ;
     font-weight: bold;
-    margin-left: 0rem;
+    margin-left: 2rem;
+    margin-top: .5rem;
 }
 .info-reservas{
     color: #545776;
@@ -88,13 +86,13 @@
     margin-top: 1rem
 }
 .reservas-vert{
-    margin: 2rem 2rem;
+    margin: 2rem 3rem;
     background-color: white; 
-    padding-left: 4rem;
+    padding-left: 2rem;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
     border-radius: .5rem;
     padding: 1rem;
-    width: 35%;
+    width: 85%;
 
 }
 .vert-check-in{
@@ -140,33 +138,37 @@
     color:#545776 ;
     font-size: 25px;
 }
+.reservas-horiz{
+    width: 95%;
+}
 @media (min-width:1100px) {
     .container-principal-reservas{
         display: flex;
     }
     .reservas-vert{
-        width: 40%;
-        margin-left: 40px;
+        width: 35%;
+        margin-left: 10px;
         margin-top: 4.5rem;
         margin-bottom: 2.87rem;
     }
    .hs-llegada-reservacion{
-        width: 38.7rem ;
-        height: 12.5rem;
-        padding: 0.93rem 0.62rem;
+        width: 94%;
+        height: 45%;
+        padding: 2rem 1.5rem;
+        margin-left: .8rem;
    }
    
     .react-datepicker{
-        width: 38.75rem;
+        width: 44rem;
         margin: 0.31rem;
-        margin-left: 33px;
+        margin-left: 14px;
         height: 20.06rem;
         font-size: 0.93rem;
         
     }
     
     .react-datepicker__current-month{
-        width: 18.31rem;
+        width: 20.9rem;
         margin: 0.5rem;
         font-size:1.25rem ;
     }
@@ -177,7 +179,7 @@
         margin-top: 1.56rem;
         /* margin-bottom: 1.87rem; */
         font-size: 1.25rem;
-        margin-left: 0.6rem;
+        margin-left: 1rem;
     }
     .info-reservas{
         font-size: 0.93rem;
@@ -199,6 +201,12 @@
         height: 29.5rem;
         object-fit: cover;
     }
+    .datos-personales-reserva{
+        width: 95%;
+        height: 39.5%;
+        margin-left: 1rem;
+        padding: 2rem;
+    } 
    
     
 }
