@@ -66,7 +66,7 @@ const ProductoDetail=(props)=>{
 
         setTimeout(() => {
             setIsLoading(false);
-        }, 2000)
+        }, 7000)
 
 
     }, [id])
