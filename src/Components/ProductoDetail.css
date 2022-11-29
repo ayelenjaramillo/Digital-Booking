@@ -142,6 +142,7 @@ margin: 0 1.8rem;}
 
 .datepicker-div{
     margin-left: 0;
+    width: 100%;
 }
 
 /* DESKTOP */
@@ -163,7 +164,7 @@ margin: 0 1.8rem;}
 
 }
  .datepicker-div{
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     padding-left: 4rem;
@@ -174,7 +175,7 @@ margin: 0 1.8rem;}
  
  .react-datepicker{
     display: flex;
-    width: 50%;
+    width: 60%;
     margin-left: 8.25rem;
     margin-right: 4rem;
     
