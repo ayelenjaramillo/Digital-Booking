@@ -7,7 +7,15 @@
 .react-datepicker{
     width: 100%;
     margin-left: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
 }
+.react-datepicker__day--keyboard-selected {
+    background-color: #1DBEB4;
+}
+.react-datepicker__day--range-start, .react-datepicker__day--range-end, .react-datepicker__day--in-range{
+    background-color: #1DBEB4;
+}
+
 
 .lblock:nth-child(3){
     padding-top: 1rem;
@@ -159,7 +167,7 @@
    }
    
     .react-datepicker{
-        width: 44rem;
+        width: 94%;
         margin: 0.31rem;
         margin-left: 14px;
         height: 20.06rem;
@@ -168,12 +176,20 @@
     }
     
     .react-datepicker__current-month{
-        width: 20.9rem;
+        width: 100%;
         margin: 0.5rem;
         font-size:1.25rem ;
     }
+    .react-datepicker__month-container{
+        width: 80%;
+        
+    }
+    .react-datepicker__day {
+        padding: 4px;
+    }
     .react-datepicker__day-names{
         font-weight: bold;
+        
     }
     .title{
         margin-top: 1.56rem;
@@ -203,7 +219,7 @@
         object-fit: cover;
     }
     .datos-personales-reserva{
-        width: 95%;
+        width: 94%;
         height: 39.5%;
         margin-left: 1rem;
         padding: 2rem;

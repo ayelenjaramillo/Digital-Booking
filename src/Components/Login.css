@@ -2,6 +2,7 @@
     padding: 10rem 25rem;
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 .container_principal label{
