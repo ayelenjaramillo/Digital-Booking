@@ -6,7 +6,7 @@ import NavBar from "../Components/Navbar";
 const CarruselB =()=>{
     return(
       <>
-      <NavBar/> 
+      {/* <NavBar/>  */}
       <Carousel className="main-slider">
         <div>
         <img src="./Hotel.jpg"className="img-slider"/>

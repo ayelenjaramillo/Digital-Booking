@@ -26,15 +26,15 @@ const NavBar =()=> {
 <>
 <header className="header-navbar">
   <div>
-    <Link to="/Home" activeclassname="active-link" onClick={() => closeMenu()}exact>
+    <Link to="/" activeclassname="active-link" onClick={() => closeMenu()}exact="true">
       <img className="image" src={Componente} alt="title"/>
       <img className="image2" src={IconMob} alt="title2"/>
     </Link>
   </div>  
   <div>
     <ul className="h-list">    
-      <li><button><Link to = "/LogIn"> Iniciar Sesion </Link></button></li>
-      <li><button><Link to = "/Registro"> Crear Cuenta </Link></button></li>
+      {window.location.pathname.includes("/LogIn")? null : <li><button><Link to = "/LogIn"> Iniciar Sesion </Link></button></li>}
+      {window.location.pathname.includes("/Registro")? null : <li><button><Link to = "/Registro"> Crear Cuenta </Link></button></li>}
     </ul>
   </div>  
   <div className="navBar-mobile" onClick={handleToggle}>
