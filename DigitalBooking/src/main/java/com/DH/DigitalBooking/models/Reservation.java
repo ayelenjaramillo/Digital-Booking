@@ -14,42 +14,42 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "Reservations")
+@Table(name = "reservations")
 public class Reservation {
 
     @Id
     //@Column(name = "idReservations")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column(name = "id_reservation")
     //@GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long idReservation;
 
     //@Column (name = "check_in_time")
-    @Column
-    private LocalTime check_in_time;
+    @Column(name = "check_in_time")
+    private LocalTime checkInTime;
 
     //@Column(name = "check_in_date")
-    @Column
-    private LocalDate check_in_date;
+    @Column(name = "check_in_date")
+    private LocalDate checkInDate;
 
     //@Column(name="check_out_date")
-    @Column
-    private LocalDate check_out_date;
+    @Column(name="check_out_date")
+    private LocalDate checkOutDate;
 
     //TODO REVISAR NOMBRES DE COLUMNAS Y TABLAS EN BD
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "users_id", referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "users_id_user", referencedColumnName = "id")
     private User user;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "products_id",referencedColumnName = "id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "products_id_product",referencedColumnName = "id")
     private Product product;
 
     //all args SIN ID
     public Reservation(LocalTime check_in_time, LocalDate check_in_date, LocalDate check_out_date,  User user, Product product) {
-    this.check_in_time = check_in_time;
-    this.check_in_date= check_in_date;
-    this.check_out_date= check_out_date;
+    this.checkInTime = checkInTime;
+    this.checkInDate= checkInDate;
+    this.checkOutDate= checkOutDate;
     this.user= user;
     this.product= product;
     }

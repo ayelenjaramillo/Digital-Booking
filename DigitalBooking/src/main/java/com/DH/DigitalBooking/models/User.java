@@ -40,7 +40,7 @@ public class User {
     @Column
     private String city;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     //@JoinColumn(name = "Roles_idRoles")
     @JoinColumn(name = "role_id")
     private Role role;
