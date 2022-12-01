@@ -15,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("/api/v1/policy")
@@ -22,6 +24,17 @@ public class PolicyController {
 
     @Autowired
     private PolicyService policyService;
+
+    @Operation(summary = "Returns a list of policies")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Operation successful")
+    })
+
+    @GetMapping
+    public ResponseEntity<List<Policy>> listPolicies() {
+        return ResponseEntity.ok(policyService.listAll());
+    }
+
     @Operation(summary = "Returns a Policy object with the specified id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Operation successful")
