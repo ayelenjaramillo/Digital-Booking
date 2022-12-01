@@ -25,11 +25,11 @@ public class PolicyController {
     @Operation(summary = "Returns a Policy object with the specified id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Operation successful")
-    })
-    @GetMapping("/{id}")
+    })@GetMapping("/{id}")
     public ResponseEntity<Policy> findById(@PathVariable Long id) throws ResourceNotFoundException {
         return ResponseEntity.ok(policyService.findById(id));
     }
+
 
     @Operation(summary = "Adds a new Policy")
     @ApiResponses(value = {
