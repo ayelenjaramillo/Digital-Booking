@@ -12,6 +12,7 @@ import "./App.css";
 import CarruselB from "./Components/CarruselB";
 import Reserva from "./Components/Reserva";
 import ConfirmacionReserva from "./Components/ConfirmacionReserva";
+import AdministradorTemplate from "./Components/AdministradorTemplate"; 
 const App = () => {
   
   return (
@@ -30,9 +31,9 @@ const App = () => {
           <Route path="/producto/:id" element= {<ProductoDetail/>} ></Route> 
           <Route path="/Reserva" element = {<Reserva/>}></Route>
           <Route path="/ConfirmacionReserva" element= {<ConfirmacionReserva/>}></Route>
+          <Route path="/AdministradorTemplate" element= {<AdministradorTemplate/>}></Route>
       </Routes>
       </BrowserRouter>
-      {/* <Avatar src="./gatonegro.png" />  */}
     <Footer/>
     </>
   );
