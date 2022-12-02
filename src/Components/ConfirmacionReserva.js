@@ -14,7 +14,7 @@ const ConfirmacionReserva = () =>{
         <p className="p-reservass"> Muchas Gracias! </p>
         <p className="p-reservasbis"> Su reserva se ha realizado con exito </p>
         </div>
-        <Link to="/" className="l-text"><button className="botton-check">ok</button></Link>
+        <Link to="/AdministradorTemplate" className="l-text"><button className="botton-check">ok</button></Link>
         </div>
     </div>
     )
