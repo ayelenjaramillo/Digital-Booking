@@ -12,11 +12,11 @@ const [endDate, setEndDate]= useState();
 const [ciudades, setCiudades] = useState([])
 const [elegirCiudad, serElegirCiudad] = useState(true)
 
-const baseUrl = "http://localhost:8080/"
+const baseUrl = "http://localhost:8080/api/v1"
 
 const buscarCiudades = async () => {
     try {
-        const res = await axios.get(`${baseUrl}/cities`)
+        const res = await axios.get(`${baseUrl}/city`)
         setCiudades(res.data);
         console.log("RES DATA")
         console.log(res.data)

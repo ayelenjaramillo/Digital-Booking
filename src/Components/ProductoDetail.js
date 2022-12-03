@@ -9,7 +9,7 @@ import DatePicker from "react-datepicker";
 import Carrusel from "./Carrusel";
 import DataList from './dataList.json';
 import Spinner from "./Spinner";
-import { faLocationDot, faAngleLeft, faStar, faCar, faTv, faPaw, faPersonSwimming, faSnowflake, faWifi, faKitchenSet} from "@fortawesome/free-solid-svg-icons";
+import { faLocationDot, faAngleLeft, faStar, faCar, faTv, faPaw, faPersonSwimming, faSnowflake, faWifi, faKitchenSet, faBathtub, faDumbbell, faSpa, faLock, faCutlery, faClock} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
@@ -31,11 +31,11 @@ const ProductoDetail=(props)=>{
         setEndDate(value[1]);
         }   
 
-    const baseUrl = "http://localhost:8080/"
+    const baseUrl = "http://localhost:8080/api/v1/"
 
     
     const getProductById = async (id) => {
-        const endpoint = `${baseUrl}products/${id}`;
+        const endpoint = `${baseUrl}product/${id}`;
         return await axios.get(endpoint);
     }
 
@@ -66,7 +66,7 @@ const ProductoDetail=(props)=>{
 
         setTimeout(() => {
             setIsLoading(false);
-        }, 7000)
+        }, 3000)
 
 
     }, [id])
@@ -101,10 +101,10 @@ return(
         <p className="p-hotel">
         <FontAwesomeIcon className="ubicacion" icon={faLocationDot} />
             { isLoading ?  <Spinner />  : (<span>{product.city.city_name}, {product.city.country} </span> )}
-            <p>{ isLoading ?  <Spinner />  : product.description} </p>
+            <p>{ isLoading ?  <Spinner />  : product.address} </p>
         </p>
     <span>
-        <h5 className="titleh5aloj">Muy Bueno</h5>
+        <h5 className="titleh5aloj">Muy bueno</h5>
         <div className="estrellas">
         <FontAwesomeIcon className="puntuacion" icon={faStar} />
         <FontAwesomeIcon className="puntuacion" icon={faStar} />
@@ -113,43 +113,54 @@ return(
         <FontAwesomeIcon style={{color: "#CBCBCF"}} className="puntuacion" icon={faStar} />
         </div>
     </span>
+    {/* DARLE FORMATO AL SPAN DE ABAJO. VA AL LADO DEL MUY BUENO Y LAS ESTRELLAS, CON FONDO AZUL */}
+    <span>{ isLoading ? <Spinner />  : product.rating}</span>
     
     </div> 
-        <Carrusel/>
+        {isLoading ? <Spinner /> : <Carrusel product={product}/>}
         {/* <CarruselB/> */}
     <span>
-        <h3 className="titleh3aloj">Alojate en el corazon de Location</h3>
-        <p className="p-hotel-negro">El Médanos Patagonia se encuentra en Las Grutas, a 500 metros de Primeras Bajadas, y ofrece alojamiento con aire acondicionado, wifi gratis y acceso a una terraza.
-        Todos los alojamientos incluyen zona de cocina con zona de comedor y heladera, sala de estar con sofá y baño privado con secador de pelo.A las parejas les gusta la ubicación. Le pusieron un puntaje de 9,4 para un viaje de a dos.
-        Médanos Patagonia recibe usuarios de Booking.com desde el 30 de mayo de 2018.</p>
+        <h3 className="titleh3aloj">{ isLoading ? <Spinner />  : product.description_title}</h3>
+        <p className="p-hotel-negro">{ isLoading ? <Spinner />  : product.description}</p>
     </span>
     <div>
         <h3 className="titleh3aloj"> Que ofrece este lugar?</h3>
         <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
         <div className="servicios-alojamiento">
-            <figure><FontAwesomeIcon className="icons" icon={faKitchenSet} />Cocina</figure>
-            <figure><FontAwesomeIcon className="icons" icon={faCar} />Parking</figure>
+
+                {isLoading ? <Spinner /> : 
+                (product.features.map((f) => {
+                    let variable = f.icon
+                    return <figure><FontAwesomeIcon className="icons" icon={variable} />{f.description}</figure>
+                })
+
+                )}
+
+
+
+            {/* {isLoading ? <Spinner /> : <figure><FontAwesomeIcon className="icons" icon={product.features[0].icon} />{product.features[0].description}</figure>} */}
+            {/* <figure><FontAwesomeIcon className="icons" icon={faCar} />Parking</figure>
             <figure><FontAwesomeIcon className="icons" icon={faTv} /> Television</figure>
             <figure><FontAwesomeIcon className="icons" icon={faPaw} />Apto Mascotas</figure>
             <figure><FontAwesomeIcon className="icons" icon={faPersonSwimming} /> Pileta</figure>
             <figure style={{width: 300}}><FontAwesomeIcon className="icons" icon={faSnowflake} /> Aire Acondicionado </figure>
-            <figure><FontAwesomeIcon className="icons" icon={faWifi} /> WI FI </figure>
+            <figure><FontAwesomeIcon className="icons" icon={faWifi} /> WI FI </figure> */}
         </div>
         <h3 className="titleh3aloj">Que tenes que saber</h3>
         <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
         <div className="politicas-alojamiento">
            <div className="politicas-pautas-div">
             <h5 className="titleh5aloj">Normas de la casa</h5>
-            <p>Check out:10am</p>
-            <p>No se permiten fiestas</p>
-            <p>No fumar</p>
+            <p>{ isLoading ? <Spinner />  : product.policy.documentation}</p>
+            {/* <p>No se permiten fiestas</p>
+            <p>No fumar</p> */}
             </div>
             <div className="politicas-pautas-div">
              <h5 className="titleh5aloj">Salud y seguridad</h5>
              <p>Se aplican las pautas de distanciamiento social
                 y otras normas relacionadas con el COVID19
              </p>
-             <p>Deposito de seguridad</p>
+             <p>Deposito de seguridad: { isLoading ? <Spinner />  : product.policy.penalty_fee}</p>
             </div>
             <div className="politicas-pautas-div">
                 <h5 className="titleh5aloj">Politicas de cancelacion</h5>

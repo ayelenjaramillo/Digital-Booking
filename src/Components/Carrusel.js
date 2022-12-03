@@ -7,7 +7,7 @@ import { faHeart, faShareNodes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-const Carrusel=()=>{
+const Carrusel=({product})=>{
 return(
     <main>
         <FontAwesomeIcon icon="fa-sharp fa-solid fa-heart" />
@@ -16,24 +16,24 @@ return(
         <div className="principal">
        <div className="img-alone">
         <figure>
-                <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="gallery-img"/>
+                <img src={product.images[0].url_image} alt={product.images[0].title_image} className="gallery-img"/>
         </figure>
         </div>
         <div className="gallery">
             <figure className="gallery-picture galeria-1">
-                <img src="../Hostel.jpg" alt="Hostel" className="gallery-img"/>
+                <img src={product.images[1].url_image} alt={product.images[1].title_image} className="gallery-img"/>
             </figure>
             <figure className="gallery-picture galeria-2">
-                <img src="../bed_and_breakfast.jpg" alt="bed_and_breakfast" className="gallery-img"/>
+                <img src={product.images[2].url_image} alt={product.images[2].title_image} className="gallery-img"/>
             </figure>
             
             <figure className="gallery-picture galeria-4">
-                <img src="../Hotel.jpg" alt="Hotel" className="gallery-img"/>
+                <img src={product.images[3].url_image} alt={product.images[3].title_image} className="gallery-img"/>
             </figure>
             <figure className="gallery-picture galeria-5">
             <Link to="/CarruselB">
                 <a href="#" target="blank">
-                    <img src="../Hostel.jpg" alt="Hostel" className="gallery-img "/>
+                    <img src={product.images[0].url_image} alt={product.images[0].title_image} className="gallery-img "/>
                         <div class="img-text">
                             Ver Mas
                         </div>
