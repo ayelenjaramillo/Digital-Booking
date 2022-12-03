@@ -8,6 +8,6 @@ import java.util.List;
 
 @Repository
 public interface FeatureRepository extends JpaRepository<Feature, Long> {
-   /* @Query("FROM Feature f WHERE f.product.id = ?1")
-    List<Feature> findAllByProductId(long id);*/
+    @Query("FROM Feature f WHERE f.product.id = ?1")
+    List<Feature> findAllByProductId(long id);
 }

@@ -17,8 +17,8 @@ public class City {
     //@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "city_sequence")
     //@SequenceGenerator(name="city_sequence",sequenceName = "city_sequence")
     private Long id;
-    @Column
-    private String city_name;
+    @Column(name="city_name")
+    private String cityName;
 
     @Column
     private String country;
@@ -26,13 +26,13 @@ public class City {
     public City() {
     }
     public City(String city_name, String country) {
-        this.city_name = city_name;
+        this.cityName = city_name;
         this.country = country;
     }
 
-    public City(Long id, String city_name, String country) {
+    public City(Long id, String cityName, String country) {
         this.id = id;
-        this.city_name = city_name;
+        this.cityName = cityName;
         this.country = country;
     }
 

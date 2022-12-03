@@ -11,15 +11,15 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @ToString
 public class ReservationProductDTO {
-
-        private Integer id;
+        //CON ID
+        private Long id;
         @DateTimeFormat(pattern = "yyyy-MM-dd")
-        private LocalDate check_ot_date;
+        private LocalDate checkIDate;
         @DateTimeFormat(pattern = "yyyy-MM-dd")
-        private LocalDate check_out_date;
-        private LocalTime check_in_time;
-        private Integer productId;
-        private Integer userId;
+        private LocalDate checkOutDate;
+        private LocalTime checkInTime;
+        private Long productId;
+        private Long userId;
 
 
 }

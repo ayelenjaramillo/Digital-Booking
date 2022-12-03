@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+//@AllArgs?
 @Entity
 @Table(name = "features")
 public class Feature {

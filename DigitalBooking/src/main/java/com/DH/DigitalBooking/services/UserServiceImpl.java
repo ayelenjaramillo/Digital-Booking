@@ -39,9 +39,7 @@ public class UserServiceImpl implements IUserService{
     }
     //devuelvo siempre un DTO adentro hago el casteo
     @Override
-    public UserDTO findByEmail(String email) {
-        return mapperUtil.map(userRepository.findByEmail(email), UserDTO.class);
-    }
+    public UserDTO findByEmail(String email) {return mapperUtil.map(userRepository.findByEmail(email), UserDTO.class);}
 
     public User findById(Long id) {
         return mapperUtil.map(userRepository.findById(id), User.class);

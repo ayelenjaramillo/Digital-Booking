@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -31,8 +32,9 @@ public class User {
     @Column
     private String surname;
     //@Column(name = "email")
-    @Column
-    private String email;
+    @Column(unique = true) //TODO FALTA EN BD
+    @Email
+    private String email; //es el username
     //@Column(name= "password")
     @Column
     private String password;
@@ -46,7 +48,7 @@ public class User {
     private Role role;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER) //TODO REVISAR EL CASCADE
     private Set<Reservation> reservations = new HashSet<>();
 
     public User(long id){
