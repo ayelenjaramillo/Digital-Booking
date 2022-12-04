@@ -8,10 +8,11 @@
     /* margin-right: 20px; */
     /* float: right; */
     border-radius: 2rem;
-    padding: 0.3rem 0.7rem;
+    padding:  0.4rem 1rem;
     color:white;
     background: #383b58;
     border: none;
+    font-size:x-large;
 }
 .div-header-menuprinc{
     display: flex;
@@ -25,6 +26,7 @@
     margin: 0;
     /* padding: 0.6rem 2rem 0.2rem; */
     background-color: white; 
+    
 }
 
 .text-avatar{
@@ -33,5 +35,26 @@
     justify-content: end;
     /* font-weight: lighter; */
     align-items: center;
+    font-weight: bold;
 }
 
+.text-avatar p span{
+    display: block;
+    padding-left: 0.5rem;
+    padding-right: 0.3rem;
+}
+
+.text-avatar p span:first-child{
+    padding-top: 0.6rem ;
+    color: grey;
+}
+
+.text-avatar p span:nth-child(2){
+    color: #1DBEB4;
+}
+
+.closeButtonLogin a{
+    text-decoration: none;
+    color: #383b58;
+    font-weight: bold;
+}

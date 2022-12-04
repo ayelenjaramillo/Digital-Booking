@@ -1,7 +1,7 @@
 import Avatar from "@material-ui/core/Avatar"; 
 import Componente from "../assets/Componente.png"; 
 import { Outlet, Link } from "react-router-dom";
-import Home from "../Components/Home"
+import Reserva from "../Components/Reserva";
 import './MenuPrincLogin.css';
 import { useLocation } from "react-router-dom"; 
 
@@ -17,12 +17,29 @@ const MenuPrincLogin =(props)=>{
             <div className="div-header-menuprinc">
                 <Link to="/"><img className="image" src={Componente} alt="title"/></Link>
                 {/* <Outlet/> */}
-                <p className="text-avatar">
+                <div className="text-avatar">
                     <button src={usuario?usuario: ""} className="avatar">{usuario[0].toUpperCase()}</button>
-                    &nbsp; Hola, {usuario}!
-                </p>
+                    <p>
+                        <span>Hola, </span>
+                        <span>{usuario}!</span>
+                    </p>
+
+                </div>                    
+                <div className="closeButtonLogin">
+                        <Link to="/">X</Link>
+                    </div>
+                {/* <p className="text-avatar">
+                    <button src={usuario?usuario: ""} className="avatar">{usuario[0].toUpperCase()}</button>
+                    &nbsp; Hola, 
+                    <span>{usuario}!</span>
+                    <div>
+                        <Link to="/"><CloseButton/></Link>
+                    </div>
+                    
+                </p> */}
+
             </div>
-            <Home/>
+            <Reserva/>
         </div>
     ); 
 }

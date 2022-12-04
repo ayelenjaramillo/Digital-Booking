@@ -28,7 +28,7 @@
     list-style-type: none;
     float: right;
     justify-content:space-around;
-    padding:0.5rem;
+    padding:1rem 0.2rem 0.2rem;
     
 }
 
@@ -38,7 +38,7 @@
     border: 0.1rem solid #1DBEB4;
     font-weight: bold;
     border-radius: 0.5rem;
-    padding: 0.5rem 2rem;
+    padding: 0.2rem 4.5rem;
 }
 
 .h-list a{
