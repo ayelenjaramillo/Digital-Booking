@@ -38,7 +38,7 @@ public class RatingController {
         return ResponseEntity.ok("La puntuación se agregó al producto");
     }
 
-    @Operation(summary = "Listar puntuaciones")
+    @Operation(summary =  "List rating")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Se listaron las puntuaciones correctamente.",
                     content = @Content)})
