@@ -2,7 +2,7 @@ package com.DH.DigitalBooking.services;
 import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
-import com.DH.DigitalBooking.models.Category;
+import com.DH.DigitalBooking.models.entities.Category;
 import com.DH.DigitalBooking.repositories.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

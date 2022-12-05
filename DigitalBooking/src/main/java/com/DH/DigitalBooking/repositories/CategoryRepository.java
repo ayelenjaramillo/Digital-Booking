@@ -1,5 +1,5 @@
 package com.DH.DigitalBooking.repositories;
-import com.DH.DigitalBooking.models.Category;
+import com.DH.DigitalBooking.models.entities.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

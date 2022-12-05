@@ -25,6 +25,7 @@ public class ReservationController {
     @Autowired
     private IReservationService iReservationService;
 
+
     @GetMapping
     public ResponseEntity<List<ReservationDTO>> findAll(){
         return ResponseEntity.ok(iReservationService.findAll());
@@ -55,8 +56,8 @@ public class ReservationController {
     }
 
     @GetMapping("/findByProductId/{productId}")
-    public ResponseEntity<List<ReservationDTO>> findByProductId(@PathVariable Long productId) throws ResourceNotFoundException {
-        return ResponseEntity.ok(iReservationService.findByProductId(productId));
+    public ResponseEntity<List<ReservationDTO>> findReservationByProductId(@PathVariable Long productId) throws ResourceNotFoundException {
+        return ResponseEntity.ok(iReservationService.findReservationByProductId(productId));
     }
 
     @GetMapping("/findAllByProductId/{productId}")
@@ -65,8 +66,8 @@ public class ReservationController {
     }
 
     @GetMapping("/findByUserId/{userId}")
-    public ResponseEntity<List<ReservationDTO>>findByUserId(@PathVariable Long userId) throws ResourceNotFoundException {
-        return ResponseEntity.ok(iReservationService.findByUserId(userId));
+    public ResponseEntity<List<ReservationDTO>>findReservationByUserId(@PathVariable Long userId) throws ResourceNotFoundException {
+        return ResponseEntity.ok(iReservationService.findReservationByUserId(userId));
     }
 }
 

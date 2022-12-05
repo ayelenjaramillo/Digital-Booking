@@ -1,4 +1,4 @@
-package com.DH.DigitalBooking.models;
+package com.DH.DigitalBooking.models.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;

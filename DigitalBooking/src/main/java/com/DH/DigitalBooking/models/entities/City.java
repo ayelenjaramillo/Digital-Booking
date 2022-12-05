@@ -1,6 +1,7 @@
-package com.DH.DigitalBooking.models;
+package com.DH.DigitalBooking.models.entities;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -14,19 +15,16 @@ public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id",insertable=false,updatable=false)
-    //@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "city_sequence")
-    //@SequenceGenerator(name="city_sequence",sequenceName = "city_sequence")
     private Long id;
     @Column(name="city_name")
     private String cityName;
-
     @Column
     private String country;
 
     public City() {
     }
-    public City(String city_name, String country) {
-        this.cityName = city_name;
+    public City(String cityName, String country) {
+        this.cityName = cityName;
         this.country = country;
     }
 

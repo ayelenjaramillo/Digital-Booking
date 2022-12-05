@@ -14,11 +14,11 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 public class AppResourceConfig {
 
 
-    @Bean
+    /*@Bean
     public ModelMapper modelMapper() {
         ModelMapper modelMapper = new ModelMapper();
         return modelMapper;
-    }
+    }*/
 
 
     @Bean

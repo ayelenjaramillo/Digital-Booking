@@ -23,7 +23,7 @@ public class UserDTO {
 
     private String city;
 
-    private String snActive;
+   // private String snActive;
 
     private RoleDTO role;
 }

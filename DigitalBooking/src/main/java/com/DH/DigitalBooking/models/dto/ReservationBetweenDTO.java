@@ -1,6 +1,4 @@
 package com.DH.DigitalBooking.models.dto;
-
-
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 

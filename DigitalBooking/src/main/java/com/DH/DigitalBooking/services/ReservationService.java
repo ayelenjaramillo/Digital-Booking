@@ -1,15 +1,14 @@
 package com.DH.DigitalBooking.services;
-import com.DH.DigitalBooking.models.User;
+import com.DH.DigitalBooking.models.entities.User;
 import com.DH.DigitalBooking.models.dto.ReservationDTO;
-import com.DH.DigitalBooking.models.dto.UserDTO;
 import com.DH.DigitalBooking.repositories.*;
-import com.DH.DigitalBooking.models.Reservation;
+import com.DH.DigitalBooking.models.entities.Reservation;
 import java.time.LocalDate;
 import java.util.*;
 import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
-import com.DH.DigitalBooking.util.MapperUtil;
+//import com.DH.DigitalBooking.util.MapperUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -136,12 +135,12 @@ public class ReservationService implements IReservationService {
     }
 
     @Override
-    public List<ReservationDTO> findByProductId(Long productId) throws ResourceNotFoundException {
+    public List<ReservationDTO> findReservationByProductId(Long productId) throws ResourceNotFoundException {
         return null;
     }
 
     @Override
-    public List<ReservationDTO> findByUserId(Long id) throws ResourceNotFoundException {
+    public List<ReservationDTO> findReservationByUserId(Long id) throws ResourceNotFoundException {
         return null;
     }
 

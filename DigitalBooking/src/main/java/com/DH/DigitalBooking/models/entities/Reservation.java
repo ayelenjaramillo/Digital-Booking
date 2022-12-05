@@ -1,12 +1,10 @@
-package com.DH.DigitalBooking.models;
+package com.DH.DigitalBooking.models.entities;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
 import java.sql.Time;
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.Date;
 
 @Getter
 @Setter

@@ -1,6 +1,6 @@
 package com.DH.DigitalBooking.models.dto;
-import com.DH.DigitalBooking.models.Category;
-import com.DH.DigitalBooking.models.City;
+import com.DH.DigitalBooking.models.entities.Category;
+import com.DH.DigitalBooking.models.entities.City;
 import lombok.*;
 
 @Getter

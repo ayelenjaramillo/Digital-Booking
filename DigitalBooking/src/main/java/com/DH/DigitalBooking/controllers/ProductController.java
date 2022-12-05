@@ -2,7 +2,7 @@ package com.DH.DigitalBooking.controllers;
 import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
-import com.DH.DigitalBooking.models.Product;
+import com.DH.DigitalBooking.models.entities.Product;
 import com.DH.DigitalBooking.services.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -11,8 +11,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
+
+
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("/api/v1/product")
@@ -55,8 +56,8 @@ public class ProductController {
     })
 
     @GetMapping("/city/{city_name}")
-    public ResponseEntity<List<Product>> getProductsByCity(@PathVariable String city_name) {
-        return ResponseEntity.ok(productService.filterByCity(city_name));
+    public ResponseEntity<List<Product>> getProductsByCity(@PathVariable String cityName) {
+        return ResponseEntity.ok(productService.filterByCity(cityName));
     }
 
     //

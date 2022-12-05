@@ -1,6 +1,5 @@
-package com.DH.DigitalBooking.models;
+package com.DH.DigitalBooking.models.entities;
 
-import com.DH.DigitalBooking.models.dto.UserDTO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

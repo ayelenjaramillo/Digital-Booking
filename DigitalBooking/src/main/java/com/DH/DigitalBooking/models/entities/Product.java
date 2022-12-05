@@ -1,10 +1,9 @@
-package com.DH.DigitalBooking.models;
+package com.DH.DigitalBooking.models.entities;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,9 +15,6 @@ import java.util.Set;
         //Unable to find column with logical name: idProduct in org.hibernate.mapping.Table(products)
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        //@SequenceGenerator(name="image_sequence",sequenceName = "image_sequence",initialValue = 1)
-        //@SequenceGenerator(name="image_sequence",sequenceName = "image_sequence")
-        //@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "image_sequence")
         //@NotNull
         private Long id;
         @Column
