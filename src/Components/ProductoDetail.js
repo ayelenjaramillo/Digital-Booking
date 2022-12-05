@@ -131,7 +131,7 @@ return(
                 {isLoading ? <Spinner /> : 
                 (product.features.map((f) => {
                     let variable = f.icon
-                    return <figure><FontAwesomeIcon className="icons" icon={variable} />{f.description}</figure>
+                    return <><FontAwesomeIcon className="icons" icon={variable} /> <span>{f.description}</span></>
                 })
 
                 )}
