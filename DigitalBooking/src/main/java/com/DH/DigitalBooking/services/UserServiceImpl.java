@@ -1,5 +1,7 @@
 package com.DH.DigitalBooking.services;
 
+import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
+import com.DH.DigitalBooking.models.entities.Product;
 import com.DH.DigitalBooking.models.entities.User;
 import com.DH.DigitalBooking.models.dto.UserDTO;
 import com.DH.DigitalBooking.repositories.UserRepository;
@@ -9,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements IUserService{
@@ -29,13 +32,12 @@ public class UserServiceImpl implements IUserService{
 
     @Override
     public UserDTO save(UserDTO userDTO) {
-
+        //mapperUtil.map(userRepository.save(mapperUtil.map(user, User.class)), UserDTO.class);
         User user= mapper.convertValue(userDTO, User.class);
         user= userRepository.save(user);
         UserDTO userDTO1 = mapper.convertValue(user, UserDTO.class);
-
         return userDTO;
-        //mapperUtil.map(userRepository.save(mapperUtil.map(user, User.class)), UserDTO.class);
+
     }
 
     @Override
@@ -50,17 +52,24 @@ public class UserServiceImpl implements IUserService{
     //devuelvo siempre un DTO adentro hago el casteo
 
     @Override
-    public UserDTO findByEmail(String email) {return null;
-            //mapperUtil.map(userRepository.findByEmail(email), UserDTO.class);
+    public UserDTO findByEmail(String email) {
+            //mapperUtil.map(userRepository.findByEmail(email), UserDTO.class); // }
+        User user= mapper.convertValue(userRepository.findByEmail(email), User.class);
+        UserDTO userDTO= mapper.convertValue(user,UserDTO.class);
 
-        // }
+        return userDTO;
+
         }
 
-    public User findById(Long id) {
-        return null;
-
+    public User findById(Long id) throws ResourceNotFoundException{
         //mapperUtil.map(userRepository.findById(id), User.class);
+        Optional<User> result= userRepository.findById(id);
+        if(result.isPresent())
+        {return result.get();}else {
+        throw new ResourceNotFoundException("Could not find specified resource.");}
+
     }
+
 
 
 
