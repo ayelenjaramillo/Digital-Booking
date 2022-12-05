@@ -6,11 +6,13 @@ import com.DH.DigitalBooking.models.entities.Rating;
 import com.DH.DigitalBooking.repositories.RatingRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+@Service
 public class RatingService implements IRatingService {
 
     @Autowired
