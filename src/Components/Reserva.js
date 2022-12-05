@@ -68,7 +68,7 @@ const Reserva = () =>{
                         <option> 16:00 AM</option>
                         <option> 18:00 AM</option>
                     </select>
-                    <hr style={{color:"#1DBEB4"}}></hr>
+                    <hr ></hr>
                 </div> 
             </div>
             <div className="reservas-vert">
@@ -85,13 +85,13 @@ const Reserva = () =>{
                 <span className="vert-location">
                     <p className= "parrafo-info"> Producto 2 </p>
                     <p style={{color: "#545776"}}><span><i class="ubicacion fa-solid fa-location-dot"></i></span> Rosario, Argentina</p>
-                    <hr style={{color:"#1DBEB4"}}/>
+                    <hr />
                 </span>
                 <span className="vert-check-in">
                     <p> Check In: </p>
                     <p className="fecha"> {startDate?.toLocaleDateString()}</p>
                 </span>
-                <hr style={{color:"#1DBEB4"}}></hr>
+                <hr ></hr>
                 <span className="vert-check-out">
                     <p> Check out: </p>
                     <p className="fecha">  {endDate?.toLocaleDateString()}</p>

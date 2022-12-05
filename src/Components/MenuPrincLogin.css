@@ -87,11 +87,12 @@
   .avatar{
     /* margin-right: 20px; */
     /* float: right; */
-    padding:  0.3rem 0.9rem;
+    padding:  0.1rem 0.7rem;
     color:#383b58;
     background: white;
     /* font-weight: bold; */
     margin-bottom: 0.5rem;
+    margin-top: 2rem;
 
 }
 
@@ -122,6 +123,7 @@
         align-items: center;
         justify-content: space-around;
         margin-right: 1rem;
+        position: relative;
     }
 
     .navBar-mobilempl a{
@@ -183,8 +185,8 @@
 
 
       
-      .menuNavmpl div{
-        text-align: left;
+      .menuNavmpl .avatarmobile{
+        text-align: right;
         padding-left: 1rem;
         /* padding-bottom: 6rem; */
         padding-top: 0.5rem;
@@ -213,10 +215,53 @@
       } */
 
       .redes-mobilempl{
-        display: inline;
-        float: right;
-        float: right;
-        justify-content:space-around;
-        padding: 18rem 0.5rem 0.5rem 0;
+        display: inline-flex;
+        /* float: right;
+        float: right; */
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        /* padding: 18rem 0.5rem 0.5rem 0; */
+        padding-right: 0.5rem;
       }
+
+      .cierreSesionMpl{
+        display: inline-flex;
+        /* float: right;
+        float: right; */
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding-bottom: 1rem;
+        padding-right:0.5rem;
+        font-weight: bold;
+        font-size: small;
+        }
+
+
+
+        .cierreSesionMpl span{
+          text-indent: 0.2rem;
+        }
+
+        .cierreSesionMpl a{
+          padding-right:0.5rem;
+          color: #1DBEB4;
+        }
+      
+
+      .redes-mobilempl li{
+        padding-right:0.5rem;
+      }
+      
+      .buttonCloseMpl{
+        background-color: #1DBEB4;
+        color: white;
+        font-weight: bold;
+        /* padding-left: 0.5rem; */
+        padding-top: 0.5rem;
+        float: left;
+      }
+
+
 }

@@ -50,26 +50,34 @@ const MenuPrincLogin =(props)=>{
                 <div className="navBar-mobilempl" onClick={handleTogglempl}>
                 <div>{navbarOpenmpl ? "" : <GiHamburgerMenu size={25}/>}</div>  
                 <ul className={`menuNavmpl ${navbarOpenmpl ? " showMenumpl" : ""}`}>
-                <div>{navbarOpenmpl ? "X" : ""}</div> 
-                <div className="avatarmobile">                    
+                <div className="avatarmobile">  
+                <div className="buttonCloseMpl">{navbarOpenmpl ? "X" : ""}</div> 
+                  
                     <button src={usuario?usuario: ""} className="avatar">{usuario[0].toUpperCase()}</button>
                         <p>
                             <span>Hola, </span>
-                            <span>{usuario}!</span>
+                            <span>{usuario}</span>
                         </p>   
-                </div>       
-                <p>¿Deseas<Link to="/">cerrar sesión?</Link></p>       
-                <li className="redes-mobilempl"><BsInstagram size={20}/></li>
-                <li className="redes-mobilempl"><AiOutlineTwitter size={20}/></li>
-                <li className="redes-mobilempl"><FaLinkedinIn size={20}/></li>
-                <li className="redes-mobilempl"><BsFacebook size={20}/></li>
+                </div>                     
+                <p className="cierreSesionMpl">¿Deseas <span> <Link to="/"> cerrar sesión?</Link></span></p>   
+                {/* <hr></hr> */}
+                <div className="redes-mobilempl"> 
+                    <li ><BsInstagram size={20}/></li>
+                    <li ><AiOutlineTwitter size={20}/></li>
+                    <li ><FaLinkedinIn size={20}/></li>
+                    <li ><BsFacebook size={20}/></li>
+                </div>
+
+
                 </ul>
             </div>             
                 <div className="closeButtonLogin">
                     <Link to="/">X</Link>
                 </div>
             </div>
-            
+            <div>
+                
+            </div>
             <Reserva/>
         </div>
     ); 
