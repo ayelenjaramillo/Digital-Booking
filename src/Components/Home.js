@@ -4,7 +4,7 @@ import Buscador from './Buscador';
 import Categoria from './Categoria';
 import Listado from './Listado';
 
-export default function Home(props) {
+export default function Home() {
     return (
     <div className="home">
         {/* <NavBar/>  */}

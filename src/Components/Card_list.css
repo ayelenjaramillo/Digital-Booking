@@ -17,6 +17,7 @@
     border-bottom-left-radius: 1rem;
     padding: 0.5rem;
     width: 50%;
+    object-fit: cover;
     /* display: block; */
 }
 
