@@ -15,10 +15,9 @@ return (
         <div className='cardlist'>
             <img className='imagelist' alt={title} src={image}></img>
             <div className='rightproductdetailslist'>
-                <p>{cat}<RiStarSFill/><RiStarSFill/><RiStarSFill/><RiStarSFill/><RiStarSFill/></p>
+                <p>{cat}</p>
                 <p>{title}</p>
                 <p><IoLocationSharp/> {title}</p>
-                <p><BiWifi/><BiSwim/></p>
                 <p>{des} </p>
                 <button ><Link to={idProd}>Ver más</Link></button>
                 
