@@ -7,14 +7,13 @@ import "../Components/ProductoDetail.css";
 import "react-datepicker/dist/react-datepicker.css"; 
 import DatePicker from "react-datepicker";
 import Carrusel from "./Carrusel";
-import DataList from './dataList.json';
 import Spinner from "./Spinner";
 import { faLocationDot, faAngleLeft, faStar, faCar, faTv, faPaw, faPersonSwimming, faSnowflake, faWifi, faKitchenSet, faBathtub, faDumbbell, faSpa, faLock, faCutlery, faClock} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
 
 
-const ProductoDetail=(props)=>{
+const ProductoDetail=()=>{
     const navigate = useNavigate();
     const[startDate, setStartDate] = useState(); 
     const [endDate, setEndDate]= useState(); 
@@ -85,112 +84,112 @@ const ProductoDetail=(props)=>{
 
 
 
-return(
-<div className="main-imagenes">
-    
-    <div className="header-hotel">
-    <p className="p-hotel"> { isLoading ?  <Spinner />  : product.category.title}
-        <h4>{isLoading ?  <Spinner />  : product.title}</h4>
-    </p>
-    <span className="iconos">
-        <Link to="/"><FontAwesomeIcon className="flecha" icon={faAngleLeft} /></Link>
-    </span>
-    
-    </div>
-   <div className="infolocation-hotel">
-        <p className="p-hotel">
-        <FontAwesomeIcon className="ubicacion" icon={faLocationDot} />
-            { isLoading ?  <Spinner />  : (<span>{product.city.city_name}, {product.city.country} </span> )}
-            <p>{ isLoading ?  <Spinner />  : product.address} </p>
-        </p>
-    <span>
-        <h5 className="titleh5aloj">Muy bueno</h5>
-        <div className="estrellas">
-        <FontAwesomeIcon className="puntuacion" icon={faStar} />
-        <FontAwesomeIcon className="puntuacion" icon={faStar} />
-        <FontAwesomeIcon className="puntuacion" icon={faStar} />
-        <FontAwesomeIcon className="puntuacion" icon={faStar} />
-        <FontAwesomeIcon style={{color: "#CBCBCF"}} className="puntuacion" icon={faStar} />
-        </div>
-    </span>
-    {/* DARLE FORMATO AL SPAN DE ABAJO. VA AL LADO DEL MUY BUENO Y LAS ESTRELLAS, CON FONDO AZUL */}
-    <span>{ isLoading ? <Spinner />  : product.rating}</span>
-    
-    </div> 
-        {isLoading ? <Spinner /> : <Carrusel product={product}/>}
-        {/* <CarruselB/> */}
-    <span>
-        <h3 className="titleh3aloj">{ isLoading ? <Spinner />  : product.description_title}</h3>
-        <p className="p-hotel-negro">{ isLoading ? <Spinner />  : product.description}</p>
-    </span>
-    <div>
-        <h3 className="titleh3aloj"> Que ofrece este lugar?</h3>
-        <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
-        <div className="servicios-alojamiento">
-
-                {isLoading ? <Spinner /> : 
-                (product.features.map((f) => {
-                    let variable = f.icon
-                    return <><FontAwesomeIcon className="icons" icon={variable} /> <span>{f.description}</span></>
-                })
-
-                )}
-
-
-
-            {/* {isLoading ? <Spinner /> : <figure><FontAwesomeIcon className="icons" icon={product.features[0].icon} />{product.features[0].description}</figure>} */}
-            {/* <figure><FontAwesomeIcon className="icons" icon={faCar} />Parking</figure>
-            <figure><FontAwesomeIcon className="icons" icon={faTv} /> Television</figure>
-            <figure><FontAwesomeIcon className="icons" icon={faPaw} />Apto Mascotas</figure>
-            <figure><FontAwesomeIcon className="icons" icon={faPersonSwimming} /> Pileta</figure>
-            <figure style={{width: 300}}><FontAwesomeIcon className="icons" icon={faSnowflake} /> Aire Acondicionado </figure>
-            <figure><FontAwesomeIcon className="icons" icon={faWifi} /> WI FI </figure> */}
-        </div>
-        <h3 className="titleh3aloj">Que tenes que saber</h3>
-        <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
-        <div className="politicas-alojamiento">
-           <div className="politicas-pautas-div">
-            <h5 className="titleh5aloj">Normas de la casa</h5>
-            <p>{ isLoading ? <Spinner />  : product.policy.documentation}</p>
-            {/* <p>No se permiten fiestas</p>
-            <p>No fumar</p> */}
+    return(
+        <div className="main-imagenes">
+            
+            <div className="header-hotel">
+                <p className="p-hotel"> { isLoading ?  <Spinner />  : product.category.title}
+                    <h4>{isLoading ?  <Spinner />  : product.title}</h4>
+                </p>
+                <span className="iconos">
+                    <Link to="/"><FontAwesomeIcon className="flecha" icon={faAngleLeft} /></Link>
+                </span>
+            
             </div>
-            <div className="politicas-pautas-div">
-             <h5 className="titleh5aloj">Salud y seguridad</h5>
-             <p>Se aplican las pautas de distanciamiento social
-                y otras normas relacionadas con el COVID19
-             </p>
-             <p>Deposito de seguridad: { isLoading ? <Spinner />  : product.policy.penalty_fee}</p>
-            </div>
-            <div className="politicas-pautas-div">
-                <h5 className="titleh5aloj">Politicas de cancelacion</h5>
-                <p>Agrega las fechas de tu viaje para obtener los detalles de cancelacion de esta estadia</p>
-            </div>
-        </div>
-        <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
-        <div className="map_location">
-        {/* <img src="../map.jpg" alt="map_location" className="map-img"/> */}
-        <h3 className="titleh3aloj">Fechas disponibles</h3>
-        
-        <div className="datepicker-div">
-        <DatePicker placeholderText= " CheckIn - CheckOut" selectsRange={true}
-                    onChange = {onChangeDateHandler}
-                    startDate={startDate}
-                    endDate={endDate}
-                    monthsShown={2}
-                    inline
-                    dateFormat="dd MM yyyy"/>
+            <div className="infolocation-hotel">
+                <p className="p-hotel">
+                    <FontAwesomeIcon className="ubicacion" icon={faLocationDot} />
+                    { isLoading ?  <Spinner />  : (<span>{product.city.city_name}, {product.city.country} </span> )}
+                    <p>{ isLoading ?  <Spinner />  : product.address} </p>
+                </p>
+                <span>
+                    <h5 className="titleh5aloj">Muy bueno</h5>
+                    <div className="estrellas">
+                        <FontAwesomeIcon className="puntuacion" icon={faStar} />
+                        <FontAwesomeIcon className="puntuacion" icon={faStar} />
+                        <FontAwesomeIcon className="puntuacion" icon={faStar} />
+                        <FontAwesomeIcon className="puntuacion" icon={faStar} />
+                        <FontAwesomeIcon style={{color: "#CBCBCF"}} className="puntuacion" icon={faStar} />
+                    </div>
+                </span>
+                {/* DARLE FORMATO AL SPAN DE ABAJO. VA AL LADO DEL MUY BUENO Y LAS ESTRELLAS, CON FONDO AZUL */}
+                <span>{ isLoading ? <Spinner />  : product.rating}</span>
+            
+            </div> 
+            {isLoading ? <Spinner /> : <Carrusel product={product}/>}
+            {/* <CarruselB/> */}
+            <span>
+                <h3 className="titleh3aloj">{ isLoading ? <Spinner />  : product.description_title}</h3>
+                <p className="p-hotel-negro">{ isLoading ? <Spinner />  : product.description}</p>
+            </span>
+            <div>
+                <h3 className="titleh3aloj"> Que ofrece este lugar?</h3>
+                <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
+                <div className="servicios-alojamiento">
 
-        <div className="cajaauxiliarfechas">
-            <p className= "p-reservasprod">Agrega tus fechas para obtener precios exactos</p>
-            <Link to="/LogIn">
-                <button className="boton-iniciar-reserva">Iniciar reserva</button>
-            </Link></div>
-        </div>
-        </div>
-    </div>
+                    {isLoading ? <Spinner /> : 
+                    (product.features.map((f) => {
+                        let variable = f.icon
+                        return <><FontAwesomeIcon className="icons" icon={variable} /> <span>{f.description}</span></>
+                    })
 
-</div>
+                    )}
+
+
+
+                    {/* {isLoading ? <Spinner /> : <figure><FontAwesomeIcon className="icons" icon={product.features[0].icon} />{product.features[0].description}</figure>} */}
+                    {/* <figure><FontAwesomeIcon className="icons" icon={faCar} />Parking</figure>
+                    <figure><FontAwesomeIcon className="icons" icon={faTv} /> Television</figure>
+                    <figure><FontAwesomeIcon className="icons" icon={faPaw} />Apto Mascotas</figure>
+                    <figure><FontAwesomeIcon className="icons" icon={faPersonSwimming} /> Pileta</figure>
+                    <figure style={{width: 300}}><FontAwesomeIcon className="icons" icon={faSnowflake} /> Aire Acondicionado </figure>
+                    <figure><FontAwesomeIcon className="icons" icon={faWifi} /> WI FI </figure> */}
+                </div>
+                <h3 className="titleh3aloj">Que tenes que saber</h3>
+                <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
+                <div className="politicas-alojamiento">
+                    <div className="politicas-pautas-div">
+                        <h5 className="titleh5aloj">Normas de la casa</h5>
+                        <p>{ isLoading ? <Spinner />  : product.policy.documentation}</p>
+                    </div>
+                    <div className="politicas-pautas-div">
+                        <h5 className="titleh5aloj">Salud y seguridad</h5>
+                        <p>Se aplican las pautas de distanciamiento social
+                            y otras normas relacionadas con el COVID19
+                        </p>
+                        <p>Deposito de seguridad: { isLoading ? <Spinner />  : product.policy.penalty_fee}</p>
+                    </div>
+                    <div className="politicas-pautas-div">
+                        <h5 className="titleh5aloj">Politicas de cancelacion</h5>
+                        <p>Agrega las fechas de tu viaje para obtener los detalles de cancelacion de esta estadia</p>
+                    </div>
+                </div>
+                <hr style={{color: "#1DBEB4", background: "#1DBEB4", opacity: 20}}></hr>
+                <div className="map_location">
+                    {/* <img src="../map.jpg" alt="map_location" className="map-img"/> */}
+                    <h3 className="titleh3aloj">Fechas disponibles</h3>
+                    
+                    <div className="datepicker-div">
+                        <DatePicker placeholderText= " CheckIn - CheckOut" selectsRange={true}
+                                    onChange = {onChangeDateHandler}
+                                    startDate={startDate}
+                                    endDate={endDate}
+                                    monthsShown={2}
+                                    inline
+                                    dateFormat="dd MM yyyy"
+                        />
+
+                        <div className="cajaauxiliarfechas">
+                            <p className= "p-reservasprod">Agrega tus fechas para obtener precios exactos</p>
+                            <Link to="/LogIn">
+                                <button className="boton-iniciar-reserva">Iniciar reserva</button>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     )    
 } 
 

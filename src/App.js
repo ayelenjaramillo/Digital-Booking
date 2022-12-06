@@ -18,7 +18,7 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-      <NavBar/>
+        <NavBar/>
         <Routes>
           <Route path="/" element={<Home/>}></Route>
           {/* <Route index element = {<Home/>}></Route>
@@ -32,9 +32,9 @@ const App = () => {
           <Route path="/Reserva" element = {<Reserva/>}></Route>
           <Route path="/ConfirmacionReserva" element= {<ConfirmacionReserva/>}></Route>
           <Route path="/AdministradorTemplate" element= {<AdministradorTemplate/>}></Route>
-      </Routes>
+        </Routes>
       </BrowserRouter>
-    <Footer/>
+      <Footer/>
     </>
   );
 };
