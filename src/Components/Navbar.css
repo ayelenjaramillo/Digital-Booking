@@ -61,7 +61,7 @@
 }
 } */
 
-@media (max-width: 991px){
+@media (max-width: 1200px){
   .image{
     display: none;
   }
@@ -140,21 +140,21 @@
       }
 
       .menuNav div{
-        text-align: left;
-        padding-left: 1rem;
+        /* text-align: left;
+        padding-left: 1rem; */
         /* padding-bottom: 6rem; */
-        padding-top: 0.5rem;
+        /* padding-top: 0.5rem;
         background-color: #1DBEB4;
         width: 100%;
         border-radius: 0;
         color: white;
         position: absolute;
-        font-weight: bold;
+        font-weight: bold; */
       }
 
-      .menuNav li:nth-child(3){
+      /* .menuNav li:nth-child(3){
         padding-top: 1rem;
-      }
+      } */
     
       .image{
         display: none;
@@ -169,11 +169,32 @@
       } */
 
       .redes-mobile{
-        display: inline;
+        /* display: inline;
         float: right;
         float: right;
         justify-content:space-around;
-        padding: 18rem 0.5rem 0.5rem 0;
+        padding: 18rem 0.5rem 0.5rem 0; */
+        display: inline-flex;
+        /* float: right;
+        float: right; */
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        /* padding: 18rem 0.5rem 0.5rem 0; */
+        padding-right: 0.2rem;
+      }
+
+      .redes-mobile li{
+        padding-right:0.5rem;
+      }
+
+      .buttonClose{
+        background-color: #1DBEB4;
+        color: white;
+        font-weight: bold;
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
+        float: left;
       }
 }
 

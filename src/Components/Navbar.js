@@ -40,15 +40,19 @@ const NavBar =()=> {
   <div className="navBar-mobile" onClick={handleToggle}>
     <div>{navbarOpen ? "" : <GiHamburgerMenu size={25}/>}</div>  
     <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}>
-      <div>{navbarOpen ? "X" : ""}</div>  
+      <div  className="buttonClose">{navbarOpen ? "X" : ""}</div>  
       <h3>MENÚ</h3>    
       <li><Link to = "/Registro"> Crear Cuenta </Link></li>
       <hr></hr>
       <li><Link to = "/LogIn"> Iniciar Sesion </Link></li>
-      <li className="redes-mobile"><BsInstagram size={20}/></li>
-      <li className="redes-mobile"><AiOutlineTwitter size={20}/></li>
-      <li className="redes-mobile"><FaLinkedinIn size={20}/></li>
-      <li className="redes-mobile"><BsFacebook size={20}/></li>
+      <div className="redes-mobile">
+        <li ><BsInstagram size={20}/></li>
+        <li ><AiOutlineTwitter size={20}/></li>
+        <li ><FaLinkedinIn size={20}/></li>
+        <li ><BsFacebook size={20}/></li>
+      </div>
+
+
     </ul>
   </div>
 </header>
