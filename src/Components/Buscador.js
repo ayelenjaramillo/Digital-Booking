@@ -45,19 +45,19 @@ return(
             <p>Busca ofertas en hoteles, casas y mucho más</p>
             <div className="h-sec">
             {/* VER ESTO CON WIN PORQUE TENEMOS QUE ELIMINAR EL SELECT Y CAMBIARLO POR UN INPUT<input placeholder= "A donde vamos?"></input> */}
-                <select name="ciudad" onClick={ () => buscarCiudades()}>
+                <select  className="fontAwesome" name="ciudad" onClick={ () => buscarCiudades()}>
                     {/* <option disabled selected hidden >A dónde vamos?</option>
                     <option>Trelew, Chubut, Argentina</option>
                     <option>Rio Cuarto, Cordoba, Argentina</option>
                     <option>Capital Federal, Buenos Aires, Argentina</option>
                     <option>Villa La Angostura, Neuquen, Argentina</option> */}
 
-                    {elegirCiudad ? <option disabled selected hidden >A dónde vamos?</option> : (  ciudades.map(e => (
+                    {elegirCiudad ? <option className="fa" disabled selected hidden >&#xf3c5; A dónde vamos?</option> : (  ciudades.map(e => (
                         <option key={e.id} value={e.i}>{e.city_name}</option>
                     )
                     ) ) }
                 </select>
-                <DatePicker placeholderText="Check in - Check out" selectsRange={true}
+                <DatePicker className="fontAwesome" placeholderText="&#xf783; Check in - Check out" selectsRange={true}
                     onChange = {onChangeDateHandler}
                     monthsShown={2}
                     startDate={startDate}

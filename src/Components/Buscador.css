@@ -13,6 +13,15 @@
     align-content: center;
 }
 
+.fontAwesome{
+    font-family: 'Helvetica', FontAwesome, sans-serif;
+    padding-left: 0.2rem;
+}
+
+option:first-child{
+    color: grey;
+}
+
 .h-principal p{
     padding: 1rem 0rem 0rem 0rem;
     text-align: center;
