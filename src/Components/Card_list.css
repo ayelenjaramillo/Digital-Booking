@@ -2,7 +2,6 @@
     border-radius: 2rem;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
-    border-radius: 1rem;
     height: 17rem;
 }
 
@@ -13,8 +12,7 @@
 
 
 .imagelist{
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-radius: 1rem;
     padding: 0.5rem;
     width: 50%;
     object-fit: cover;
