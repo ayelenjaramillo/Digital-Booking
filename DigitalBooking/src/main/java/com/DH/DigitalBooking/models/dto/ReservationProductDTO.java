@@ -14,10 +14,10 @@ public class ReservationProductDTO {
 
         private Integer id;
         @DateTimeFormat(pattern = "yyyy-MM-dd")
-        private LocalDate check_ot_date;
+        private LocalDate checkInDate;
         @DateTimeFormat(pattern = "yyyy-MM-dd")
-        private LocalDate check_out_date;
-        private LocalTime check_in_time;
+        private LocalDate checkOutDate;
+        private LocalTime checkInTime;
         private Integer productId;
         private Integer userId;
 
