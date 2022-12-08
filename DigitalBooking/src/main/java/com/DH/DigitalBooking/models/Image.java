@@ -27,8 +27,8 @@ public class Image {
     @JsonIgnore
     private Product product;
 
-    public Image(String title_image, String url_image, Product product) {
-        this.titleImage = title_image;
+    public Image(String titleImage, String urlImage, Product product) {
+        this.titleImage = titleImage;
         this.urlImage = urlImage;
         this.product = product;
     }
