@@ -102,9 +102,10 @@ const ProductoDetail=()=>{
                     { isLoading ?  <Spinner />  : (<span>{product.city.city_name}, {product.city.country} </span> )}
                     <p>{ isLoading ?  <Spinner />  : product.address} </p>
                 </p>
-                <span>
-                    <h5 className="titleh5aloj">Muy bueno</h5>
-                    <div className="estrellas">
+                <div className="rating-general-producto">
+                    <span>
+                    <p className="titleh5aloj">Muy bueno</p>
+                    <div className="estrellas">                    
                         <FontAwesomeIcon className="puntuacion" icon={faStar} />
                         <FontAwesomeIcon className="puntuacion" icon={faStar} />
                         <FontAwesomeIcon className="puntuacion" icon={faStar} />
@@ -113,7 +114,9 @@ const ProductoDetail=()=>{
                     </div>
                 </span>
                 {/* DARLE FORMATO AL SPAN DE ABAJO. VA AL LADO DEL MUY BUENO Y LAS ESTRELLAS, CON FONDO AZUL */}
-                <span>{ isLoading ? <Spinner />  : product.rating}</span>
+                <button className="rating-product">{ isLoading ? <Spinner />  : product.rating}</button>
+                </div>
+                
             
             </div> 
             {isLoading ? <Spinner /> : <Carrusel product={product}/>}

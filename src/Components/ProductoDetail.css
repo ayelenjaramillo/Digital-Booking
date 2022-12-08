@@ -105,10 +105,11 @@
 
 .titleh5aloj{
     color:#545776; 
-    width: 100%;
-    font-size: 1.12rem;
+    /* width: 100%; */
+    /* font-size: 1.12rem; */
     padding: 0;
-    margin-bottom: .6rem;
+    margin-bottom: 0rem;
+    display: inline;
 }
 .iconoscarrusel{
     color: #545776
@@ -143,6 +144,22 @@ margin: 0 1.8rem;}
 .datepicker-div{
     margin-left: 0;
     width: 100%;
+}
+
+.rating-general-producto{
+    display: flex;
+    align-items: center;
+}
+
+.rating-product{
+    border-radius: 20%;
+    /* padding:  0.4rem 1rem; */
+    color:white;
+    background: #383b58;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    display: inline;
 }
 
 /* DESKTOP */
