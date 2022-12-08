@@ -20,9 +20,8 @@ public class Role {
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    //@Column(name = "role_name")
-    @Column
-    private String role_name;
+    @Column(name = "role_name")
+    private String roleName;
 
     /*@Column(name = "description")
     private String description;
@@ -30,7 +29,7 @@ public class Role {
     private Boolean snactive;*/
 
     public Role(String role_name) {
-        this.role_name = role_name;
+        this.roleName = role_name;
     }
 
 }
