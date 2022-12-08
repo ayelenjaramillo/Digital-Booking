@@ -22,8 +22,10 @@ public class DTOProductUpdate {
     private String description;
     private Integer rating;
     private String address;
-    private long category_id;
-    private long city_id;
+    //private long category_id;
+    private long categoryId;
+    //private long city_id;
+    private long cityId;
     private Set<Image> images = new HashSet<>();
     private Set<Feature> features = new HashSet<>();
     private String policy;
