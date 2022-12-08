@@ -14,9 +14,9 @@ import java.time.LocalDate;
 public class ReservationBetweenDTO {
 
         @DateTimeFormat(pattern = "yyyy-MM-dd")
-        private LocalDate check_in_date;
+        private LocalDate checkInDate;
         @DateTimeFormat(pattern = "yyyy-MM-dd")
-        private LocalDate check_out_date;
+        private LocalDate checkOuDate;
 
 
 
