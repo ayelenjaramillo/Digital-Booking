@@ -14,16 +14,13 @@ public class Image {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    //@GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "image_generator")
-    //@SequenceGenerator(name="image_generator",sequenceName = "image_seq", allocationSize = 1)
+
     //@Column(name = "id", updatable = false, nullable = false)
     private Long id;
-    //@Column(name = "title_image")
-    @Column
-    private String title_image;
-    //@Column(name="url_image")
-    @Column
-    private String url_image;
+    @Column(name = "title_image")
+    private String titleImage;
+    @Column(name="url_image")
+    private String urlImage;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "products_id", referencedColumnName = "id")
@@ -31,8 +28,8 @@ public class Image {
     private Product product;
 
     public Image(String title_image, String url_image, Product product) {
-        this.title_image = title_image;
-        this.url_image = url_image;
+        this.titleImage = title_image;
+        this.urlImage = urlImage;
         this.product = product;
     }
 
