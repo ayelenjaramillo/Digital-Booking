@@ -83,23 +83,27 @@ public class SecurityConfig {
                 .antMatchers(HttpMethod.POST, "/api/v1/city/").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/v1/image/").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/v1/policy/").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/api/v1/reservation/").hasAnyRole( "USER","ADMIN")
+
+                .antMatchers(HttpMethod.POST, "/api/v1/reservation/**", "/api/v1/bookmark/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.PUT, "/api/v1/reservation/**", "/api/v1/bookmark/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.DELETE, "/api/v1/reservation/**", "/api/v1/bookmark/**").hasAnyRole("USER", "ADMIN")
+                .antMatchers(HttpMethod.GET, "/api/v1/reservation/**", "/api/v1/bookmark/**").hasAnyRole("USER", "ADMIN")
+
+
                 .antMatchers(HttpMethod.POST, "/api/v1/feature/").permitAll()
+                //.antMatchers(HttpMethod.POST, "/api/v1/feature/").hasAnyRole("ADMIN")
 
                 .antMatchers(HttpMethod.PUT, "/api/v1/product/**", "/api/v1/category/**", "/api/v1/city/**", "/api/v1/feature/**", "/api/v1/policy/**", "/api/v1/product-feature/**", "/api/v1/role/**", "/api/v1/user/**").hasAnyRole("ADMIN")
 
                 .antMatchers(HttpMethod.DELETE, "/api/v1/product/**", "/api/v1/category/**", "/api/v1/city/**", "/api/v1/feature/**", "/api/v1/policy/**", "/api/v1/product-feature/**", "/api/v1/role/**", "/api/v1/user/**").hasAnyRole("ADMIN")
 
-
                 .antMatchers(HttpMethod.GET, "/api/v1/role/**", "/api/v1/user/**").hasAnyRole("ADMIN")
 
 
                 //.antMatchers(HttpMethod.POST, "/api/v1/city/country").hasAnyRole("USER")
-//                .antMatchers(HttpMethod.PUT, "/api/v1/product/**", "/api/v1/category/**"
-//                        , "/api/v1/city/**", "/api/v1/feature/**", "/api/v1/policy/**", "/api/v1/product-feature/**"
-//                        , "/api/v1/role/**", "/api/v1/user/**").hasAnyRole("ADMIN")
-//                .antMatchers(HttpMethod.DELETE, "/api/v1/product/**", "/api/v1/category/**"
-//                        , "/api/v1/city/**", "/api/v1/feature/**", "/api/v1/policy/**", "/api/v1/product-feature/**"
-//                        , "/api/v1/role/**", "/api/v1/user/**").hasAnyRole("ADMIN")
+//                .antMatchers(HttpMethod.PUT, "/api/v1/product/**", "/api/v1/category/**", "/api/v1/city/**", "/api/v1/feature/**", "/api/v1/policy/**", "/api/v1/product-feature/**", "/api/v1/role/**", "/api/v1/user/**").hasAnyRole("ADMIN")
+//                .antMatchers(HttpMethod.DELETE, "/api/v1/product/**", "/api/v1/category/**", "/api/v1/city/**", "/api/v1/feature/**", "/api/v1/policy/**", "/api/v1/product-feature/**", "/api/v1/role/**", "/api/v1/user/**").hasAnyRole("ADMIN")
 //                .antMatchers(HttpMethod.GET, "/api/v1/role/**", "/api/v1/user/**").hasAnyRole("ADMIN")
 //                .antMatchers(HttpMethod.POST, "/api/v1/booking/**", "/api/v1/favorite/**").hasAnyRole("USER", "ADMIN")
 //                .antMatchers(HttpMethod.PUT, "/api/v1/booking/**", "/api/v1/favorite/**").hasAnyRole("USER", "ADMIN")
