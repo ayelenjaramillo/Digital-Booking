@@ -40,7 +40,7 @@ public class JwtProviderConfig {
                 .setSubject(mainUserAuth.getUsername()) //el username va a ser el mismo correo en nuestro caso
                 .addClaims(claims)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(new Date().getTime() + expiration * 1000))
+                .setExpiration(new Date(new Date().getTime() + expiration * 100000))
                 .signWith(SignatureAlgorithm.HS512, secret).compact();
 
     }

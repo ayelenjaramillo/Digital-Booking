@@ -1,4 +1,5 @@
-//package com.DH.DigitalBooking.util;
+/*
+package com.DH.DigitalBooking.util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Component;
@@ -9,7 +10,7 @@ import java.util.stream.Collectors;
 
 //NO ES EL MAPPER DE SWAGGER ES EL MODEL MAPPER DE LA DEPENDENCIA
 
-/*
+
 @Component
 public class MapperUtil {
 
@@ -31,5 +32,6 @@ public class MapperUtil {
         return entities.map(objectEntity -> modelMapper.map(objectEntity, dtoClass));
     }
 
-}
-*/
+
+}*/
+
