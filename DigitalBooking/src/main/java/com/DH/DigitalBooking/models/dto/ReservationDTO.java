@@ -15,18 +15,18 @@ import java.util.Date;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ReservationDTO {
 
-    private LocalTime check_in_time;
-    private LocalDate check_in_date;
-    private LocalDate check_out_date;
-    private long product_id;
-    private long user_id;
+    private LocalTime checkInTime;
+    private LocalDate checkInDate;
+    private LocalDate checkOutDate;
+    private long productId;
+    private long userId;
 
     public Reservation toReservation(){
-        return new Reservation(this.getCheck_in_time(),
-                this.getCheck_in_date(),
-                this.getCheck_out_date(),
-                new User(this.getUser_id()),
-                new Product(this.getProduct_id()));
+        return new Reservation(this.getCheckInTime(),
+                this.getCheckInDate(),
+                this.getCheckOutDate(),
+                new User(this.getUserId()),
+                new Product(this.getProductId()));
     }
 
 
