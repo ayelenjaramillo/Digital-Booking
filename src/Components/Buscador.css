@@ -15,11 +15,11 @@
 
 .fontAwesome{
     font-family: 'Helvetica', FontAwesome, sans-serif;
-    padding-left: 0.2rem;
+    padding-left: 1rem;
 }
 
-option:first-child{
-    color: grey;
+.fontColorCity{
+    color: black;
 }
 
 .h-principal p{
@@ -73,6 +73,7 @@ option:first-child{
     padding: 0 1rem;
     border-radius: 0.3rem;
     width: 22rem;
+    color:grey;
 
 }
 .react-datepicker-popper{
@@ -88,7 +89,9 @@ option:first-child{
         display: flex;
         /* height: 2rem; */
         width: 15rem;
+
     } 
+
 }
 
 @media (max-width: 731px){
@@ -103,12 +106,12 @@ option:first-child{
         align-items: center;
     }
     .h-principal input{
-        width: 90%;
-        margin-left: 5.1%;
+        width: 100%;
+        /* margin-left: 5.1%; */
     }
 
     .react-datepicker-wrapper{
-        width: 90%;
+        width: 82%;
         padding: 0;
     }
    
