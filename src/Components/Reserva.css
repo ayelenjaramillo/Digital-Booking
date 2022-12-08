@@ -5,9 +5,13 @@
 }
 
 .react-datepicker{
-    width: 100%;
-    margin-left: 2rem;
+    width: 90%;
+    margin-left: 3rem;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
+}
+
+.datepicket-reservas{
+    width: 97%;
 }
 .react-datepicker__day--keyboard-selected {
     background-color: #1DBEB4;
@@ -34,10 +38,11 @@
 
 .reservas-horiz{
     /* margin: 0rem 1rem; */
-    width: 65%;
-    padding-left: 1rem;
+    width: 60%;
+    
   
 }
+
 .datos-div{
    
     display: grid;
@@ -50,17 +55,20 @@
     
 }
 .react-datepicker{
-    width: 39rem;
+    width: 94%;
+    padding-left: 5%;
+   
     
 }
 .react-datepicker__current-month{
-    width: 19.4rem ;
+    width: 35.4rem ;
     gap: 1rem;
+    
 }
 .datos-personales-reserva{
     background-color: white;
     width: 93%;
-    margin-left: 2rem;
+    margin-left: 3rem;
     height: 12rem;
     padding: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
@@ -70,7 +78,7 @@
     font-size: 1.1rem;
     color: #545776 ;
     font-weight: bold;
-    margin-left: 2rem;
+    margin-left: 3rem;
     margin-top: .5rem;
 }
 .info-reservas{
@@ -83,7 +91,7 @@
     box-shadow: rgba(0, 0, 0, 0.2) 3px 6px 10px;
     border-radius: .5rem;
     padding: 1rem;
-    margin-left: 2rem;
+    margin-left: 3rem;
     margin-right: 2rem;
     height: 13rem;
 }
@@ -153,6 +161,11 @@
     .container-principal-reservas{
         display: flex;
     }
+    .datepicket-reservas{
+        width: 155.5%;
+        padding-left: 0;
+    }
+
     .reservas-vert{
         width: 35%;
         margin-left: 10px;
@@ -172,6 +185,8 @@
         margin-left: 4px;
         height: 20.06rem;
         font-size: 0.93rem;
+        padding-left: 0;
+       
         
     }
     
@@ -181,11 +196,11 @@
         font-size:1.25rem ;
     }
     .react-datepicker__month-container{
-        width: 80%;
+        width: 100%;
         
     }
     .react-datepicker__day {
-        padding: 4px;
+        padding: 5px;
     }
     .react-datepicker__day-names{
         font-weight: bold;
@@ -202,11 +217,12 @@
     }
     .btn-confirmacion{
         width: 25rem;
-        margin-left: 1rem;
+        margin-left: 5.5rem;
         margin-bottom: 0.62rem;
     }
     .reservas-horiz{
         height: 35rem;
+        width: 70%;
     }
     .select-reserv{
         width: 45%;
