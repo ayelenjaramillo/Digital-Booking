@@ -1,4 +1,4 @@
-package com.DH.DigitalBooking.models;
+package com.DH.DigitalBooking.models.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
@@ -10,6 +10,7 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+//@AllArgs?
 @Entity
 @Table(name = "features")
 public class Feature {

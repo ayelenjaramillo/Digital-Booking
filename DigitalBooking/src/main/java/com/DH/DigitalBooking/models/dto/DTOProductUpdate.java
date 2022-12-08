@@ -1,7 +1,7 @@
 package com.DH.DigitalBooking.models.dto;
 
-import com.DH.DigitalBooking.models.Feature;
-import com.DH.DigitalBooking.models.Image;
+import com.DH.DigitalBooking.models.entities.Feature;
+import com.DH.DigitalBooking.models.entities.Image;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,11 +22,13 @@ public class DTOProductUpdate {
     private String description;
     private Integer rating;
     private String address;
+    private Long categoryId;
+    private Long cityId;
     //private long category_id;
     private long categoryId;
     //private long city_id;
     private long cityId;
     private Set<Image> images = new HashSet<>();
     private Set<Feature> features = new HashSet<>();
-    private String policy;
+    //private String policy;
 }

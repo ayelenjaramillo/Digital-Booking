@@ -1,4 +1,4 @@
-package com.DH.DigitalBooking.models;
+package com.DH.DigitalBooking.models.entities;
 
 
 import lombok.AllArgsConstructor;
@@ -28,8 +28,8 @@ public class Role {
     @Column(name = "snactive")
     private Boolean snactive;*/
 
-    public Role(String role_name) {
-        this.roleName = role_name;
+    public Role(String roleName) {
+        this.roleName = roleName;
     }
 
 }

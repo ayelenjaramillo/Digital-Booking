@@ -21,7 +21,9 @@ public class UserDTO {
 
     private String password;
 
-    private String snActive;
+    private String city;
+
+   // private String snActive;
 
     private RoleDTO role;
 }

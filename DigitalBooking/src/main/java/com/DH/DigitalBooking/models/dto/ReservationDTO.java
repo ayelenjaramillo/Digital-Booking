@@ -1,18 +1,18 @@
 package com.DH.DigitalBooking.models.dto;
-
-import com.DH.DigitalBooking.models.Product;
-import com.DH.DigitalBooking.models.Reservation;
-import com.DH.DigitalBooking.models.User;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
 
-@Data
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
+@ToString
+//@FieldDefaults(level = AccessLevel.PRIVATE)
 public class ReservationDTO {
 
     private LocalTime checkInTime;
@@ -20,6 +20,14 @@ public class ReservationDTO {
     private LocalDate checkOutDate;
     private long productId;
     private long userId;
+    private Long id;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate checkInDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate checkOutDate;
+    private LocalTime checkInTime;
+    private Long productId;
+    private Long userId;
 
     public Reservation toReservation(){
         return new Reservation(this.getCheckInTime(),

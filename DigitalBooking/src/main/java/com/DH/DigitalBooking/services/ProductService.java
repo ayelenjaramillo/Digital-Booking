@@ -2,7 +2,9 @@ package com.DH.DigitalBooking.services;
 import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
-import com.DH.DigitalBooking.models.*;
+import com.DH.DigitalBooking.models.entities.Feature;
+import com.DH.DigitalBooking.models.entities.Image;
+import com.DH.DigitalBooking.models.entities.Product;
 import com.DH.DigitalBooking.repositories.FeatureRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,8 +52,8 @@ public class ProductService {
         return result;
     }
 
-    public List<Product> filterByCity(String city_name) {
-        List<Product> result = productRepository.filterProductsByCityName(city_name);
+    public List<Product> filterByCity(String cityName) {
+        List<Product> result = productRepository.filterProductsByCityName(cityName);
         return result;
     }
 

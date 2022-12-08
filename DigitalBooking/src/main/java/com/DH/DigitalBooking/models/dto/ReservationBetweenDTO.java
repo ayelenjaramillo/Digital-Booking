@@ -1,6 +1,4 @@
 package com.DH.DigitalBooking.models.dto;
-
-
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -16,7 +14,8 @@ public class ReservationBetweenDTO {
         @DateTimeFormat(pattern = "yyyy-MM-dd")
         private LocalDate checkInDate;
         @DateTimeFormat(pattern = "yyyy-MM-dd")
-        private LocalDate checkOuDate;
+        private LocalDate checkOutDate;
+        private Long cityId;
 
 
 

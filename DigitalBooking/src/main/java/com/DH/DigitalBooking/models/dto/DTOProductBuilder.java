@@ -1,5 +1,5 @@
 package com.DH.DigitalBooking.models.dto;
-import com.DH.DigitalBooking.models.*;
+import com.DH.DigitalBooking.models.entities.*;
 import lombok.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -19,8 +19,8 @@ public class DTOProductBuilder {
     private Integer rating;
     private String address;
 
-    private long category_id;
-    private long city_id;
+    private Long categoryId;
+    private Long cityId;
 
     private Set<Image> images = new HashSet<>();
     private Set<Feature> features = new HashSet<>();
@@ -31,7 +31,7 @@ public class DTOProductBuilder {
     private Product toProduct(DTOProductBuilder dtoProductBuilder){
         return new Product(dtoProductBuilder.getTitle(), dtoProductBuilder.getDescription(), dtoProductBuilder.getDescription_title(), dtoProductBuilder.getRating(), dtoProductBuilder.getAddress(),
                 new Category( null, null, null),
-                new City(dtoProductBuilder.getCity_id(), null, null),
+                new City(dtoProductBuilder.getCityId(), null, null),
                 images, features, new Policy(null, null));
     }
 

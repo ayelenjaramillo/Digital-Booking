@@ -46,7 +46,7 @@ public class SecurityConfig {
     public JwtTokenFilterConfig jwtTokenFilter() {
         return new JwtTokenFilterConfig();
     }
-
+    @Primary
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -77,13 +77,13 @@ public class SecurityConfig {
 
                 .antMatchers(HttpMethod.GET, "/api/v1/image/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/v1/policy/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/api/v1/feature/").permitAll()
+                 .antMatchers(HttpMethod.GET, "/api/v1/feature/").permitAll()
 
                 .antMatchers(HttpMethod.POST, "/api/v1/product/").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/v1/city/").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/v1/image/").hasAnyRole("ADMIN")
                 .antMatchers(HttpMethod.POST, "/api/v1/policy/").hasAnyRole("ADMIN")
-                .antMatchers(HttpMethod.POST, "/api/v1/feature/").hasAnyRole("ADMIN")
+                .antMatchers(HttpMethod.POST, "/api/v1/feature/").permitAll()
 
                 .antMatchers(HttpMethod.PUT, "/api/v1/product/**", "/api/v1/category/**", "/api/v1/city/**", "/api/v1/feature/**", "/api/v1/policy/**", "/api/v1/product-feature/**", "/api/v1/role/**", "/api/v1/user/**").hasAnyRole("ADMIN")
 

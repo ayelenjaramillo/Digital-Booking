@@ -20,7 +20,7 @@ public class UserController {
     @Autowired
     private IUserService userService;
     //necesitamos inyectar este passwordEncoder y asi puedo setear el password que viene en mi mismo objeto el cual yo envio a traves del postman,
-    // en ese caso el password es 1234
+    //
     @Autowired
     private PasswordEncoder passwordEncoder;
 
