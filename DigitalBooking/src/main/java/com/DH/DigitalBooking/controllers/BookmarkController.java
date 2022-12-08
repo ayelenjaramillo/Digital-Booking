@@ -17,7 +17,7 @@ import javax.validation.Valid;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/bookmarks")
+@RequestMapping("ap1/v1/bookmarks")
 @CrossOrigin(origins = "*")
 @Tag(name = "Bookmarks", description = "It's mandatory valid token to used endpoints")
 public class BookmarkController {
