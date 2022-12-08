@@ -53,7 +53,7 @@ return(
                     <option>Villa La Angostura, Neuquen, Argentina</option> */}
 
                     {elegirCiudad ? <option className="fa" disabled selected hidden >&#xf3c5; A dónde vamos?</option> : (  ciudades.map(e => (
-                        <option key={e.id} value={e.i}>{e.city_name}</option>
+                        <option  className="fontColorCity" key={e.id} value={e.i}>&#xf3c5; {e.city_name}</option>
                     )
                     ) ) }
                 </select>

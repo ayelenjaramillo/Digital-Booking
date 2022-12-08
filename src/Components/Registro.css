@@ -1,8 +1,10 @@
 .registro {
-    padding: 7rem 25rem;
+    /* padding: 7rem 25rem; */
     display: flex;
     justify-content: center;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
+    bottom: 0;
+    height: 100vh;
 }
 
 .ptext{
@@ -10,8 +12,8 @@
     font-size: x-large;  
     font-weight: bold;
     text-align: center;
-    padding-top: 3rem;
-    margin-bottom:3rem;
+    padding-top: 4.5rem;
+    padding-bottom:1rem;
 
 }
 .input-registro {
@@ -46,12 +48,13 @@ border: none;
 
 .buttonholder{
     text-align: center;
+    padding-top: 1rem;
 }
 
 .loginalign{
     text-align: center;
     padding-top: 0.3rem;
-    margin-bottom: 0.2rem;
+    /* margin-bottom: 0.2rem; */
 }
 
 .submit-registro {
@@ -60,7 +63,7 @@ background-color: #1CB9C2;
 color: white;
 font-weight: bold;
 height: 3rem;
-margin-top: 3.2rem;
+/* margin-top: 3.2rem; */
 border: none;
 border-radius: 0.5rem;
 cursor: pointer;
@@ -69,10 +72,12 @@ cursor: pointer;
 
 @media (max-width: 1200px){
     .registro {
-        padding: 4rem 10rem;
+        /* padding: 4rem 10rem; */
         display: flex;
         justify-content: center;
+        padding: 0 2.5rem;
     }
+
 
     .nya-inlinen{
         display: inline;
@@ -83,12 +88,17 @@ cursor: pointer;
         display: inline;
     }
 
+.ptext{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
 }
 
 @media (max-width: 731px){
     
     .registro {
-        padding: 4rem 2rem;
+        /* padding: 4rem 2rem; */
         display: flex;
         justify-content: center;
     }
