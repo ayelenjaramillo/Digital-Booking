@@ -173,10 +173,10 @@
         margin-bottom: 2.87rem;
     }
    .hs-llegada-reservacion{
-        width: 94%;
-        height: 45%;
+        width: 93.5%;
+        height: 47%;
         padding: 2rem 1.5rem;
-        margin-left: .8rem;
+        margin-left: 1rem;
    }
    
     .react-datepicker{
@@ -216,8 +216,8 @@
         font-size: 0.93rem;
     }
     .btn-confirmacion{
-        width: 25rem;
-        margin-left: 5.5rem;
+        width: 75%;
+        margin-left: 13%;
         margin-bottom: 0.62rem;
     }
     .reservas-horiz{
