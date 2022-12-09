@@ -3,7 +3,7 @@ package com.DH.DigitalBooking.controllers;
 import com.DH.DigitalBooking.exceptions.CreatingExistingEntityException;
 import com.DH.DigitalBooking.exceptions.EmptyFieldException;
 import com.DH.DigitalBooking.exceptions.ResourceNotFoundException;
-import com.DH.DigitalBooking.models.City;
+import com.DH.DigitalBooking.models.entities.City;
 import com.DH.DigitalBooking.services.CityService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;

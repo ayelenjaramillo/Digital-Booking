@@ -17,7 +17,7 @@ import java.util.Map;
 @Component
 public class JwtProviderConfig {
 
-    @Value("${jwt.secret}") //estas se crean en el properties
+    @Value("${jwt.secret}")
     private String secret;
     @Value("${jwt.expiration}")
     private int expiration;
@@ -40,9 +40,7 @@ public class JwtProviderConfig {
                 .setSubject(mainUserAuth.getUsername()) //el username va a ser el mismo correo en nuestro caso
                 .addClaims(claims)
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(new Date().getTime() + expiration * 1000))
-                //llave provada y llave pública, la privada se encarga de descifrar
-                //secret es lo que colocamos en properties
+                .setExpiration(new Date(new Date().getTime() + expiration * 100000))
                 .signWith(SignatureAlgorithm.HS512, secret).compact();
 
     }

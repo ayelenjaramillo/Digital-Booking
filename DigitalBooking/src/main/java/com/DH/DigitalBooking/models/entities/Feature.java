@@ -1,4 +1,4 @@
-package com.DH.DigitalBooking.models;
+package com.DH.DigitalBooking.models.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
@@ -10,13 +10,13 @@ import javax.persistence.*;
 @Getter
 @Setter
 @NoArgsConstructor
+//@AllArgs?
 @Entity
 @Table(name = "features")
 public class Feature {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    /*@SequenceGenerator(name="feature_sequence",sequenceName = "feature_sequence")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "feature_sequence")*/
+
     private Long id;
     @Column
     private String description;
