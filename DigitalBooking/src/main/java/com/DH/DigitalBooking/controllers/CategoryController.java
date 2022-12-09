@@ -38,6 +38,7 @@ public class CategoryController {
         return ResponseEntity.ok(categoryService.listAllCategories()) ;
     }
 
+
     @Operation(summary = "Adds a new category")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Category successfully added"),
@@ -49,10 +50,16 @@ public class CategoryController {
         return ResponseEntity.ok(categoryService.createCategory(category));
     }
 
-    /*@PostMapping
-    public ResponseEntity addCategory(@RequestBody Category category) throws CreatingExistingEntityException, EmptyFieldException, ResourceNotFoundException {
-        return ResponseEntity.ok(categoryService.createCategory(category));
-    }*/
+   //LO AGREGO EL 08/12/22
+        @Operation(summary = "Gets a specific category")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Operation successful"),
+            @ApiResponse(responseCode = "400", description = "The requested category was not found", content = @Content)
+    })
+    @GetMapping("/{id}")
+    public ResponseEntity<Category> getCategoryById(@PathVariable Long id) throws ResourceNotFoundException {
+        return ResponseEntity.ok(categoryService.findById(id));
+    }
 
     @Operation(summary = "Edits a category")
     @ApiResponses(value = {

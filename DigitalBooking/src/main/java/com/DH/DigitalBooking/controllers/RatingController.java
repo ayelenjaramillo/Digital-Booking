@@ -17,9 +17,9 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/ratings")
+@RequestMapping("/rating")
 @CrossOrigin(origins = "*")
-@Tag(name = "Puntuaciones")
+@Tag(name = "Rating")
 public class RatingController {
 
     @Autowired

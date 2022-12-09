@@ -71,9 +71,9 @@ public class SecurityConfig {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/auth/**", "/api/v1/user/**").permitAll()
-
                 .antMatchers(HttpMethod.GET, "/api/v1/city/**").permitAll()
-                .antMatchers(HttpMethod.GET, "/api/v1/product/**").permitAll()
+                .antMatchers(HttpMethod.GET, "/api/v1/category/**").permitAll()
+
 
                 .antMatchers(HttpMethod.GET, "/api/v1/image/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/api/v1/policy/**").permitAll()
