@@ -31,13 +31,37 @@
     padding: 0 1rem;
     padding-top: .5rem;
     background-color: #E5E5E7;
+    align-items: center;
 }
 .p-hotel{
     width: 92%;
     justify-content: center;
     padding: 0 1rem;
     margin-bottom: 0;
+    text-transform: uppercase;
+
 }
+
+.p-descripcion{
+    width: 92%;
+    justify-content: center;
+    padding: 0 1rem;
+    margin-bottom: 0;
+    text-transform: capitalize;
+
+}
+
+.p-direccion{
+    padding-left: 1.3rem;
+}
+
+.p-nombre{
+    font-size: x-large;
+    font-weight: bold;
+    text-transform:capitalize;
+}
+
+
 .ubicacion{
     padding: .3rem;
 }
@@ -46,8 +70,8 @@
     color: #1DBEB4;
     font-size: 0.75rem;
 }
-.estrellas{
-    padding-left: 1rem;
+.estrellas:nth-child(5){
+    color: grey;
 }
 .flecha{
     font-size: 2.5rem;
@@ -107,9 +131,10 @@
     color:#545776; 
     /* width: 100%; */
     /* font-size: 1.12rem; */
-    padding: 0;
+    padding-left: 0;
     margin-bottom: 0rem;
-    display: inline;
+    /* display: inline; */
+    white-space: pre;
 }
 .iconoscarrusel{
     color: #545776
@@ -147,7 +172,7 @@ margin: 0 1.8rem;}
 }
 
 .rating-general-producto{
-    display: flex;
+    display: inline-block;
     align-items: center;
 }
 
@@ -160,6 +185,7 @@ margin: 0 1.8rem;}
     width: 2rem;
     height: 2rem;
     display: inline;
+    margin-left: 1rem;
 }
 
 /* DESKTOP */
@@ -221,7 +247,7 @@ margin: 0 1.8rem;}
  }
  
  .servicios-alojamiento{
-    width: 66.2rem; 
+    /* width: 66.2rem;  */
     display: grid;
     grid-template-columns: repeat(4, 2fr);
     grid-auto-rows:4.37rem;

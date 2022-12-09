@@ -89,36 +89,31 @@ const ProductoDetail=()=>{
             
             <div className="header-hotel">
                 <p className="p-hotel"> { isLoading ?  <Spinner />  : product.category.title}
-                    <h4>{isLoading ?  <Spinner />  : product.title}</h4>
+                    <p className="p-nombre">{isLoading ?  <Spinner />  : product.title}</p>
                 </p>
                 <span className="iconos">
                     <Link to="/"><FontAwesomeIcon className="flecha" icon={faAngleLeft} /></Link>
                 </span>
-            
             </div>
             <div className="infolocation-hotel">
-                <p className="p-hotel">
+                <p className="p-descripcion">
                     <FontAwesomeIcon className="ubicacion" icon={faLocationDot} />
                     { isLoading ?  <Spinner />  : (<span>{product.city.city_name}, {product.city.country} </span> )}
-                    <p>{ isLoading ?  <Spinner />  : product.address} </p>
+                    <p className="p-direccion">{ isLoading ?  <Spinner />  : product.address} </p>
                 </p>
                 <div className="rating-general-producto">
-                    <span>
                     <p className="titleh5aloj">Muy bueno</p>
                     <div className="estrellas">                    
                         <FontAwesomeIcon className="puntuacion" icon={faStar} />
                         <FontAwesomeIcon className="puntuacion" icon={faStar} />
                         <FontAwesomeIcon className="puntuacion" icon={faStar} />
                         <FontAwesomeIcon className="puntuacion" icon={faStar} />
-                        <FontAwesomeIcon style={{color: "#CBCBCF"}} className="puntuacion" icon={faStar} />
+                        <FontAwesomeIcon className="puntuacion" icon={faStar} />
                     </div>
-                </span>
-                {/* DARLE FORMATO AL SPAN DE ABAJO. VA AL LADO DEL MUY BUENO Y LAS ESTRELLAS, CON FONDO AZUL */}
-                <button className="rating-product">{ isLoading ? <Spinner />  : product.rating}</button>
                 </div>
-                
-            
+                <button className="rating-product">{ isLoading ? <Spinner />  : product.rating}</button>
             </div> 
+            
             {isLoading ? <Spinner /> : <Carrusel product={product}/>}
             {/* <CarruselB/> */}
             <span>
