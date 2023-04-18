@@ -1,3 +1,12 @@
+POYECTO FINAL DE CERTIFIED TECH DEVELOPER. 
+ROL: Frontend Developer: AYELEN JARAMILLO
+
+CREACION DE COMPONENTES REUTILIZABLES. 
+LOGICA ENTRE COMPONENTES EN JAVASCRIPT. 
+ESTILO Y MAQUETACION.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
